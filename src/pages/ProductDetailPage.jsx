@@ -62,16 +62,16 @@ export default function ProductDetailPage() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Image */}
             <motion.div
-            initial={{ opacity: 0, x: -50, scale: 0.95 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ 
-              duration: 0.7,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }}
-              className="relative h-64 sm:h-80 md:h-96 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center"
+              initial={{ opacity: 0, x: -50, scale: 0.95 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ 
+                duration: 0.7,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}
+              className="relative h-64 sm:h-80 md:h-96 bg-linear-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center"
             >
               <img
-                src={`/src/assets/images/${product.id === 'rp-silver' ? 'RP Silver Cadmium Free Alloy' : product.title.replace('RP ', 'RP ')}.png`}
+                src={`/src/assets/images/${product.id === 'rp-silver' ? 'rp-silver-cadmium-free-alloy' : product.title.toLowerCase().replace(/\s+/g, '-')}.png`}
                 alt={product.title}
                 className="w-full h-full object-contain p-6 md:p-8"
                 onError={(e) => {
@@ -116,7 +116,7 @@ export default function ProductDetailPage() {
                   <ul className="space-y-3">
                     {product.key_technical_features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-sm text-gray-700">
-                        <svg className="w-5 h-5 text-teal-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-teal-600 mr-2 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                           <path
                             fillRule="evenodd"
                             d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -154,7 +154,7 @@ export default function ProductDetailPage() {
                     <ul className="space-y-2">
                       {category.key_technical_features.map((feature, idx) => (
                         <li key={idx} className="flex items-start text-sm text-gray-700">
-                          <svg className="w-5 h-5 text-teal-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                          <svg className="w-5 h-5 text-teal-600 mr-2 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                             <path
                               fillRule="evenodd"
                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
