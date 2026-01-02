@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './Logo';
 
 export default function Header() {
@@ -38,12 +37,7 @@ export default function Header() {
               >
                 {item.name}
                 {isActive(item.path) && (
-                  <motion.div
-                    layoutId="activeNav"
-                    className="absolute -bottom-2 left-0 right-0 h-0.5 bg-teal-600"
-                    initial={false}
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
+                  <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-teal-600"></span>
                 )}
               </Link>
             ))}
@@ -51,7 +45,7 @@ export default function Header() {
               href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20products."
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors duration-300 font-medium inline-flex items-center"
+              className="px-5 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-all duration-300 font-medium inline-flex items-center hover:scale-105"
             >
               Get Quote
             </a>
@@ -60,7 +54,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-teal-600 hover:bg-gray-100 focus:outline-none"
+            className="md:hidden p-2 rounded-md text-gray-700 hover:text-teal-600 hover:bg-gray-100 focus:outline-none transition-colors duration-200"
           >
             <svg
               className="h-6 w-6"
@@ -88,45 +82,38 @@ export default function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden"
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="py-4 space-y-3">
+            {navigation.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setIsMenuOpen(false)}
+                className={`block px-4 py-2 rounded-md font-medium transition-colors duration-300 ${
+                  isActive(item.path)
+                    ? 'bg-teal-50 text-teal-600'
+                    : 'text-gray-700 hover:bg-gray-50'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <a
+              href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20products."
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMenuOpen(false)}
+              className="block mx-4 px-5 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors duration-300 font-medium text-center"
             >
-              <div className="py-4 space-y-3">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`block px-4 py-2 rounded-md font-medium transition-colors duration-300 ${
-                      isActive(item.path)
-                        ? 'bg-teal-50 text-teal-600'
-                        : 'text-gray-700 hover:bg-gray-50'
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-                <a
-                  href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20products."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block mx-4 px-5 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors duration-300 font-medium text-center"
-                >
-                  Get Quote
-                </a>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              Get Quote
+            </a>
+          </div>
+        </div>
       </nav>
     </header>
   );
 }
-
