@@ -1,0 +1,1148 @@
+{
+  "products_page": {
+    "title": "Our Products",
+    "description": "High-performance brazing, welding, and filler metal solutions for industrial applications.",
+
+    "major_products": [
+      {
+        "id": "rp-phos",
+        "title": "RP Phos",
+        "short_description": "Copper–phosphorus brazing alloys for copper and copper–brass joints.",
+        "description": "RP Phos brazing alloys are filler metals formulated primarily for copper-to-copper and copper-to-brass joints. They are widely used in HVAC/R, plumbing, and electrical assemblies due to their excellent capillary flow and ability to create sound joints at relatively low brazing temperatures in air. Phosphorus enables self-fluxing on copper, while optional silver additions improve ductility, reduce melting range, and enhance gap-bridging and fillet formation.",
+        "key_technical_features": [
+          "Typical tensile strength: 370–415 MPa",
+          "Excellent capillary action for tight joint clearances",
+          "Self-fluxing on copper joints",
+          "Silver additions improve ductility and gap filling",
+          "Flux required for brass joints; avoid sulfur-bearing environments"
+        ],
+        "thumbnail": "/assets/major-products/rp-phos.jpg",
+        "cta": {
+          "label": "View Products",
+          "route": "/products/rp-phos"
+        },
+
+        "sub_products": [
+          {
+            "id": "rp-phos-0",
+            "name": "RP PHOS 0",
+            "short_description": "Excellent liquidity alloy for tight fitting copper joints.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Silver (Ag) %", "value": "0" },
+                { "parameter": "Copper (Cu) %", "value": "92.75" },
+                { "parameter": "Phosphorus (P) %", "value": "7.25" },
+                { "parameter": "AWS A5.8", "value": "BCuP-2" },
+                { "parameter": "EN 1044", "value": "CP202" },
+                { "parameter": "BS 1845", "value": "L-CuP7" },
+                { "parameter": "DIN 8513", "value": "-" }
+              ]
+            }
+          },
+
+          {
+            "id": "rp-phos-1",
+            "name": "RP PHOS 1",
+            "short_description": "Cost-effective alloy with good fluidity.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Silver (Ag) %", "value": "1" },
+                { "parameter": "Copper (Cu) %", "value": "92" },
+                { "parameter": "Phosphorus (P) %", "value": "7" },
+                { "parameter": "AWS A5.8", "value": "-" },
+                { "parameter": "EN 1044", "value": "-" },
+                { "parameter": "BS 1845", "value": "-" },
+                { "parameter": "DIN 8513", "value": "-" }
+              ]
+            }
+          },
+
+          {
+            "id": "rp-phos-2",
+            "name": "RP PHOS 2",
+            "short_description": "Low silver with high phosphorus for very good fluidity.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Silver (Ag) %", "value": "2" },
+                { "parameter": "Copper (Cu) %", "value": "91" },
+                { "parameter": "Phosphorus (P) %", "value": "7" },
+                { "parameter": "AWS A5.8", "value": "BCuP-6" },
+                { "parameter": "EN 1044", "value": "CP105" },
+                { "parameter": "BS 1845", "value": "BS 1845" },
+                { "parameter": "DIN 8513", "value": "L-Ag2P" }
+              ]
+            }
+          },
+
+          {
+            "id": "rp-phos-5",
+            "name": "RP PHOS 5",
+            "short_description": "Moderate liquidity with improved gap filling.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Silver (Ag) %", "value": "5" },
+                { "parameter": "Copper (Cu) %", "value": "89" },
+                { "parameter": "Phosphorus (P) %", "value": "6" },
+                { "parameter": "AWS A5.8", "value": "BCuP-3" },
+                { "parameter": "EN 1044", "value": "-" },
+                { "parameter": "BS 1845", "value": "CP 4" },
+                { "parameter": "DIN 8513", "value": "L-Ag5P" }
+              ]
+            }
+          },
+
+          {
+            "id": "rp-phos-5hp",
+            "name": "RP PHOS 5HP",
+            "short_description": "High phosphorus preform alloy for improved liquidity.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Silver (Ag) %", "value": "5" },
+                { "parameter": "Copper (Cu) %", "value": "88.25" },
+                { "parameter": "Phosphorus (P) %", "value": "6.75" },
+                { "parameter": "AWS A5.8", "value": "BCuP-7" },
+                { "parameter": "EN 1044", "value": "-" },
+                { "parameter": "BS 1845", "value": "BS 1845" },
+                { "parameter": "DIN 8513", "value": "-" }
+              ]
+            }
+          },
+
+          {
+            "id": "rp-phos-6",
+            "name": "RP PHOS 6",
+            "short_description": "Designed to replicate RP PHOS 15 performance at lower cost.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Silver (Ag) %", "value": "6" },
+                { "parameter": "Copper (Cu) %", "value": "87.9" },
+                { "parameter": "Phosphorus (P) %", "value": "6.1" },
+                { "parameter": "AWS A5.8", "value": "-" },
+                { "parameter": "EN 1044", "value": "-" },
+                { "parameter": "BS 1845", "value": "-" },
+                { "parameter": "DIN 8513", "value": "-" }
+              ]
+            }
+          },
+
+          {
+            "id": "rp-phos-6hp",
+            "name": "RP PHOS 6HP",
+            "short_description": "Fluid alloy for controlled clearances and automated brazing.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Silver (Ag) %", "value": "6" },
+                { "parameter": "Copper (Cu) %", "value": "86.75" },
+                { "parameter": "Phosphorus (P) %", "value": "7.25" },
+                { "parameter": "AWS A5.8", "value": "BCuP-4" },
+                { "parameter": "EN 1044", "value": "-" },
+                { "parameter": "BS 1845", "value": "-" },
+                { "parameter": "DIN 8513", "value": "L-Ag7P" }
+              ]
+            }
+          },
+
+          {
+            "id": "rp-phos-15",
+            "name": "RP PHOS 15",
+            "short_description": "High silver alloy with superior ductility and wide gap capability.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Silver (Ag) %", "value": "15" },
+                { "parameter": "Copper (Cu) %", "value": "80" },
+                { "parameter": "Phosphorus (P) %", "value": "5" },
+                { "parameter": "AWS A5.8", "value": "BCuP-5" },
+                { "parameter": "EN 1044", "value": "CP102" },
+                { "parameter": "BS 1845", "value": "CP 1" },
+                { "parameter": "DIN 8513", "value": "L-Ag15P" }
+              ]
+            }
+          }
+        ]
+      },
+
+      {
+  "id": "rp-silver",
+  "title": "RP Silver",
+  "short_description": "Silver brazing alloys for strong, ductile, and leak-tight joints.",
+  "description": "RP Silver brazing alloys consist of cadmium-free and cadmium-bearing Ag-Cu-Zn based filler metals designed to deliver excellent wetting, low brazing temperatures, and high joint strength. These alloys are widely used in HVAC, refrigeration, plumbing, electrical, medical, food, aeronautical, and general industrial applications.",
+  "cta": {
+    "label": "View Products",
+    "route": "/products/rp-silver"
+  },
+
+  "sub_categories": [
+    {
+      "id": "rp-silver-cadmium-free",
+      "title": "Cadmium Free Alloy",
+      "description": "Cadmium-free silver brazing alloys designed to eliminate toxic cadmium fumes while delivering strong, ductile, leak-tight joints at relatively low brazing temperatures.",
+      "key_technical_features": [
+        "No cadmium – safe and RoHS compliant",
+        "Excellent flow and capillary action",
+        "Suitable for steels, stainless steels, copper alloys, brass, bronze, and nickel alloys",
+        "Available in rods, wires, rings, strips, pastes, and flux-coated forms"
+      ],
+
+      "sub_products": [
+        {
+          "id": "rp-silver-25",
+          "name": "RP SILVER 25",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-33" },
+              { "parameter": "EN 1044", "value": "AG 233" },
+              { "parameter": "DIN 8513", "value": "L-Ag 25Cu" },
+              { "parameter": "Ag %", "value": "25" },
+              { "parameter": "Cu %", "value": "52.5" },
+              { "parameter": "Zn %", "value": "22.5" },
+              { "parameter": "Solidus (°C)", "value": "607" },
+              { "parameter": "Liquidus (°C)", "value": "746" },
+              { "parameter": "Color", "value": "Brass Yellow" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-30",
+          "name": "RP SILVER 30",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-31" },
+              { "parameter": "EN 1044", "value": "AG 231" },
+              { "parameter": "DIN 8513", "value": "L-Ag 30Cu" },
+              { "parameter": "Ag %", "value": "30" },
+              { "parameter": "Cu %", "value": "38" },
+              { "parameter": "Zn %", "value": "32" },
+              { "parameter": "Solidus (°C)", "value": "650" },
+              { "parameter": "Liquidus (°C)", "value": "760" },
+              { "parameter": "Color", "value": "Light Yellow" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-35",
+          "name": "RP SILVER 35",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-30" },
+              { "parameter": "EN 1044", "value": "AG 230" },
+              { "parameter": "DIN 8513", "value": "L-Ag 35Cu" },
+              { "parameter": "Ag %", "value": "35" },
+              { "parameter": "Cu %", "value": "32" },
+              { "parameter": "Zn %", "value": "33" },
+              { "parameter": "Solidus (°C)", "value": "650" },
+              { "parameter": "Liquidus (°C)", "value": "770" },
+              { "parameter": "Color", "value": "Light Yellow" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-38t",
+          "name": "RP SILVER 38T",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-29" },
+              { "parameter": "EN 1044", "value": "AG 229" },
+              { "parameter": "DIN 8513", "value": "L-Ag 38Cu" },
+              { "parameter": "Ag %", "value": "38" },
+              { "parameter": "Cu %", "value": "32" },
+              { "parameter": "Zn %", "value": "28" },
+              { "parameter": "Solidus (°C)", "value": "650" },
+              { "parameter": "Liquidus (°C)", "value": "770" },
+              { "parameter": "Color", "value": "Light Yellow" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-40ni2",
+          "name": "RP SILVER 40Ni2",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-25" },
+              { "parameter": "EN 1044", "value": "AG 125" },
+              { "parameter": "DIN 8513", "value": "L-Ag 40CuNi" },
+              { "parameter": "Ag %", "value": "40" },
+              { "parameter": "Cu %", "value": "30" },
+              { "parameter": "Zn %", "value": "28" },
+              { "parameter": "Ni %", "value": "2" },
+              { "parameter": "Solidus (°C)", "value": "700" },
+              { "parameter": "Liquidus (°C)", "value": "740" },
+              { "parameter": "Color", "value": "Light Yellow" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-40t",
+          "name": "RP SILVER 40T",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-28" },
+              { "parameter": "EN 1044", "value": "AG 228" },
+              { "parameter": "DIN 8513", "value": "L-Ag 40CuSn" },
+              { "parameter": "Ag %", "value": "40" },
+              { "parameter": "Cu %", "value": "30" },
+              { "parameter": "Zn %", "value": "28" },
+              { "parameter": "Solidus (°C)", "value": "680" },
+              { "parameter": "Liquidus (°C)", "value": "770" },
+              { "parameter": "Color", "value": "Light Yellow" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-45",
+          "name": "RP SILVER 45",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-19" },
+              { "parameter": "EN 1044", "value": "AG 19" },
+              { "parameter": "DIN 8513", "value": "L-Ag 45CuZn" },
+              { "parameter": "Ag %", "value": "45" },
+              { "parameter": "Cu %", "value": "30" },
+              { "parameter": "Zn %", "value": "25" },
+              { "parameter": "Solidus (°C)", "value": "700" },
+              { "parameter": "Liquidus (°C)", "value": "750" },
+              { "parameter": "Color", "value": "Yellow White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-45t",
+          "name": "RP SILVER 45T",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-20" },
+              { "parameter": "EN 1044", "value": "AG 20" },
+              { "parameter": "DIN 8513", "value": "L-Ag 45CuZnSn" },
+              { "parameter": "Ag %", "value": "45" },
+              { "parameter": "Cu %", "value": "27" },
+              { "parameter": "Zn %", "value": "25" },
+              { "parameter": "Sn %", "value": "3" },
+              { "parameter": "Solidus (°C)", "value": "680" },
+              { "parameter": "Liquidus (°C)", "value": "770" },
+              { "parameter": "Color", "value": "Pale Yellow" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-50",
+          "name": "RP SILVER 50",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-6" },
+              { "parameter": "EN 1044", "value": "AG 310" },
+              { "parameter": "DIN 8513", "value": "L-Ag 60Cu" },
+              { "parameter": "Ag %", "value": "50" },
+              { "parameter": "Cu %", "value": "34" },
+              { "parameter": "Zn %", "value": "16" },
+              { "parameter": "Solidus (°C)", "value": "725" },
+              { "parameter": "Liquidus (°C)", "value": "775" },
+              { "parameter": "Color", "value": "Yellow White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-50ni2",
+          "name": "RP SILVER 50Ni2",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-24" },
+              { "parameter": "EN 1044", "value": "AG 450" },
+              { "parameter": "DIN 8513", "value": "L-Ag 50CuNi" },
+              { "parameter": "Ag %", "value": "50" },
+              { "parameter": "Cu %", "value": "20" },
+              { "parameter": "Zn %", "value": "28" },
+              { "parameter": "Ni %", "value": "2" },
+              { "parameter": "Solidus (°C)", "value": "720" },
+              { "parameter": "Liquidus (°C)", "value": "770" },
+              { "parameter": "Color", "value": "Light Yellow" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-54n",
+          "name": "RP SILVER 54N",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-13" },
+              { "parameter": "EN 1044", "value": "AG 54Ni1" },
+              { "parameter": "DIN 8513", "value": "L-Ag 54CuZnNi" },
+              { "parameter": "Ag %", "value": "54" },
+              { "parameter": "Cu %", "value": "40" },
+              { "parameter": "Zn %", "value": "5" },
+              { "parameter": "Ni %", "value": "1" },
+              { "parameter": "Solidus (°C)", "value": "700" },
+              { "parameter": "Liquidus (°C)", "value": "750" },
+              { "parameter": "Color", "value": "White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-56t",
+          "name": "RP SILVER 56T",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-7" },
+              { "parameter": "EN 1044", "value": "AG 107" },
+              { "parameter": "DIN 8513", "value": "L-Ag 56CuZn" },
+              { "parameter": "Ag %", "value": "56" },
+              { "parameter": "Cu %", "value": "22" },
+              { "parameter": "Zn %", "value": "17" },
+              { "parameter": "Sn %", "value": "5" },
+              { "parameter": "Solidus (°C)", "value": "660" },
+              { "parameter": "Liquidus (°C)", "value": "740" },
+              { "parameter": "Color", "value": "White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-56ni2",
+          "name": "RP SILVER 56Ni2",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-10" },
+              { "parameter": "EN 1044", "value": "AG 1010" },
+              { "parameter": "DIN 8513", "value": "L-Ag 56CuNi" },
+              { "parameter": "Ag %", "value": "56" },
+              { "parameter": "Cu %", "value": "42" },
+              { "parameter": "Ni %", "value": "2" },
+              { "parameter": "Solidus (°C)", "value": "720" },
+              { "parameter": "Liquidus (°C)", "value": "750" },
+              { "parameter": "Color", "value": "White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-60",
+          "name": "RP SILVER 60",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-6" },
+              { "parameter": "EN 1044", "value": "AG 310" },
+              { "parameter": "DIN 8513", "value": "L-Ag 60Cu" },
+              { "parameter": "Ag %", "value": "60" },
+              { "parameter": "Cu %", "value": "30" },
+              { "parameter": "Zn %", "value": "10" },
+              { "parameter": "Ni %", "value": "<0.002" },
+              { "parameter": "Solidus (°C)", "value": "725" },
+              { "parameter": "Liquidus (°C)", "value": "775" },
+              { "parameter": "Color", "value": "Silver White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-61",
+          "name": "RP SILVER 61",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-5" },
+              { "parameter": "EN 1044", "value": "AG 311" },
+              { "parameter": "DIN 8513", "value": "L-Ag 60Cu" },
+              { "parameter": "Ag %", "value": "61" },
+              { "parameter": "Cu %", "value": "24" },
+              { "parameter": "Zn %", "value": "5" },
+              { "parameter": "Ni %", "value": "<0.001" },
+              { "parameter": "Solidus (°C)", "value": "700" },
+              { "parameter": "Liquidus (°C)", "value": "740" },
+              { "parameter": "Color", "value": "Silver White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-65",
+          "name": "RP SILVER 65",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-4" },
+              { "parameter": "EN 1044", "value": "AG 107" },
+              { "parameter": "DIN 8513", "value": "L-Ag 65Cu" },
+              { "parameter": "Ag %", "value": "65" },
+              { "parameter": "Cu %", "value": "20" },
+              { "parameter": "Zn %", "value": "15" },
+              { "parameter": "Solidus (°C)", "value": "780" },
+              { "parameter": "Liquidus (°C)", "value": "850" },
+              { "parameter": "Color", "value": "White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-72",
+          "name": "RP SILVER 72",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-8" },
+              { "parameter": "DIN 8513", "value": "L-Ag72" },
+              { "parameter": "Ag %", "value": "72" },
+              { "parameter": "Cu %", "value": "28" },
+              { "parameter": "Ni %", "value": "<0.001" },
+              { "parameter": "Solidus (°C)", "value": "770" },
+              { "parameter": "Liquidus (°C)", "value": "810" },
+              { "parameter": "Color", "value": "Silver White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-49",
+          "name": "RP SILVER 49",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-22" },
+              { "parameter": "EN 1044", "value": "AG 502" },
+              { "parameter": "Ag %", "value": "49" },
+              { "parameter": "Cu %", "value": "16" },
+              { "parameter": "Zn %", "value": "23" },
+              { "parameter": "Ni %", "value": "4.5" },
+              { "parameter": "Mn %", "value": "7.5" },
+              { "parameter": "Solidus (°C)", "value": "680" },
+              { "parameter": "Liquidus (°C)", "value": "700" },
+              { "parameter": "Color", "value": "Silver White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-100",
+          "name": "RP SILVER 100",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "Purity", "value": "99.95% Silver" },
+              { "parameter": "Solidus (°C)", "value": "961.8" },
+              { "parameter": "Liquidus (°C)", "value": "961.8" },
+              { "parameter": "Color", "value": "White" }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "rp-silver-cadmium-bearing",
+      "title": "Cadmium Bearing Alloy",
+      "description": "Cadmium-bearing silver brazing alloys formulated for extremely low brazing temperatures, narrow melting ranges, and exceptional capillary flow where cadmium use is permitted.",
+      "key_technical_features": [
+        "Very low melting points",
+        "Exceptional capillary flow",
+        "Broad base-metal compatibility",
+        "Requires proper fume extraction due to cadmium toxicity"
+      ],
+
+      "sub_products": [
+        {
+          "id": "rp-silver-cd-20",
+          "name": "RP SILVER Cd-20",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-20" },
+              { "parameter": "EN 1044", "value": "AG 309" },
+              { "parameter": "DIN 8513", "value": "L-Ag20Cd" },
+              { "parameter": "Ag %", "value": "20" },
+              { "parameter": "Cu %", "value": "40" },
+              { "parameter": "Zn %", "value": "25" },
+              { "parameter": "Cd %", "value": "15" },
+              { "parameter": "Solidus (°C)", "value": "680" },
+              { "parameter": "Liquidus (°C)", "value": "770" },
+              { "parameter": "Color", "value": "Bright Silver-White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-cd-25",
+          "name": "RP SILVER Cd-25",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-27" },
+              { "parameter": "EN 1044", "value": "AG 303" },
+              { "parameter": "DIN 8513", "value": "L-Ag27" },
+              { "parameter": "Ag %", "value": "25" },
+              { "parameter": "Cu %", "value": "35" },
+              { "parameter": "Zn %", "value": "26.5" },
+              { "parameter": "Cd %", "value": "13.5" },
+              { "parameter": "Solidus (°C)", "value": "607" },
+              { "parameter": "Liquidus (°C)", "value": "746" },
+              { "parameter": "Color", "value": "Silver White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-cd-30",
+          "name": "RP SILVER Cd-30",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-2a" },
+              { "parameter": "EN 1044", "value": "AG 306" },
+              { "parameter": "DIN 8513", "value": "L-Ag30Cd" },
+              { "parameter": "Ag %", "value": "30" },
+              { "parameter": "Cu %", "value": "27" },
+              { "parameter": "Zn %", "value": "23" },
+              { "parameter": "Cd %", "value": "20" },
+              { "parameter": "Solidus (°C)", "value": "607" },
+              { "parameter": "Liquidus (°C)", "value": "710" },
+              { "parameter": "Color", "value": "Bright Silver-White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-cd-35",
+          "name": "RP SILVER Cd-35",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-2" },
+              { "parameter": "EN 1044", "value": "AG 305" },
+              { "parameter": "Ag %", "value": "35" },
+              { "parameter": "Cu %", "value": "26" },
+              { "parameter": "Zn %", "value": "21" },
+              { "parameter": "Cd %", "value": "18" },
+              { "parameter": "Solidus (°C)", "value": "607" },
+              { "parameter": "Liquidus (°C)", "value": "702" },
+              { "parameter": "Color", "value": "Silver White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-cd-40",
+          "name": "RP SILVER Cd-40",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-2" },
+              { "parameter": "EN 1044", "value": "AG 304" },
+              { "parameter": "Ag %", "value": "40" },
+              { "parameter": "Cu %", "value": "19" },
+              { "parameter": "Zn %", "value": "21" },
+              { "parameter": "Cd %", "value": "20" },
+              { "parameter": "Solidus (°C)", "value": "610" },
+              { "parameter": "Liquidus (°C)", "value": "650" },
+              { "parameter": "Color", "value": "Bright Silver-White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-cd-43",
+          "name": "RP SILVER Cd-43",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-2" },
+              { "parameter": "EN 1044", "value": "AG 2" },
+              { "parameter": "DIN 8513", "value": "L-Ag16A" },
+              { "parameter": "Ag %", "value": "43" },
+              { "parameter": "Cu %", "value": "17" },
+              { "parameter": "Zn %", "value": "20" },
+              { "parameter": "Cd %", "value": "20" },
+              { "parameter": "Solidus (°C)", "value": "630" },
+              { "parameter": "Liquidus (°C)", "value": "640–760" },
+              { "parameter": "Color", "value": "Silver White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-cd-45",
+          "name": "RP SILVER Cd-45",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-1" },
+              { "parameter": "EN 1044", "value": "AG 101" },
+              { "parameter": "DIN 8513", "value": "L-Ag" },
+              { "parameter": "Ag %", "value": "45" },
+              { "parameter": "Cu %", "value": "15" },
+              { "parameter": "Zn %", "value": "16" },
+              { "parameter": "Cd %", "value": "24" },
+              { "parameter": "Solidus (°C)", "value": "607" },
+              { "parameter": "Liquidus (°C)", "value": "618" },
+              { "parameter": "Color", "value": "Silvery-White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-cd-50",
+          "name": "RP SILVER Cd-50",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-1a" },
+              { "parameter": "EN 1044", "value": "AG 105" },
+              { "parameter": "DIN 8513", "value": "L-Ag50Cd" },
+              { "parameter": "Ag %", "value": "50" },
+              { "parameter": "Cu %", "value": "15" },
+              { "parameter": "Zn %", "value": "15" },
+              { "parameter": "Cd %", "value": "20" },
+              { "parameter": "Solidus (°C)", "value": "630" },
+              { "parameter": "Liquidus (°C)", "value": "640–760" },
+              { "parameter": "Color", "value": "Silvery-White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-cd-50ni3",
+          "name": "RP SILVER Cd-50Ni3",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-3" },
+              { "parameter": "EN 1044", "value": "AG 110" },
+              { "parameter": "DIN 8513", "value": "L-Ag50CdNi" },
+              { "parameter": "Ag %", "value": "50" },
+              { "parameter": "Cu %", "value": "15.5" },
+              { "parameter": "Zn %", "value": "15.5" },
+              { "parameter": "Cd %", "value": "16" },
+              { "parameter": "Ni %", "value": "3" },
+              { "parameter": "Solidus (°C)", "value": "632" },
+              { "parameter": "Liquidus (°C)", "value": "688" },
+              { "parameter": "Color", "value": "Silvery-White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-cd-67",
+          "name": "RP SILVER Cd-67",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "Ag %", "value": "67" },
+              { "parameter": "Cu %", "value": "11" },
+              { "parameter": "Zn %", "value": "12" },
+              { "parameter": "Cd %", "value": "10" },
+              { "parameter": "Solidus (°C)", "value": "480–500" },
+              { "parameter": "Liquidus (°C)", "value": "600–620" },
+              { "parameter": "Color", "value": "Bright Silver-White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-cd-44",
+          "name": "RP SILVER Cd-44",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "Ag %", "value": "44" },
+              { "parameter": "Cu %", "value": "27" },
+              { "parameter": "Zn %", "value": "13" },
+              { "parameter": "Cd %", "value": "16" },
+              { "parameter": "Solidus (°C)", "value": "520–540" },
+              { "parameter": "Liquidus (°C)", "value": "650–680" },
+              { "parameter": "Color", "value": "Bright Silver" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-cd-12",
+          "name": "RP SILVER Cd-12",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "AWS A5.8", "value": "BAg-8" },
+              { "parameter": "EN 1044", "value": "AG 401" },
+              { "parameter": "DIN 8513", "value": "L-Ag 12Cd" },
+              { "parameter": "Ag %", "value": "12" },
+              { "parameter": "Cu %", "value": "50" },
+              { "parameter": "Zn %", "value": "31" },
+              { "parameter": "Cd %", "value": "7" },
+              { "parameter": "Solidus (°C)", "value": "700" },
+              { "parameter": "Liquidus (°C)", "value": "740" },
+              { "parameter": "Color", "value": "Bright Silver-White" }
+            ]
+          }
+        },
+
+        {
+          "id": "rp-silver-cd-72",
+          "name": "RP SILVER Cd-72",
+          "technical_specifications": {
+            "table_title": "Technical Specifications",
+            "rows": [
+              { "parameter": "Ag %", "value": "72" },
+              { "parameter": "Cu %", "value": "15" },
+              { "parameter": "Zn %", "value": "11" },
+              { "parameter": "Cd %", "value": "2" },
+              { "parameter": "Solidus (°C)", "value": "600" },
+              { "parameter": "Liquidus (°C)", "value": "650" },
+              { "parameter": "Color", "value": "Silvery-White" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+,
+
+      {
+  "id": "rp-copper",
+  "title": "RP Copper",
+  "short_description": "Copper and bronze welding alloys for high-quality, corrosion-resistant joints.",
+  "description": "RP Copper welding alloys are filler metals and consumables formulated to join pure copper and copper-based alloys while managing challenges such as high thermal conductivity, oxide formation, and porosity during welding operations. Bronze welding alloys, where tin, silicon, or aluminum are principal additions, are used to weld bronzes, brasses, steels for surfacing, and dissimilar joints with good corrosion resistance and aesthetic color matching.",
+  "key_technical_features": [
+    "Deoxidized fillers with silicon and manganese reduce porosity in oxygen-bearing copper",
+    "Excellent corrosion resistance, especially with silicon bronze alloys",
+    "Compatible with TIG, MIG, and torch welding processes",
+    "Argon shielding gas recommended for TIG and MIG welding",
+    "Filler selection should match the base alloy for optimal performance"
+  ],
+  "cta": {
+    "label": "View Products",
+    "route": "/products/rp-copper"
+  },
+
+  "sub_products": [
+    {
+      "id": "rp-weld-92",
+      "name": "RP-WELD 92",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "AWS Grade", "value": "ERCuSi-A" },
+          { "parameter": "Copper", "value": "Balance" },
+          { "parameter": "Aluminium", "value": "0.001%" },
+          { "parameter": "Zinc", "value": "0.2%" },
+          { "parameter": "Tin", "value": "0.7%" },
+          { "parameter": "Manganese", "value": "0.6%" },
+          { "parameter": "Silicon", "value": "3.0%" },
+          { "parameter": "Nickel", "value": "0.5%" },
+          { "parameter": "Phosphorus", "value": "0.02%" },
+          { "parameter": "Total Impurities", "value": "0.01%" },
+          { "parameter": "Melting Point", "value": "1019°C" },
+          { "parameter": "Process", "value": "MIG / TIG / Torch" }
+        ]
+      }
+    },
+
+    {
+      "id": "rp-weld-58-b",
+      "name": "RP-WELD 58 (RBCuZn-B)",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "AWS Grade", "value": "RBCuZn-B" },
+          { "parameter": "Copper", "value": "Balance" },
+          { "parameter": "Aluminium", "value": "0.01%" },
+          { "parameter": "Zinc", "value": "38.95%" },
+          { "parameter": "Tin", "value": "0.75–1.10%" },
+          { "parameter": "Manganese", "value": "0.01–0.50%" },
+          { "parameter": "Silicon", "value": "0.04–0.15%" },
+          { "parameter": "Nickel", "value": "0.20–0.80%" },
+          { "parameter": "Iron", "value": "0.25–1.25%" },
+          { "parameter": "Lead", "value": "0.05%" },
+          { "parameter": "Total Impurities", "value": "0.01%" },
+          { "parameter": "Melting Point", "value": "882°C" },
+          { "parameter": "Process", "value": "Torch" }
+        ]
+      }
+    },
+
+    {
+      "id": "rp-weld-58-c",
+      "name": "RP-WELD 58 (RBCuZn-C)",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "AWS Grade", "value": "RBCuZn-C" },
+          { "parameter": "Copper", "value": "Balance" },
+          { "parameter": "Aluminium", "value": "0.01%" },
+          { "parameter": "Zinc", "value": "37.45%" },
+          { "parameter": "Tin", "value": "0.8–1.1%" },
+          { "parameter": "Manganese", "value": "0.01–0.50%" },
+          { "parameter": "Silicon", "value": "0.04–0.15%" },
+          { "parameter": "Iron", "value": "0.25–1.2%" },
+          { "parameter": "Lead", "value": "0.05%" },
+          { "parameter": "Total Impurities", "value": "0.02%" },
+          { "parameter": "Melting Point", "value": "888°C" },
+          { "parameter": "Process", "value": "Torch / Furnace / Induction" }
+        ]
+      }
+    },
+
+    {
+      "id": "rp-weld-98",
+      "name": "RP-WELD 98",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "AWS Grade", "value": "ERCu" },
+          { "parameter": "Copper", "value": "Balance" },
+          { "parameter": "Aluminium", "value": "0.01%" },
+          { "parameter": "Tin", "value": "1.0%" },
+          { "parameter": "Manganese", "value": "0.5%" },
+          { "parameter": "Silicon", "value": "0.5%" },
+          { "parameter": "Iron", "value": "0.02%" },
+          { "parameter": "Lead", "value": "0.15%" },
+          { "parameter": "Phosphorus", "value": "0.5%" },
+          { "parameter": "Melting Point", "value": "1075°C" },
+          { "parameter": "Process", "value": "MIG / TIG / Torch" }
+        ]
+      }
+    },
+
+    {
+      "id": "rp-weld-59",
+      "name": "RP-WELD 59",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "AWS Grade", "value": "RBCuZn-A" },
+          { "parameter": "Copper", "value": "Balance" },
+          { "parameter": "Aluminium", "value": "0.01%" },
+          { "parameter": "Zinc", "value": "39.15%" },
+          { "parameter": "Tin", "value": "0.25–1.0%" },
+          { "parameter": "Iron", "value": "0.05%" },
+          { "parameter": "Total Impurities", "value": "0.01%" },
+          { "parameter": "Melting Point", "value": "885°C" },
+          { "parameter": "Process", "value": "Torch" }
+        ]
+      }
+    },
+
+    {
+      "id": "rp-weld-94",
+      "name": "RP-WELD 94",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "AWS Grade", "value": "ERCuSn-A" },
+          { "parameter": "Copper", "value": "Balance" },
+          { "parameter": "Tin", "value": "4.0–6.0%" },
+          { "parameter": "Nickel", "value": "0.25%" },
+          { "parameter": "Iron", "value": "0.02%" },
+          { "parameter": "Lead", "value": "0.10–0.35%" },
+          { "parameter": "Total Impurities", "value": "0.01%" },
+          { "parameter": "Melting Point", "value": "954°C" },
+          { "parameter": "Process", "value": "MIG / TIG / Torch" }
+        ]
+      }
+    },
+
+    {
+      "id": "rp-weld-91",
+      "name": "RP-WELD 91",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "AWS Grade", "value": "ERCuSn-C" },
+          { "parameter": "Copper", "value": "Balance" },
+          { "parameter": "Zinc", "value": "0.2%" },
+          { "parameter": "Tin", "value": "7.0–9.0%" },
+          { "parameter": "Manganese", "value": "0.1%" },
+          { "parameter": "Nickel", "value": "0.1%" },
+          { "parameter": "Iron", "value": "0.05%" },
+          { "parameter": "Lead", "value": "0.03–0.35%" },
+          { "parameter": "Total Impurities", "value": "0.01%" },
+          { "parameter": "Melting Point", "value": "1027°C" },
+          { "parameter": "Process", "value": "MIG / TIG / Torch" }
+        ]
+      }
+    },
+
+    {
+      "id": "rp-weld-90",
+      "name": "RP-WELD 90",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "AWS Grade", "value": "ERCuAl-A1" },
+          { "parameter": "Copper", "value": "Balance" },
+          { "parameter": "Aluminium", "value": "6.0–8.5%" },
+          { "parameter": "Zinc", "value": "0.2%" },
+          { "parameter": "Tin", "value": "0.5%" },
+          { "parameter": "Manganese", "value": "0.5%" },
+          { "parameter": "Iron", "value": "0.02%" },
+          { "parameter": "Total Impurities", "value": "0.01%" },
+          { "parameter": "Melting Point", "value": "1041°C" },
+          { "parameter": "Process", "value": "MIG / TIG / Torch" }
+        ]
+      }
+    },
+
+    {
+      "id": "rp-weld-88",
+      "name": "RP-WELD 88",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "AWS Grade", "value": "ERCuAl-A2" },
+          { "parameter": "Copper", "value": "Balance" },
+          { "parameter": "Aluminium", "value": "8.5–11.0%" },
+          { "parameter": "Zinc", "value": "0.02%" },
+          { "parameter": "Tin", "value": "0.1%" },
+          { "parameter": "Manganese", "value": "1.5%" },
+          { "parameter": "Iron", "value": "0.50–1.50%" },
+          { "parameter": "Total Impurities", "value": "0.01%" },
+          { "parameter": "Melting Point", "value": "1045°C" },
+          { "parameter": "Process", "value": "MIG / TIG / Torch" }
+        ]
+      }
+    }
+  ]
+}
+,
+
+      {
+  "id": "rp-braze",
+  "title": "RP Braze",
+  "short_description": "Brass brazing alloys for strong, economical structural joints.",
+  "description": "RP Braze brass brazing alloys are copper–zinc filler metals used for high-temperature brazing and braze-welding of steels, copper alloys, cast irons, and carbide. They provide a cost-effective alternative to silver brazing alloys, offering excellent fillet formation, wider gap-bridging capability, and strong structural joints for fabrication and repair applications.",
+  "key_technical_features": [
+    "Copper–zinc brass core system for strength and durability",
+    "Modified with elements such as Ni, Si, Sn, or small Ag additions to improve wetting, color, and corrosion resistance",
+    "Flows at higher temperatures than silver brazes",
+    "Excellent fillet-building and wide gap-bridging characteristics",
+    "Available in rods, wires, preforms, strips, powders, and pastes",
+    "Commonly used in tubular steel assemblies, heat exchangers, radiators, and carbide tool brazing"
+  ],
+  "cta": {
+    "label": "View Products",
+    "route": "/products/rp-braze"
+  },
+
+  "sub_products": [
+    {
+      "id": "rp-braze-90",
+      "name": "RP BRAZE 90",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "ASTM Code", "value": "C 220" },
+          { "parameter": "Copper (Cu) %", "value": "90" },
+          { "parameter": "Zinc (Zn) %", "value": "10" },
+          { "parameter": "Key Characteristics", "value": "Excellent ductility and corrosion resistance" },
+          { "parameter": "Workability", "value": "Easy cold working, minimal brittleness" }
+        ]
+      }
+    },
+
+    {
+      "id": "rp-braze-80",
+      "name": "RP BRAZE 80",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "ASTM Code", "value": "C 240" },
+          { "parameter": "Copper (Cu) %", "value": "80" },
+          { "parameter": "Zinc (Zn) %", "value": "20" },
+          { "parameter": "Key Characteristics", "value": "Moderately high strength with good ductility" },
+          { "parameter": "Corrosion Resistance", "value": "Excellent" }
+        ]
+      }
+    },
+
+    {
+      "id": "rp-braze-70",
+      "name": "RP BRAZE 70",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "ASTM Code", "value": "C 260" },
+          { "parameter": "Copper (Cu) %", "value": "70" },
+          { "parameter": "Zinc (Zn) %", "value": "30" },
+          { "parameter": "Key Characteristics", "value": "Highest ductility among yellow brasses" },
+          { "parameter": "Workability", "value": "Excellent cold workability and reliable corrosion resistance" }
+        ]
+      }
+    },
+
+    {
+      "id": "rp-braze-65",
+      "name": "RP BRAZE 65",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "ASTM Code", "value": "C 270" },
+          { "parameter": "Copper (Cu) %", "value": "65" },
+          { "parameter": "Zinc (Zn) %", "value": "35" },
+          { "parameter": "Key Characteristics", "value": "Good cold workability with moderate tensile strength" },
+          { "parameter": "Formability", "value": "Excellent cold forming, poor hot formability" }
+        ]
+      }
+    },
+
+    {
+      "id": "rp-braze-63",
+      "name": "RP BRAZE 63",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "ASTM Code", "value": "C 724" },
+          { "parameter": "Copper (Cu) %", "value": "63" },
+          { "parameter": "Zinc (Zn) %", "value": "37" },
+          { "parameter": "Key Characteristics", "value": "Good formability and corrosion resistance" },
+          { "parameter": "Typical Applications", "value": "Mechanical parts, fasteners, connectors, low-lead components" }
+        ]
+      }
+    },
+
+    {
+      "id": "rp-braze-60",
+      "name": "RP BRAZE 60",
+      "technical_specifications": {
+        "table_title": "Technical Specifications",
+        "rows": [
+          { "parameter": "ASTM Code", "value": "C 280" },
+          { "parameter": "Copper (Cu) %", "value": "60" },
+          { "parameter": "Zinc (Zn) %", "value": "40" },
+          { "parameter": "Key Characteristics", "value": "Higher strength and rigidity due to increased zinc content" },
+          { "parameter": "Appearance", "value": "Warm golden-yellow color with good polishability" }
+        ]
+      }
+    }
+  ]
+}
+
+    ]
+  }
+}
