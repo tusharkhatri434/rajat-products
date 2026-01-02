@@ -71,7 +71,7 @@ export default function ProductDetailPage() {
               className="relative h-64 sm:h-80 md:h-96 bg-linear-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center"
             >
               <img
-                src={`/src/assets/images/${product.id === 'rp-silver' ? 'rp-silver-cadmium-free-alloy' : product.title.toLowerCase().replace(/\s+/g, '-')}.png`}
+                src={`/images/${product.imgName}`}
                 alt={product.title}
                 className="w-full h-full object-contain p-6 md:p-8"
                 onError={(e) => {

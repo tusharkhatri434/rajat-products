@@ -126,7 +126,7 @@ export default function ProductsPage() {
                   <div className="shrink-0">
                     <div className="relative w-full lg:w-[280px] xl:w-[340px] h-64 lg:h-[340px] bg-linear-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center overflow-hidden">
                       <motion.img
-                        src={`/src/assets/images/${product.id === 'rp-silver' ? 'rp-silver-cadmium-free-alloy' : product.title.toLowerCase().replace(/\s+/g, '-')}.png`}
+                        src={`/images/${product.imgName}`}
                         alt={product.title}
                         className="w-full h-full object-contain p-6"
                         whileHover={{ scale: 1.05 }}

@@ -23,14 +23,14 @@ export default function ProductCard({ product, index = 0 }) {
       className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
     >
       {/* Image Container */}
-      <div className="relative h-48 sm:h-56 md:h-64 bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden">
+      <div className="relative h-48 sm:h-56 md:h-64 bg-linear-to-br from-gray-800 to-gray-900 overflow-hidden">
         <motion.div
           className="absolute inset-0"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.4 }}
         >
           <img
-            src={`/src/assets/images/${product.id === 'rp-silver' ? 'rp-silver-cadmium-free-alloy' : product.title.toLowerCase().replace(/\s+/g, '-')}.png`}
+            src={`/images/${product.imgName}`}
             alt={product.title}
             className="w-full h-full object-contain p-4"
             onError={(e) => {
@@ -41,7 +41,7 @@ export default function ProductCard({ product, index = 0 }) {
         </motion.div>
         
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         
         {/* Floating Badge */}
         <motion.div
@@ -75,7 +75,7 @@ export default function ProductCard({ product, index = 0 }) {
         </p>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-teal-500 to-transparent mb-4 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        <div className="h-px bg-linear-to-r from-teal-500 to-transparent mb-4 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
         {/* CTA Button */}
         <Link
@@ -97,7 +97,7 @@ export default function ProductCard({ product, index = 0 }) {
       </div>
 
       {/* Bottom Accent */}
-      <div className="h-1 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+      <div className="h-1 bg-linear-to-r from-teal-500 via-teal-600 to-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
     </motion.div>
   );
 }
