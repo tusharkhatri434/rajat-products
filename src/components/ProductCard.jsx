@@ -30,7 +30,7 @@ export default function ProductCard({ product, index = 0 }) {
           transition={{ duration: 0.4 }}
         >
           <img
-            src={`/src/assets/images/${product.id === 'rp-silver' ? 'RP Silver Cadmium Free Alloy' : product.title.replace('RP ', 'RP ')}.png`}
+            src={`/src/assets/images/${product.id === 'rp-silver' ? 'rp-silver-cadmium-free-alloy' : product.title.toLowerCase().replace(/\s+/g, '-')}.png`}
             alt={product.title}
             className="w-full h-full object-contain p-4"
             onError={(e) => {
