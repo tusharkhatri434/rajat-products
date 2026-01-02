@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import Button from '../components/Button';
 
 export default function InfrastructurePage() {
@@ -145,7 +144,7 @@ export default function InfrastructurePage() {
           <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-transparent"></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -161,7 +160,7 @@ export default function InfrastructurePage() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               {stats.map((stat, index) => (
-                <motion.div
+                <div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -170,17 +169,17 @@ export default function InfrastructurePage() {
                 >
                   <div className="text-4xl md:text-5xl font-bold text-teal-400 mb-2">{stat.value}</div>
                   <div className="text-gray-300 text-sm uppercase tracking-wider">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Production Facilities */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -192,11 +191,11 @@ export default function InfrastructurePage() {
             <p className="text-gray-600 max-w-3xl mx-auto">
               Our manufacturing infrastructure is designed for precision, efficiency & consistent quality output
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {facilities.map((facility, index) => (
-              <motion.div
+              <div
                 key={facility.title}
                 initial={{ opacity: 0, y: 20, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -213,13 +212,13 @@ export default function InfrastructurePage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-teal-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="relative z-10 flex items-start space-x-4">
-                  <motion.div 
+                  <div 
                     className="text-5xl"
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
                     {facility.icon}
-                  </motion.div>
+                  </div>
                   <div className="flex-grow">
                     <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-teal-600 transition-colors">
                       {facility.title}
@@ -244,7 +243,7 @@ export default function InfrastructurePage() {
                 
                 {/* Bottom Accent */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 to-teal-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -253,7 +252,7 @@ export default function InfrastructurePage() {
       {/* Testing Laboratories */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -265,11 +264,11 @@ export default function InfrastructurePage() {
             <p className="text-gray-600 max-w-3xl mx-auto">
               Comprehensive in-house testing facilities ensure every product meets stringent quality specifications
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {laboratories.map((lab, index) => (
-              <motion.div
+              <div
                 key={lab.title}
                 initial={{ opacity: 0, y: 30, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -294,13 +293,13 @@ export default function InfrastructurePage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-teal-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="relative z-10">
-                  <motion.div 
+                  <div 
                     className="text-5xl mb-4 text-center"
                     whileHover={{ rotate: 360, scale: 1.2 }}
                     transition={{ duration: 0.6 }}
                   >
                     {lab.icon}
-                  </motion.div>
+                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 text-center group-hover:text-teal-600 transition-colors">
                     {lab.title}
                   </h3>
@@ -323,7 +322,7 @@ export default function InfrastructurePage() {
                 
                 {/* Bottom Accent */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 to-teal-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -332,7 +331,7 @@ export default function InfrastructurePage() {
       {/* Advanced Technologies */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -344,11 +343,11 @@ export default function InfrastructurePage() {
             <p className="text-gray-600 max-w-3xl mx-auto">
               Investing in cutting-edge technology to deliver consistent excellence and leading reliability
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {technologies.map((tech, index) => (
-              <motion.div
+              <div
                 key={tech.title}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -359,7 +358,7 @@ export default function InfrastructurePage() {
                 <div className="text-4xl md:text-5xl mb-4">{tech.icon}</div>
                 <h3 className="text-xl md:text-2xl font-bold mb-3">{tech.title}</h3>
                 <p className="text-teal-100 text-sm md:text-base leading-relaxed">{tech.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -368,7 +367,7 @@ export default function InfrastructurePage() {
       {/* Innovation at Our Core */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -377,11 +376,11 @@ export default function InfrastructurePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Innovation at Our Core
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {innovation.map((item, index) => (
-              <motion.div
+              <div
                 key={item.title}
                 initial={{ opacity: 0, x: index === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -405,7 +404,7 @@ export default function InfrastructurePage() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -414,15 +413,15 @@ export default function InfrastructurePage() {
       {/* CTA */}
       <section className="py-16 bg-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2
+          <h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
             Experience Our Capabilities
-          </motion.h2>
-          <motion.p
+          </h2>
+          <p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -430,8 +429,8 @@ export default function InfrastructurePage() {
             className="text-xl text-teal-100 mb-8"
           >
             Visit our facilities or schedule a virtual tour to see our world-class infrastructure in action
-          </motion.p>
-          <motion.div
+          </p>
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -444,7 +443,7 @@ export default function InfrastructurePage() {
             <Button to="/certifications" variant="outline">
               View Our Certifications
             </Button>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

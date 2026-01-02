@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import SubProductCard from '../components/SubProductCard';
 import Pagination from '../components/Pagination';
 import productsData from '../data/products.json';
@@ -61,7 +60,7 @@ export default function ProductDetailPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Image */}
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -50, scale: 0.95 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ 
@@ -88,10 +87,10 @@ export default function ProductDetailPage() {
                   Get Your Quote
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Content */}
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 50, scale: 0.95 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ 
@@ -129,7 +128,7 @@ export default function ProductDetailPage() {
                   </ul>
                 </div>
               )}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -140,7 +139,7 @@ export default function ProductDetailPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
               {product.sub_categories.map((category, index) => (
-                <motion.div
+                <div
                   key={category.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -166,7 +165,7 @@ export default function ProductDetailPage() {
                       ))}
                     </ul>
                   )}
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -176,7 +175,7 @@ export default function ProductDetailPage() {
       {/* Sub Products Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -188,7 +187,7 @@ export default function ProductDetailPage() {
             <p className="text-gray-600">
               Select any product to view detailed technical specifications
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {currentSubProducts.map((subProduct, index) => (
@@ -214,13 +213,13 @@ export default function ProductDetailPage() {
 
       {/* Technical Specifications Modal/Section */}
       {selectedSubProduct && (
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedSubProduct(null)}
         >
-          <motion.div
+          <div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
@@ -287,8 +286,8 @@ export default function ProductDetailPage() {
                 </button>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
     </div>
   );

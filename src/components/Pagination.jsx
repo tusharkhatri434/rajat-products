@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 export default function Pagination({ currentPage, totalPages, onPageChange }) {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
@@ -15,10 +13,10 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
       <button
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className={`p-2 rounded-md ${
+        className={`p-2 rounded-md transition-all duration-200 ${
           currentPage === 1
             ? 'text-gray-400 cursor-not-allowed'
-            : 'text-teal-600 hover:bg-teal-50'
+            : 'text-teal-600 hover:bg-teal-50 hover:scale-110'
         }`}
         aria-label="Previous page"
       >
@@ -30,19 +28,17 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
       {/* Page Numbers */}
       <div className="flex space-x-1">
         {pages.map((page) => (
-          <motion.button
+          <button
             key={page}
             onClick={() => handlePageChange(page)}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className={`w-10 h-10 rounded-md font-medium transition-all duration-200 ${
+            className={`w-10 h-10 rounded-md font-medium transition-all duration-200 hover:scale-110 active:scale-95 ${
               page === currentPage
                 ? 'bg-teal-600 text-white shadow-md'
                 : 'text-gray-700 hover:bg-gray-100'
             }`}
           >
             {page}
-          </motion.button>
+          </button>
         ))}
       </div>
 
@@ -50,10 +46,10 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
       <button
         onClick={() => handlePageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className={`p-2 rounded-md ${
+        className={`p-2 rounded-md transition-all duration-200 ${
           currentPage === totalPages
             ? 'text-gray-400 cursor-not-allowed'
-            : 'text-teal-600 hover:bg-teal-50'
+            : 'text-teal-600 hover:bg-teal-50 hover:scale-110'
         }`}
         aria-label="Next page"
       >
@@ -64,4 +60,3 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
     </div>
   );
 }
-

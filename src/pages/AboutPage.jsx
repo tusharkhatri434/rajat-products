@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import Button from '../components/Button';
 
 export default function AboutPage() {
@@ -115,7 +114,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative bg-teal-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -130,14 +129,14 @@ export default function AboutPage() {
                 Explore Products
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Three Decades Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -146,7 +145,7 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Three Decades of Metallurgical Mastery
             </h2>
-          </motion.div>
+          </div>
 
           <div className="prose prose-lg max-w-4xl mx-auto text-gray-600">
             <p className="mb-6">
@@ -170,7 +169,7 @@ export default function AboutPage() {
 
           {/* Mission and Vision */}
           <div className="grid md:grid-cols-2 gap-8 mt-16">
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -181,8 +180,8 @@ export default function AboutPage() {
                 To deliver world-class brazing and welding solutions by pioneering quality, consistency & precision,
                 empowering global industries with reliable, cutting-edge metallurgical excellence.
               </p>
-            </motion.div>
-            <motion.div
+            </div>
+            <div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -193,7 +192,7 @@ export default function AboutPage() {
                 To become the most trusted manufacturer globally, setting benchmarks in purity, innovation, and
                 sustainability, while shaping the future of metallurgical excellence in modern manufacturing ecosystems.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -201,7 +200,7 @@ export default function AboutPage() {
       {/* Journey Timeline */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -211,11 +210,11 @@ export default function AboutPage() {
               Our Journey through Years
             </h2>
             <p className="text-gray-600">Key milestones that shaped our company's growth & success</p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {timeline.map((item, index) => (
-              <motion.div
+              <div
                 key={item.year}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -234,7 +233,7 @@ export default function AboutPage() {
                     <p className="text-gray-600">{item.description}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -243,7 +242,7 @@ export default function AboutPage() {
       {/* Capabilities */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -253,11 +252,11 @@ export default function AboutPage() {
             <p className="text-gray-600 max-w-3xl mx-auto">
               Advanced facilities and expertise for designing top-quality solutions
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {capabilities.map((capability, index) => (
-              <motion.div
+              <div
                 key={capability.title}
                 initial={{ opacity: 0, y: 20, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -297,7 +296,7 @@ export default function AboutPage() {
                 
                 {/* Bottom Accent */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 to-teal-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -306,14 +305,14 @@ export default function AboutPage() {
       {/* Strategic Focus */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Strategic Focus</h2>
-          </motion.div>
+          </div>
 
           <div className="prose prose-lg max-w-4xl mx-auto text-gray-600 space-y-6">
             <p>
@@ -331,18 +330,18 @@ export default function AboutPage() {
       {/* Values */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {values.map((value, index) => (
-              <motion.div
+              <div
                 key={value.title}
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -357,7 +356,7 @@ export default function AboutPage() {
                 <div className="text-5xl mb-4">{value.icon}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{value.title}</h3>
                 <p className="text-gray-600 text-sm">{value.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -366,15 +365,15 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-16 bg-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2
+          <h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
             Ready to get started
-          </motion.h2>
-          <motion.div
+          </h2>
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -387,7 +386,7 @@ export default function AboutPage() {
             <Button to="/products" variant="outline">
               Get In Touch
             </Button>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import Button from '../components/Button';
 
 export default function CertificationsPage() {
@@ -107,7 +106,7 @@ export default function CertificationsPage() {
       {/* Hero Section */}
       <section className="relative bg-teal-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -119,14 +118,14 @@ export default function CertificationsPage() {
             <p className="text-xl text-teal-100 max-w-3xl mx-auto">
               Committed to international standards and meticulous quality control at every step
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Internationally Recognized Excellence */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -138,11 +137,11 @@ export default function CertificationsPage() {
             <p className="text-gray-600 max-w-3xl mx-auto">
               Our certifications demonstrate unwavering commitment to quality
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {certifications.map((cert, index) => (
-              <motion.div
+              <div
                 key={cert.title}
                 initial={{ opacity: 0, y: 20, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -159,13 +158,13 @@ export default function CertificationsPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-teal-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="relative z-10 flex items-start space-x-4">
-                  <motion.div 
+                  <div 
                     className="text-6xl"
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
                     {cert.icon}
-                  </motion.div>
+                  </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-teal-600 transition-colors">
                       {cert.title}
@@ -177,7 +176,7 @@ export default function CertificationsPage() {
                 
                 {/* Bottom Accent */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 to-teal-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -186,7 +185,7 @@ export default function CertificationsPage() {
       {/* International Standards Compliance */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -198,11 +197,11 @@ export default function CertificationsPage() {
             <p className="text-gray-600 max-w-3xl mx-auto">
               Our products meet and exceed global industry standards
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
             {standards.map((standard, index) => (
-              <motion.div
+              <div
                 key={standard.code}
                 initial={{ opacity: 0, y: 20, scale: 0.92 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -228,7 +227,7 @@ export default function CertificationsPage() {
                 </div>
                 <h3 className="font-bold text-gray-900 text-sm mb-1">{standard.full}</h3>
                 <p className="text-xs text-gray-600">{standard.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -237,7 +236,7 @@ export default function CertificationsPage() {
       {/* Our Quality Process */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -249,11 +248,11 @@ export default function CertificationsPage() {
             <p className="text-gray-600 max-w-3xl mx-auto">
               A systematic approach to quality that ensures every product meets the highest standards
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {qualityProcess.map((process, index) => (
-              <motion.div
+              <div
                 key={process.step}
                 initial={{ opacity: 0, y: 30, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -279,7 +278,7 @@ export default function CertificationsPage() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -288,7 +287,7 @@ export default function CertificationsPage() {
       {/* Our Quality Commitment */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -297,11 +296,11 @@ export default function CertificationsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Quality Commitment
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {commitments.map((commitment, index) => (
-              <motion.div
+              <div
                 key={commitment.title}
                 initial={{ opacity: 0, y: 30, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -325,7 +324,7 @@ export default function CertificationsPage() {
                 <div className="text-4xl md:text-5xl mb-4">{commitment.icon}</div>
                 <h3 className="text-lg md:text-xl font-bold mb-3">{commitment.title}</h3>
                 <p className="text-teal-100 text-xs md:text-sm leading-relaxed">{commitment.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -334,7 +333,7 @@ export default function CertificationsPage() {
       {/* Quality Assurance Statement */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -354,22 +353,22 @@ export default function CertificationsPage() {
             <p className="text-teal-700 font-medium italic">
               "Quality is never an accident; it is always the result of intelligent effort."
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-16 bg-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2
+          <h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
             Explore Our Products
-          </motion.h2>
-          <motion.p
+          </h2>
+          <p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -377,8 +376,8 @@ export default function CertificationsPage() {
             className="text-xl text-teal-100 mb-8"
           >
             Discover our comprehensive range of certified, high-quality brazing alloys
-          </motion.p>
-          <motion.div
+          </p>
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -387,7 +386,7 @@ export default function CertificationsPage() {
             <Button to="/products" variant="outline">
               View Product Range
             </Button>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

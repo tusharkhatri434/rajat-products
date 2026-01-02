@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 export default function Button({ 
   children, 
@@ -9,7 +8,7 @@ export default function Button({
   className = '',
   external = false 
 }) {
-  const baseStyles = 'px-6 py-3 rounded-md font-medium transition-all duration-300 inline-block text-center';
+  const baseStyles = 'px-6 py-3 rounded-md font-medium transition-all duration-300 inline-block text-center hover:scale-105 active:scale-95';
   
   const variants = {
     primary: 'bg-teal-600 text-white hover:bg-teal-700 shadow-md hover:shadow-lg',
@@ -19,19 +18,24 @@ export default function Button({
 
   const classes = `${baseStyles} ${variants[variant]} ${className}`;
 
-  const MotionComponent = motion(to ? Link : 'button');
+  if (to) {
+    return (
+      <Link
+        to={to}
+        className={classes}
+        {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+      >
+        {children}
+      </Link>
+    );
+  }
 
   return (
-    <MotionComponent
-      to={to}
+    <button
       onClick={onClick}
       className={classes}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      {...(external && { target: "_blank", rel: "noopener noreferrer" })}
     >
       {children}
-    </MotionComponent>
+    </button>
   );
 }
-

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import productsData from '../data/products.json';
@@ -81,10 +80,10 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-100 to-gray-200 py-20 overflow-hidden">
+      <section className="relative bg-linear-to-br from-gray-100 to-gray-200 py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <motion.h1
+            <h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -94,16 +93,16 @@ export default function HomePage() {
               <span className="text-teal-600">next gen silver alloys</span>
               <br />
               for demanding applications
-            </motion.h1>
-            <motion.p
+            </h1>
+            <p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
             >
               Delivering trusted brazing solutions since 1989
-            </motion.p>
-            <motion.div
+            </p>
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -115,7 +114,7 @@ export default function HomePage() {
               <Button to="/about" variant="secondary">
                 Learn More
               </Button>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -124,7 +123,7 @@ export default function HomePage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
+            <div
             initial={{ opacity: 0, x: -60, scale: 0.95 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -134,11 +133,11 @@ export default function HomePage() {
             }}
               className="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center text-white text-2xl sm:text-3xl md:text-4xl font-bold text-center px-4">
+              <div className="absolute inset-0 bg-linear-to-br from-teal-500 to-teal-700 flex items-center justify-center text-white text-2xl sm:text-3xl md:text-4xl font-bold text-center px-4">
                 Manufacturing Excellence
               </div>
-            </motion.div>
-            <motion.div
+            </div>
+            <div
             initial={{ opacity: 0, x: 60, scale: 0.95 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -159,7 +158,7 @@ export default function HomePage() {
               <Button to="/about" variant="primary">
                 Discover Our Story
               </Button>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -167,7 +166,7 @@ export default function HomePage() {
       {/* Industries We Serve */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -179,11 +178,11 @@ export default function HomePage() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Comprehensive range of brazing alloys tailored for specific industrial applications
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {industries.map((industry, index) => (
-              <motion.div
+              <div
                 key={industry.title}
               initial={{ opacity: 0, y: 30, scale: 0.93 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -205,23 +204,23 @@ export default function HomePage() {
                 className="group bg-teal-600 text-white p-4 md:p-6 rounded-2xl hover:bg-teal-700 transition-all duration-300 shadow-lg hover:shadow-2xl cursor-pointer border-2 border-transparent hover:border-teal-400 relative overflow-hidden"
               >
                 {/* Animated Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="relative z-10">
-                  <motion.div 
+                  <div 
                     className="text-3xl md:text-4xl mb-3"
                     animate={{ rotate: [0, 10, -10, 0] }}
                     transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
                   >
                     {industry.icon}
-                  </motion.div>
+                  </div>
                   <h3 className="text-lg md:text-xl font-bold mb-2">{industry.title}</h3>
                   <p className="text-teal-100 text-xs md:text-sm leading-relaxed">{industry.description}</p>
                 </div>
 
                 {/* Bottom Accent Line */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-teal-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -230,7 +229,7 @@ export default function HomePage() {
       {/* Why Choose Rajat Products */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -242,11 +241,11 @@ export default function HomePage() {
             <p className="text-gray-600 max-w-3xl mx-auto">
               At Rajat Products, we're dedicated to excellence in every aspect. Our cutting-edge technology and quality-driven approach ensure unmatched reliability and superior performance.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
             {whyChooseUs.map((item, index) => (
-              <motion.div
+              <div
                 key={item.title}
                 initial={{ opacity: 0, y: 20, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -258,28 +257,28 @@ export default function HomePage() {
                 }}
                 className="group text-center bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-teal-500 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <motion.div 
+                <div 
                   className="text-5xl mb-4"
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2, repeat: Infinity, repeatDelay: 3, delay: index * 0.2 }}
                 >
                   {item.icon}
-                </motion.div>
+                </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-teal-600 transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
                 
                 {/* Bottom Accent */}
-                <div className="mt-4 h-1 bg-gradient-to-r from-teal-500 to-teal-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              </motion.div>
+                <div className="mt-4 h-1 bg-linear-to-r from-teal-500 to-teal-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              </div>
             ))}
           </div>
 
           {/* Value Propositions */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mt-12 md:mt-16">
             {values.map((value, index) => (
-              <motion.div
+              <div
                 key={value.title}
                 initial={{ opacity: 0, y: 20, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -293,20 +292,20 @@ export default function HomePage() {
                 className="group bg-teal-600 text-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-teal-400 relative overflow-hidden"
               >
                 {/* Animated Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="relative z-10">
-                  <motion.div 
+                  <div 
                     className="text-5xl mb-4"
                     whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.2 }}
                     transition={{ duration: 0.5 }}
                   >
                     {value.icon}
-                  </motion.div>
+                  </div>
                   <h3 className="text-xl font-bold mb-3">{value.title}</h3>
                   <p className="text-teal-100 text-sm leading-relaxed">{value.description}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -315,15 +314,15 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-16 bg-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2
+          <h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
             Ready to Experience Excellence?
-          </motion.h2>
-          <motion.p
+          </h2>
+          <p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -331,8 +330,8 @@ export default function HomePage() {
             className="text-xl text-teal-100 mb-8"
           >
             Let's discuss how our premium brazing solutions can elevate your manufacturing processes
-          </motion.p>
-          <motion.div
+          </p>
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -341,7 +340,7 @@ export default function HomePage() {
             <Button to="/products" variant="outline">
               View Our Products
             </Button>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
