@@ -31,13 +31,13 @@ export default function Header() {
                 to={item.path}
                 className={`relative font-medium transition-colors duration-300 ${
                   isActive(item.path)
-                    ? 'text-teal-600'
-                    : 'text-gray-700 hover:text-teal-600'
+                    ? 'text-[#2C7596]'
+                    : 'text-gray-700 hover:text-[#2C7596]'
                 }`}
               >
                 {item.name}
                 {isActive(item.path) && (
-                  <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-teal-600"></span>
+                  <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-[#2C7596]"></span>
                 )}
               </Link>
             ))}
@@ -45,7 +45,7 @@ export default function Header() {
               href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20products."
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-all duration-300 font-medium inline-flex items-center hover:scale-105"
+              className="px-5 py-2 bg-[#2C7596] text-white rounded-md hover:bg-[#355a6d] transition-all duration-300 font-medium inline-flex items-center hover:scale-105"
             >
               Get Quote
             </a>
@@ -54,7 +54,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-teal-600 hover:bg-gray-100 focus:outline-none transition-colors duration-200"
+            className="md:hidden p-2 rounded-md text-gray-700 hover:text-[#2C7596] hover:bg-gray-100 focus:outline-none transition-colors duration-200"
           >
             <svg
               className="h-6 w-6"
@@ -95,7 +95,7 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
                 className={`block px-4 py-2 rounded-md font-medium transition-colors duration-300 ${
                   isActive(item.path)
-                    ? 'bg-teal-50 text-teal-600'
+                    ? 'bg-[#2C7596]/10 text-[#2C7596]'
                     : 'text-gray-700 hover:bg-gray-50'
                 }`}
               >
@@ -107,7 +107,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMenuOpen(false)}
-              className="block mx-4 px-5 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors duration-300 font-medium text-center"
+              className="block mx-4 px-5 py-2 bg-[#2C7596] text-white rounded-md hover:bg-[#355a6d] transition-colors duration-300 font-medium text-center"
             >
               Get Quote
             </a>

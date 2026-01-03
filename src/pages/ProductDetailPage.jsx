@@ -46,9 +46,9 @@ export default function ProductDetailPage() {
       <div className="bg-gray-50 py-4 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link to="/" className="hover:text-teal-600">Home</Link>
+            <Link to="/" className="hover:text-[#2C7596]">Home</Link>
             <span>/</span>
-            <Link to="/products" className="hover:text-teal-600">Products</Link>
+            <Link to="/products" className="hover:text-[#2C7596]">Products</Link>
             <span>/</span>
             <span className="text-gray-900 font-medium">{product.title}</span>
           </div>
@@ -82,7 +82,7 @@ export default function ProductDetailPage() {
                   href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20products."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-2 md:px-4 md:py-2 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-colors text-sm md:text-base shadow-lg inline-block"
+                  className="px-3 py-2 md:px-4 md:py-2 bg-[#2C7596] text-white rounded-lg font-medium hover:bg-[#1f5c7a] transition-colors text-sm md:text-base shadow-lg inline-block"
                 >
                   Get Your Quote
                 </a>
@@ -106,7 +106,7 @@ export default function ProductDetailPage() {
               {product.key_technical_features && (
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="font-bold text-gray-900 mb-4 flex items-center">
-                    <svg className="w-5 h-5 text-teal-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-5 h-5 text-[#2C7596] mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
                       <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
                     </svg>
@@ -115,7 +115,7 @@ export default function ProductDetailPage() {
                   <ul className="space-y-3">
                     {product.key_technical_features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-sm text-gray-700">
-                        <svg className="w-5 h-5 text-teal-600 mr-2 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-[#2C7596] mr-2 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                           <path
                             fillRule="evenodd"
                             d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -153,7 +153,7 @@ export default function ProductDetailPage() {
                     <ul className="space-y-2">
                       {category.key_technical_features.map((feature, idx) => (
                         <li key={idx} className="flex items-start text-sm text-gray-700">
-                          <svg className="w-5 h-5 text-teal-600 mr-2 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                          <svg className="w-5 h-5 text-[#2C7596] mr-2 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                             <path
                               fillRule="evenodd"
                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -281,7 +281,7 @@ export default function ProductDetailPage() {
                 >
                   Close
                 </button>
-                <button className="px-6 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors font-medium">
+                <button className="px-6 py-2 bg-[#2C7596] text-white rounded-md hover:bg-[#1f5c7a] transition-colors font-medium">
                   Request Quote
                 </button>
               </div>

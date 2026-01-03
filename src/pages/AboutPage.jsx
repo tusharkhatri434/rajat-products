@@ -1,31 +1,32 @@
 import Button from '../components/Button';
+import { FaAward, FaLightbulb, FaHandshake, FaLeaf } from 'react-icons/fa';
 
 export default function AboutPage() {
   const timeline = [
     {
-      year: '1989s',
-      title: 'Founded Metallurgical Excellence',
-      description: 'Rajat Products was established with a vision to deliver the highest quality brazing alloys'
+      year: '1948s',
+      title: 'Founded Maheshwari Industrial Corporation',
+      description: ''
     },
     {
       year: '2000',
-      title: 'International Expansion',
-      description: 'Expanded operations globally, serving clients across continents'
+      title: 'Pioneered silver and copper-phosphorus alloy formulations',
+      description: ''
     },
     {
       year: '2010',
-      title: 'ISO Certification & Advanced R&D',
-      description: 'Achieved ISO 9001:2015 & ISO 14001:2015 certifications, established state-of-the-art R&D facilities'
+      title: 'Achieved ISO 9001:2015 & ISO 14001:2015 certifications',
+      description: ''
     },
     {
       year: '2015',
-      title: 'Industry Leadership',
-      description: 'Recognized as a leading manufacturer with cutting-edge technology and innovation'
+      title: 'Expanded to comprehensive welding alloy solutions',
+      description: ''
     },
     {
       year: '2020+',
-      title: 'Sustainable Manufacturing',
-      description: 'Leading the transition to sustainable, eco-friendly manufacturing processes'
+      title: 'Established \'Everything in one place\' customer-centric approach',
+      description: ''
     }
   ];
 
@@ -88,31 +89,31 @@ export default function AboutPage() {
 
   const values = [
     {
-      icon: '✨',
+      icon: FaAward,
       title: 'Quality',
-      description: 'Never compromise on quality—deliver excellence in every alloy'
+      description: 'Never compromise on performance standards'
     },
     {
-      icon: '🌱',
+      icon: FaLightbulb,
       title: 'Innovation',
-      description: 'Constantly innovating metallurgical technology and formulations'
+      description: 'Constantly developing new materials and techniques'
     },
     {
-      icon: '🤝',
+      icon: FaHandshake,
       title: 'Integrity',
-      description: 'Transparent and ethical in all business dealings'
+      description: 'Transparent, ethical & customer-focused approach'
     },
     {
-      icon: '🌍',
+      icon: FaLeaf,
       title: 'Sustainability',
-      description: 'Committed to environmentally responsible manufacturing practices'
+      description: 'Commitment to environmentally responsible practices'
     }
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-teal-700 text-white py-20">
+      <section className="relative bg-[#1f5c7a] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             initial={{ opacity: 0, y: 30 }}
@@ -121,7 +122,7 @@ export default function AboutPage() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Rajat Products</h1>
-            <p className="text-xl text-teal-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
               Since the 1980s, we've been pioneering excellence in metallurgical solutions. Delivering world-class brazing alloys that set new standards in quality, consistency & reliability across metallurgical applications worldwide.
             </p>
             <div className="mt-8">
@@ -204,15 +205,91 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Journey through Years
             </h2>
-            <p className="text-gray-600">Key milestones that shaped our company's growth & success</p>
+            <p className="text-gray-600 text-lg">Key milestones that shaped our company's growth & success</p>
           </div>
 
-          <div className="space-y-6">
+          {/* Desktop Timeline */}
+          <div className="hidden lg:block relative py-12">
+            {/* Main Horizontal Line */}
+            <div className="absolute top-1/2 left-[8%] right-[8%] h-[3px] bg-[#5b8ca3] -translate-y-1/2"></div>
+            
+            {/* Timeline Container */}
+            <div className="relative">
+              {/* Top Row Cards */}
+              <div className="grid grid-cols-3 gap-8 mb-8 relative z-10">
+                {/* 1948s */}
+                <div className="relative">
+                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <h3 className="text-3xl font-bold mb-4 text-center">{timeline[0].year}</h3>
+                    <p className="text-white text-center leading-relaxed">
+                      {timeline[0].title}
+                    </p>
+                  </div>
+                  {/* Vertical connector down from card */}
+                  <div className="absolute left-1/2 -bottom-8 w-[3px] h-8 bg-[#5b8ca3] -translate-x-1/2"></div>
+                </div>
+
+                {/* 2010 */}
+                <div className="relative">
+                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <h3 className="text-3xl font-bold mb-4 text-center">{timeline[2].year}</h3>
+                    <p className="text-white text-center leading-relaxed">
+                      {timeline[2].title}
+                    </p>
+                  </div>
+                  {/* Vertical connector down from card */}
+                  <div className="absolute left-1/2 -bottom-8 w-[3px] h-8 bg-[#5b8ca3] -translate-x-1/2"></div>
+                </div>
+
+                {/* 2020+ */}
+                <div className="relative">
+                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <h3 className="text-3xl font-bold mb-4 text-center">{timeline[4].year}</h3>
+                    <p className="text-white text-center leading-relaxed">
+                      {timeline[4].title}
+                    </p>
+                  </div>
+                  {/* Vertical connector down from card */}
+                  <div className="absolute left-1/2 -bottom-8 w-[3px] h-8 bg-[#5b8ca3] -translate-x-1/2"></div>
+                </div>
+              </div>
+
+              {/* Bottom Row Cards (offset) */}
+              <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto mt-24 relative z-10">
+                {/* 2000 */}
+                <div className="relative">
+                  {/* Vertical connector up to card */}
+                  <div className="absolute left-1/2 -top-24 w-[3px] h-24 bg-[#5b8ca3] -translate-x-1/2"></div>
+                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <h3 className="text-3xl font-bold mb-4 text-center">{timeline[1].year}</h3>
+                    <p className="text-white text-center leading-relaxed">
+                      {timeline[1].title}
+                    </p>
+                  </div>
+                </div>
+
+                {/* 2015 */}
+                <div className="relative">
+                  {/* Vertical connector up to card */}
+                  <div className="absolute left-1/2 -top-24 w-[3px] h-24 bg-[#5b8ca3] -translate-x-1/2"></div>
+                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <h3 className="text-3xl font-bold mb-4 text-center">{timeline[3].year}</h3>
+                    <p className="text-white text-center leading-relaxed">
+                      {timeline[3].title}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile/Tablet Timeline */}
+          <div className="lg:hidden space-y-6">
             {timeline.map((item, index) => (
               <div
                 key={item.year}
@@ -220,19 +297,10 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                className="bg-[#4a7c92] text-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="flex flex-col md:flex-row md:items-center gap-4">
-                  <div className="md:w-32 flex-shrink-0">
-                    <span className="inline-block bg-teal-600 text-white px-4 py-2 rounded-full font-bold">
-                      {item.year}
-                    </span>
-                  </div>
-                  <div className="flex-grow">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                    <p className="text-gray-600">{item.description}</p>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-bold mb-3">{item.year}</h3>
+                <p className="text-white text-sm leading-relaxed">{item.title}</p>
               </div>
             ))}
           </div>
@@ -267,21 +335,21 @@ export default function AboutPage() {
                   scale: 1.02,
                   transition: { duration: 0.3 }
                 }}
-                className="group bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-teal-600 hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden"
+                className="group bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-[#2C7596] hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden"
               >
                 {/* Colored Left Border */}
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-teal-400 to-teal-600 transform scale-y-100 group-hover:scale-y-105 transition-transform duration-300"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#5aa3c5] to-[#2C7596] transform scale-y-100 group-hover:scale-y-105 transition-transform duration-300"></div>
                 
                 {/* Content */}
                 <div className="ml-4">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#2C7596] transition-colors">
                     {capability.title}
                   </h3>
                   <p className="text-gray-600 mb-4">{capability.description}</p>
                   <ul className="space-y-2">
                     {capability.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-700">
-                        <svg className="w-5 h-5 text-teal-600 mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-[#2C7596] mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                           <path
                             fillRule="evenodd"
                             d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -295,7 +363,7 @@ export default function AboutPage() {
                 </div>
                 
                 {/* Bottom Accent */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 to-teal-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#3d8aaf] to-[#5aa3c5] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
             ))}
           </div>
@@ -329,7 +397,7 @@ export default function AboutPage() {
 
       {/* Values */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -339,31 +407,38 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
-            {values.map((value, index) => (
-              <div
-                key={value.title}
-              initial={{ opacity: 0, y: 30, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ 
-                duration: 0.6,
-                ease: [0.25, 0.46, 0.45, 0.94],
-                delay: index * 0.08
-              }}
-              className="text-center"
-            >
-                <div className="text-5xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{value.title}</h3>
-                <p className="text-gray-600 text-sm">{value.description}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
+            {values.map((value, index) => {
+              const IconComponent = value.icon;
+              return (
+                <div
+                  key={value.title}
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ 
+                    duration: 0.6,
+                    ease: [0.25, 0.46, 0.45, 0.94],
+                    delay: index * 0.08
+                  }}
+                  className="text-center"
+                >
+                  <div className="flex justify-center mb-4">
+                    <div className="w-16 h-16 bg-[#4a7c92] rounded-lg flex items-center justify-center">
+                      <IconComponent className="text-3xl text-white" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-teal-600 text-white">
+      <section className="py-16 bg-[#2C7596] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2
             initial={{ opacity: 0, y: 30 }}

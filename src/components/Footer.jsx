@@ -61,7 +61,7 @@ export default function Footer() {
               </a>
               <a 
                 href="mailto:Rpalloys2000@gmail.com" 
-                className="text-gray-400 hover:text-teal-500 transition-colors"
+                className="text-gray-400 hover:text-[#2C7596] transition-colors"
                 aria-label="Email"
               >
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -72,7 +72,7 @@ export default function Footer() {
                 href="https://maps.app.goo.gl/5hiqGJCByr7hh73L8?g_st=ipc" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-teal-500 transition-colors"
+                className="text-gray-400 hover:text-[#2C7596] transition-colors"
                 aria-label="Location"
               >
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -90,7 +90,7 @@ export default function Footer() {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-gray-400 hover:text-teal-500 transition-colors text-sm"
+                    className="text-gray-400 hover:text-[#2C7596] transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -107,7 +107,7 @@ export default function Footer() {
                 <li key={category.path}>
                   <Link
                     to={category.path}
-                    className="text-gray-400 hover:text-teal-500 transition-colors text-sm"
+                    className="text-gray-400 hover:text-[#2C7596] transition-colors text-sm"
                   >
                     {category.name}
                   </Link>
@@ -137,7 +137,7 @@ export default function Footer() {
                     href="https://maps.app.goo.gl/5hiqGJCByr7hh73L8?g_st=ipc" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="hover:text-teal-500 transition-colors"
+                    className="hover:text-[#2C7596] transition-colors"
                   >
                     1, Mohkampur Industrial Complex,<br />
                     Phase - II, Rithani,<br />
@@ -157,7 +157,7 @@ export default function Footer() {
                   <span className="font-medium text-white">Email:</span><br />
                   <a 
                     href="mailto:Rpalloys2000@gmail.com"
-                    className="hover:text-teal-500 transition-colors"
+                    className="hover:text-[#2C7596] transition-colors"
                   >
                     Rpalloys2000@gmail.com
                   </a>
@@ -166,9 +166,9 @@ export default function Footer() {
               <div>
                 <p className="text-gray-400">
                   <span className="font-medium text-white">Phone:</span><br />
-                  <a href="tel:+919837065599" className="hover:text-teal-500 transition-colors">+91 98370 65599</a><br />
-                  <a href="tel:+919837002076" className="hover:text-teal-500 transition-colors">+91 98370 02076</a><br />
-                  <a href="tel:+919457815966" className="hover:text-teal-500 transition-colors">+91 94578 15966</a>
+                  <a href="tel:+919837065599" className="hover:text-[#2C7596] transition-colors">+91 98370 65599</a><br />
+                  <a href="tel:+919837002076" className="hover:text-[#2C7596] transition-colors">+91 98370 02076</a><br />
+                  <a href="tel:+919457815966" className="hover:text-[#2C7596] transition-colors">+91 94578 15966</a>
                 </p>
               </div>
               <div>
@@ -201,7 +201,7 @@ export default function Footer() {
                 {certifications.map((cert, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-gray-800 text-teal-500 text-xs font-medium rounded-full"
+                    className="px-3 py-1 bg-gray-800 text-[#2C7596] text-xs font-medium rounded-full"
                   >
                     {cert}
                   </span>
