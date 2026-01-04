@@ -134,30 +134,21 @@ export default function HomePage() {
             }}
               className="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl"
             >
-              <div className="absolute inset-0 bg-linear-to-br from-[#2C7596] to-[#355a6d] flex items-center justify-center text-white text-2xl sm:text-3xl md:text-4xl font-bold text-center px-4">
-                Manufacturing Excellence
+              <div className="w-full h-full flex items-center justify-center">
+                <img src="/homePage/home_img1.png" alt="Manufacturing Excellence" className="w-full h-full object-cover" />
               </div>
             </div>
-            <div
-            initial={{ opacity: 0, x: 60, scale: 0.95 }}
-            whileInView={{ opacity: 1, x: 0, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ 
-              duration: 0.8,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }}
-            >
+            <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Leading the Industry Since 1989
               </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                With over three decades of expertise, Rajat Products stands as a pioneer in manufacturing high-quality silver and copper phosphorus brazing alloys. We've set industry benchmarks for purity, consistency, and performance excellence.
+              <p className="text-gray-800 mb-6 leading-relaxed">
+                Located in Meerut's industrial hub, Rajat Products Pvt. Ltd. has been a trusted name in manufacturing high-quality silver and copper phosphorus brazing alloys, welding alloys and zari wire.
               </p>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                Our commitment to innovation and quality has made us the preferred choice for HVAC, refrigeration, electrical, and general manufacturing industries worldwide.
-              </p>
+              <p className="text-gray-800 mb-8 leading-relaxed">
+              When our customers are not aware of what alloy they might require for accomplishing their manufacturing, we are always there to assist them with our technical expertise.              </p>
               <Button to="/about" variant="primary">
-                Discover Our Story
+                Know more about us
               </Button>
             </div>
           </div>
@@ -181,7 +172,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
             {industries.map((industry, index) => {
               const IconComponent = industry.icon;
               return (
@@ -204,14 +195,16 @@ export default function HomePage() {
                       damping: 25
                     }
                   }}
-                  className="group bg-[#2C7596] text-white p-6 rounded-xl hover:bg-[#355a6d] transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer relative overflow-hidden"
+                  className="group bg-white p-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer"
                 >
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-4">
-                      <IconComponent className="text-3xl text-white" />
+                  <div className="text-center">
+                    <div className="flex justify-center mb-4">
+                      <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center">
+                        <IconComponent className="text-2xl text-white" />
+                      </div>
                     </div>
-                    <h3 className="text-lg font-bold mb-2">{industry.title}</h3>
-                    <p className="text-gray-200 text-sm leading-relaxed">{industry.description}</p>
+                    <h3 className="text-base font-bold text-gray-900 mb-2">{industry.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{industry.description}</p>
                   </div>
                 </div>
               );
@@ -235,18 +228,11 @@ export default function HomePage() {
               }}
               className="relative h-96 rounded-2xl overflow-hidden shadow-xl"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center text-white text-2xl font-bold text-center px-4">
-                Premium Brazing Materials
+                <div className="w-full h-full flex items-center justify-center">
+                <img src="/homePage/home_img2.png" alt="Why Choose Rajat Products" className="w-full h-full object-cover" />
               </div>
             </div>
             <div
-              initial={{ opacity: 0, x: 60, scale: 0.95 }}
-              whileInView={{ opacity: 1, x: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
-                duration: 0.8,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Why choose Rajat Products
@@ -334,7 +320,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#2C7596] text-white">
+      {/* <section className="py-16 bg-[#2C7596] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2
             initial={{ opacity: 0, y: 30 }}
@@ -364,7 +350,7 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

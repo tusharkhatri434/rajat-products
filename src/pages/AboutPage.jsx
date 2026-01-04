@@ -396,8 +396,8 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -405,9 +405,12 @@ export default function AboutPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              The principles that guide everything we do at Rajat Products
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {values.map((value, index) => {
               const IconComponent = value.icon;
               return (
@@ -421,14 +424,23 @@ export default function AboutPage() {
                     ease: [0.25, 0.46, 0.45, 0.94],
                     delay: index * 0.08
                   }}
-                  className="text-center"
+                  whileHover={{ 
+                    scale: 1.03, 
+                    y: -5,
+                    transition: { 
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 25
+                    }
+                  }}
+                  className="bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
                   <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 bg-[#4a7c92] rounded-lg flex items-center justify-center">
-                      <IconComponent className="text-3xl text-white" />
+                    <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center">
+                      <IconComponent className="text-2xl text-white" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{value.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
                 </div>
               );

@@ -250,7 +250,7 @@ export default function CertificationsPage() {
 
       {/* Our Quality Commitment */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -260,9 +260,12 @@ export default function CertificationsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Quality Commitment
             </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Dedicated to delivering excellence through expertise, documentation, and continuous improvement
+            </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {commitments.map((commitment, index) => (
               <div
                 key={commitment.title}
@@ -275,7 +278,7 @@ export default function CertificationsPage() {
                   delay: index * 0.08
                 }}
                 whileHover={{
-                  y: -8,
+                  y: -5,
                   scale: 1.03,
                   transition: {
                     type: "spring",
@@ -283,11 +286,15 @@ export default function CertificationsPage() {
                     damping: 25
                   }
                 }}
-                className="bg-[#2C7596] text-white p-6 md:p-8 rounded-2xl text-center shadow-lg cursor-pointer"
+                className="bg-white p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <div className="text-4xl md:text-5xl mb-4">{commitment.icon}</div>
-                <h3 className="text-lg md:text-xl font-bold mb-3">{commitment.title}</h3>
-                <p className="text-gray-100 text-xs md:text-sm leading-relaxed">{commitment.description}</p>
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center text-3xl">
+                    {commitment.icon}
+                  </div>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">{commitment.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{commitment.description}</p>
               </div>
             ))}
           </div>

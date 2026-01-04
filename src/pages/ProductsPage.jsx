@@ -43,7 +43,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Custom Alloy Solutions */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-12 opacity-0 animate-fade-in-up animation-delay-100">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
@@ -54,18 +54,20 @@ export default function ProductsPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {customSolutions.map((solution, index) => (
               <div
                 key={solution.title}
-                className="bg-[#2C7596] text-white p-6 md:p-8 rounded-2xl text-center shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer hover:-translate-y-2 opacity-0 animate-fade-in-up"
+                className="bg-white p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-2 opacity-0 animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="text-4xl md:text-5xl mb-4">
-                  {solution.icon}
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center text-3xl">
+                    {solution.icon}
+                  </div>
                 </div>
-                <h3 className="text-lg md:text-xl font-bold mb-3">{solution.title}</h3>
-                <p className="text-gray-100 text-sm leading-relaxed">{solution.description}</p>
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">{solution.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{solution.description}</p>
               </div>
             ))}
           </div>
