@@ -1,15 +1,13 @@
 import { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import SubProductCard from '../components/SubProductCard';
-import Pagination from '../components/Pagination';
 import productsData from '../data/products.json';
+import Button from '../components/Button';
 
 export default function ProductDetailPage() {
   const { productId } = useParams();
   const navigate = useNavigate();
-  const [currentPage, setCurrentPage] = useState(1);
   const [selectedSubProduct, setSelectedSubProduct] = useState(null);
-  const itemsPerPage = 8;
 
   // Find the product
   const product = productsData.products_page.major_products.find(p => p.id === productId);
@@ -29,21 +27,10 @@ export default function ProductDetailPage() {
     allSubProducts = product.sub_products;
   }
 
-  // Pagination logic
-  const totalPages = Math.ceil(allSubProducts.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentSubProducts = allSubProducts.slice(startIndex, endIndex);
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 400, behavior: 'smooth' });
-  };
-
   return (
     <div>
       {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4 border-b">
+      {/* <div className="bg-gray-50 py-4 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center space-x-2 text-sm text-gray-600">
             <Link to="/" className="hover:text-[#2C7596]">Home</Link>
@@ -53,41 +40,16 @@ export default function ProductDetailPage() {
             <span className="text-gray-900 font-medium">{product.title}</span>
           </div>
         </div>
+      </div> */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 flex justify-end">
+        <Button onClick={() => navigate('/products')} variant="primary">Back to Products</Button>
       </div>
 
       {/* Product Header */}
       <section className="py-12 bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Image */}
-            <div
-              initial={{ opacity: 0, x: -50, scale: 0.95 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ 
-                duration: 0.7,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}
-              className="relative h-64 sm:h-80 md:h-96 bg-linear-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center"
-            >
-              <img
-                src={`/images/${product.imgName}`}
-                alt={product.title}
-                className="w-full h-full object-contain p-6 md:p-8"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                }}
-              />
-              <div className="absolute top-4 right-4">
-                <a 
-                  href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20products."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3 py-2 md:px-4 md:py-2 bg-[#2C7596] text-white rounded-lg font-medium hover:bg-[#1f5c7a] transition-colors text-sm md:text-base shadow-lg inline-block"
-                >
-                  Get Your Quote
-                </a>
-              </div>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8">
+          
 
             {/* Content */}
             <div
@@ -128,6 +90,36 @@ export default function ProductDetailPage() {
                   </ul>
                 </div>
               )}
+            </div>
+
+              {/* Image */}
+              <div
+              initial={{ opacity: 0, x: -50, scale: 0.95 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ 
+                duration: 0.7,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}
+              className="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center"
+            >
+              <img
+                src={`/images/${product.imgName}`}
+                alt={product.title}
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                }}
+              />
+              <div className="absolute top-4 right-4">
+                <a 
+                  href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20products."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-2 md:px-4 md:py-2 bg-[#2C7596] text-white rounded-lg font-medium hover:bg-[#1f5c7a] transition-colors text-sm md:text-base shadow-lg inline-block"
+                >
+                  Get Your Quote
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -189,8 +181,8 @@ export default function ProductDetailPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {currentSubProducts.map((subProduct, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {allSubProducts.map((subProduct, index) => (
               <div
                 key={subProduct.id}
                 onClick={() => setSelectedSubProduct(subProduct)}
@@ -200,14 +192,6 @@ export default function ProductDetailPage() {
               </div>
             ))}
           </div>
-
-          {totalPages > 1 && (
-            <Pagination
-              currentPage={currentPage}
-              totalPages={totalPages}
-              onPageChange={handlePageChange}
-            />
-          )}
         </div>
       </section>
 
@@ -216,74 +200,94 @@ export default function ProductDetailPage() {
         <div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+            backgroundColor: 'rgba(0, 0, 0, 0.4)'
+          }}
           onClick={() => setSelectedSubProduct(null)}
         >
           <div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="sticky top-0 bg-white border-b p-6 flex justify-between items-center">
-              <h3 className="text-2xl font-bold text-gray-900">{selectedSubProduct.name}</h3>
+            <div className="sticky top-0 bg-white border-b-2 border-[#2C7596]/20 p-6 flex justify-between items-center rounded-t-2xl">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#2C7596]">{selectedSubProduct.name}</h3>
               <button
                 onClick={() => setSelectedSubProduct(null)}
                 className="p-2 hover:bg-gray-100 rounded-full transition-colors"
               >
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
 
-            <div className="p-6">
+            <div className="p-6 md:p-8">
               {selectedSubProduct.short_description && (
-                <p className="text-gray-600 mb-6">{selectedSubProduct.short_description}</p>
+                <p className="text-gray-600 mb-6 text-base leading-relaxed">{selectedSubProduct.short_description}</p>
               )}
 
               {selectedSubProduct.technical_specifications && (
                 <div className="overflow-x-auto">
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">
+                  <h4 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <svg className="w-6 h-6 text-[#2C7596] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
                     {selectedSubProduct.technical_specifications.table_title}
                   </h4>
-                  <table className="min-w-full divide-y divide-gray-200 border">
-                    <thead className="bg-gray-50">
-                      <tr>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border-r">
-                          Parameter
-                        </th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
-                          Value
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg-white divide-y divide-gray-200">
-                      {selectedSubProduct.technical_specifications.rows.map((row, idx) => (
-                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r">
-                            {row.parameter}
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
-                            {row.value}
-                          </td>
+                  <div className="bg-linear-to-br from-gray-50 to-white rounded-xl overflow-hidden border-2 border-gray-200">
+                    <table className="min-w-full">
+                      <thead>
+                        <tr className="bg-linear-to-r from-[#2C7596] to-[#3d8aaf]">
+                          <th className="px-4 md:px-6 py-4 text-left text-xs md:text-sm font-bold text-white uppercase tracking-wider">
+                            Parameter
+                          </th>
+                          <th className="px-4 md:px-6 py-4 text-left text-xs md:text-sm font-bold text-white uppercase tracking-wider">
+                            Value
+                          </th>
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                      </thead>
+                      <tbody>
+                        {selectedSubProduct.technical_specifications.rows.map((row, idx) => (
+                          <tr 
+                            key={idx} 
+                            className={`${
+                              idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'
+                            } hover:bg-[#2C7596]/5 transition-colors duration-150`}
+                          >
+                            <td className="px-4 md:px-6 py-4 text-sm md:text-base font-semibold text-gray-900 border-b border-gray-200">
+                              {row.parameter}
+                            </td>
+                            <td className="px-4 md:px-6 py-4 text-sm md:text-base text-gray-700 border-b border-gray-200">
+                              {row.value}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               )}
 
-              <div className="mt-6 flex justify-end space-x-4">
+              <div className="mt-8 flex flex-col sm:flex-row justify-end gap-3 sm:gap-4">
                 <button
                   onClick={() => setSelectedSubProduct(null)}
-                  className="px-6 py-2 border-2 border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors font-medium"
+                  className="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-300 font-medium"
                 >
                   Close
                 </button>
-                <button className="px-6 py-2 bg-[#2C7596] text-white rounded-md hover:bg-[#1f5c7a] transition-colors font-medium">
+                <a
+                  href="https://wa.me/919837053328?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20products."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-[#2C7596] text-white rounded-lg hover:bg-[#1f5c7a] transition-all duration-300 font-medium shadow-lg hover:shadow-xl text-center"
+                >
                   Request Quote
-                </button>
+                </a>
               </div>
             </div>
           </div>

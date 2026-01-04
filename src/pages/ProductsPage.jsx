@@ -92,7 +92,7 @@ export default function ProductsPage() {
                       <img
                         src={`/images/${product.imgName}`}
                         alt={product.title}
-                        className="w-full h-full object-contain p-6 transition-transform duration-300 group-hover:scale-105"
+                        className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
                         onError={(e) => {
                           e.target.style.display = 'none';
                         }}
@@ -223,7 +223,7 @@ export default function ProductsPage() {
               href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20request%20a%20consultation%20for%20custom%20brazing%20solutions."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 md:px-8 py-3 bg-white text-[#2C7596] rounded-lg hover:bg-[#2C7596]/10 transition-all duration-300 font-medium text-sm md:text-base shadow-lg hover:scale-105"
+              className="inline-flex items-center justify-center px-6 md:px-8 py-3 bg-white text-[#2C7596] rounded-lg hover:bg-[#2C7596]/10 hover:text-white hover:border-2 hover:border-white transition-all duration-300 font-medium text-sm md:text-base shadow-lg hover:scale-105"
             >
               Request Consultation
             </a>

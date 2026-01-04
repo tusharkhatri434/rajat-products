@@ -178,8 +178,7 @@ export default function AboutPage() {
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
-                To deliver world-class brazing and welding solutions by pioneering quality, consistency & precision,
-                empowering global industries with reliable, cutting-edge metallurgical excellence.
+              To deliver world-class brazing alloys that set new benchmarks in quality, consistency & reliability empowering industries to achieve robust & efficient metal joining solutions in every application.
               </p>
             </div>
             <div
@@ -190,8 +189,7 @@ export default function AboutPage() {
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
               <p className="text-gray-600 leading-relaxed">
-                To become the most trusted manufacturer globally, setting benchmarks in purity, innovation, and
-                sustainability, while shaping the future of metallurgical excellence in modern manufacturing ecosystems.
+              To become the most trusted and innovative global supplier of silver and copper-phosphorus brazing alloys, driving advancements in manufacturing, sustainability & metallurgical excellence for a better-connected world.
               </p>
             </div>
           </div>

@@ -8,7 +8,7 @@ export default function Button({
   className = '',
   external = false 
 }) {
-  const baseStyles = 'px-6 py-3 rounded-md font-medium transition-all duration-300 inline-block text-center hover:scale-105 active:scale-95';
+  const baseStyles = 'px-3 py-1 rounded-md font-medium transition-all duration-300 inline-block text-center hover:scale-105 active:scale-95';
   
   const variants = {
     primary: 'bg-[#2C7596] text-white hover:bg-[#355a6d] shadow-md hover:shadow-lg',

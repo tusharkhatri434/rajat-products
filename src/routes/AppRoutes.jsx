@@ -5,6 +5,7 @@ import ProductsPage from '../pages/ProductsPage';
 import ProductDetailPage from '../pages/ProductDetailPage';
 import InfrastructurePage from '../pages/InfrastructurePage';
 import CertificationsPage from '../pages/CertificationsPage';
+import ContactPage from '../pages/ContactPage';
 import NotFoundPage from '../pages/NotFoundPage';
 
 export default function AppRoutes() {
@@ -16,6 +17,7 @@ export default function AppRoutes() {
       <Route path="/products/:productId" element={<ProductDetailPage />} />
       <Route path="/infrastructure" element={<InfrastructurePage />} />
       <Route path="/certifications" element={<CertificationsPage />} />
+      <Route path="/contact" element={<ContactPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

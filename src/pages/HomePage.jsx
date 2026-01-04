@@ -113,7 +113,7 @@ export default function HomePage() {
                 Explore Products
               </Button>
               <Button to="/about" variant="secondary">
-                Learn More
+                Contact us
               </Button>
             </div>
           </div>

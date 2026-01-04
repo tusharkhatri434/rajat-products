@@ -234,7 +234,7 @@ export default function CertificationsPage() {
                 </div>
 
                 {/* Card */}
-                <div className="border border-gray-300 rounded-xl px-6 py-5 pl-10 bg-white hover:shadow-md transition-shadow duration-300">
+                <div className="h-full border border-gray-300 rounded-xl px-6 py-5 pl-10 bg-white hover:shadow-md transition-shadow duration-300">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {process.title}
                   </h3>

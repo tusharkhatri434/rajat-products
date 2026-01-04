@@ -7,20 +7,29 @@ a, button, [role="button"], .cursor-pointer {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
+  height: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f1f5f9;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0d9488;
-  border-radius: 5px;
+  background: linear-gradient(180deg, #2C7596 0%, #1f5c7a 100%);
+  border-radius: 10px;
+  border: 2px solid #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0f766e;
+  background: linear-gradient(180deg, #1f5c7a 0%, #1a4f65 100%);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2C7596 #f1f5f9;
 }
 
 /* Smooth scroll behavior */
@@ -86,7 +95,7 @@ img {
 
 /* Focus styles for accessibility */
 *:focus-visible {
-  outline: 2px solid #0d9488;
+  outline: 2px solid #2C7596;
   outline-offset: 2px;
 }
 

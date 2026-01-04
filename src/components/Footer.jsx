@@ -7,7 +7,8 @@ export default function Footer() {
     { name: 'About Us', path: '/about' },
     { name: 'Our Products', path: '/products' },
     { name: 'Certifications', path: '/certifications' },
-    { name: 'Infrastructure & Capabilities', path: '/infrastructure' }
+    { name: 'Infrastructure & Capabilities', path: '/infrastructure' },
+    { name: 'Contact Us', path: '/contact' }
   ];
 
   const products = [
@@ -35,20 +36,13 @@ export default function Footer() {
           <div className="lg:col-span-1">
             {/* Logo */}
             <div className="mb-6">
-              <div className="flex items-center space-x-3">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-linear-to-br from-[#2C7596] to-[#1e5a75] rounded-lg flex items-center justify-center">
-                    <div className="text-white font-bold">
-                      <span className="text-2xl">R</span>
-                      <span className="text-xl">P</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col leading-tight">
-                  <span className="text-xl font-bold text-gray-900 tracking-tight">RAJAT</span>
-                  <span className="text-sm font-semibold text-[#2C7596] tracking-wide">PRODUCTS</span>
-                </div>
-              </div>
+              <Link to="/" className="inline-block">
+                <img 
+                  src="/logo/image.png" 
+                  alt="Rajat Products" 
+                  className="max-h-15 w-auto object-contain hover:opacity-80 transition-opacity"
+                />
+              </Link>
             </div>
 
             {/* Company Description */}

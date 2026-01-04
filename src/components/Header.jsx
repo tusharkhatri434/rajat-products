@@ -11,7 +11,8 @@ export default function Header() {
     { name: 'About Us', path: '/about' },
     { name: 'Products', path: '/products' },
     { name: 'Infrastructure', path: '/infrastructure' },
-    { name: 'Certifications', path: '/certifications' }
+    { name: 'Certifications', path: '/certifications' },
+    { name: 'Contact Us', path: '/contact' }
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -41,14 +42,6 @@ export default function Header() {
                 )}
               </Link>
             ))}
-            <a
-              href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20products."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2 bg-[#2C7596] text-white rounded-md hover:bg-[#355a6d] transition-all duration-300 font-medium inline-flex items-center hover:scale-105"
-            >
-              Get Quote
-            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -102,15 +95,6 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <a
-              href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20products."
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setIsMenuOpen(false)}
-              className="block mx-4 px-5 py-2 bg-[#2C7596] text-white rounded-md hover:bg-[#355a6d] transition-colors duration-300 font-medium text-center"
-            >
-              Get Quote
-            </a>
           </div>
         </div>
       </nav>

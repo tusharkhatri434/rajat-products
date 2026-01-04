@@ -169,13 +169,18 @@
           }
         ]
       },
-
       {
   "id": "rp-silver",
   "title": "RP Silver",
   "imgName": "rp-silver-cadmium-free-alloy.png",
   "short_description": "Silver brazing alloys for strong, ductile, and leak-tight joints.",
   "description": "RP Silver brazing alloys consist of cadmium-free and cadmium-bearing Ag-Cu-Zn based filler metals designed to deliver excellent wetting, low brazing temperatures, and high joint strength. These alloys are widely used in HVAC, refrigeration, plumbing, electrical, medical, food, aeronautical, and general industrial applications.",
+  "key_technical_features": [
+    "No cadmium – avoiding toxic fume hazards and meeting RoHS and similar restrictions for food/medical and general industrial applications",
+    "Low brazing temperatures with good flow – Tin-modified grades such as Ag-56Sn types offer among the lowest melting ranges and excellent flow among cadmium-free families",
+    "Excellent capillary action and minimizing heat input to parts",
+    "Suitable for most steels, stainless steels, copper/brass/bronze and many nickel alloys"
+  ],
   "cta": {
     "label": "View Products",
     "route": "/products/rp-silver"

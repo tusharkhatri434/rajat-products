@@ -3,9 +3,10 @@ import { FaShieldAlt, FaMicroscope, FaFileAlt, FaCheckCircle } from 'react-icons
 
 export default function InfrastructurePage() {
   const stats = [
-    { value: '8,000+ MT', label: 'Annual Capacity' },
-    { value: '99%', label: 'Quality Compliance' },
-    { value: '24/7', label: 'Production Support' }
+    { value: '500+ MT', label: 'Annual Production' },
+    { value: '85%', label: 'Process Automation' },
+    { value: '50+', label: 'Skilled Professionals' },
+    {value: '99.9%', label: 'First Pass Yield'}
   ];
 
   const facilities = [
@@ -126,36 +127,52 @@ export default function InfrastructurePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-800 to-gray-900 text-white py-20">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#3d8aaf] to-transparent"></div>
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative min-h-[600px] flex items-center justify-center text-white py-20">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: 'url(/infra/banner.png)',
+            // filter: 'grayscale(100%)'
+          }}
+        />
+        
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/20"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Infrastructure & <span className="text-[#5aa3c5]">Capabilities</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Our modern, state-of-the-art facility combines cutting-edge technology with decades of metallurgical expertise to deliver consistent, high-quality brazing products at every scale
-            </p>
+            {/* Title Section with Glass Effect */}
+            <div className="bg-white/15 backdrop-blur-xs rounded-2xl px-8 py-10 mb-12 max-w-5xl mx-auto border border-white/20">
+              <p className="text-sm uppercase tracking-widest text-black mb-4">
+                World Class Facilities
+              </p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-black">
+                Infrastructure & <span className="text-[#5aa3c5]">Capabilities</span>
+              </h1>
+              <p className="text-lg text-black max-w-4xl mx-auto leading-relaxed">
+                Our modern manufacturing facility combines cutting-edge technology with decades of
+                metallurgical expertise to deliver brazing alloys of uncompromising quality.
+              </p>
+            </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
               {stats.map((stat, index) => (
                 <div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="text-center"
+                  className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
-                  <div className="text-4xl md:text-5xl font-bold text-[#5aa3c5] mb-2">{stat.value}</div>
-                  <div className="text-gray-300 text-sm uppercase tracking-wider">{stat.label}</div>
+                  <div className="text-3xl md:text-4xl font-bold text-black mb-2">{stat.value}</div>
+                  <div className="text-black text-xs md:text-sm uppercase tracking-wide">{stat.label}</div>
                 </div>
               ))}
             </div>
