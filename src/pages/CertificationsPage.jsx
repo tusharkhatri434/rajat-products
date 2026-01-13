@@ -125,7 +125,7 @@ export default function CertificationsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Internationally Recognized Excellence
             </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-600 text-base md:text-lg max-w-4xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
               Internationally recognized certifications that validate our commitment to quality & environmental responsibility
             </p>
           </motion.div>
@@ -202,7 +202,7 @@ export default function CertificationsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Quality Process
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
               A systematic approach to quality that ensures every product meets the highest standards
             </p>
           </motion.div>
@@ -261,15 +261,15 @@ export default function CertificationsPage() {
               <AnimatedCard
                 key={commitment.title}
                 index={index}
-                className="group bg-white p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group bg-[#2C7596] p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center text-3xl transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
-                    {commitment.icon}
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-3xl transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+                    <span className="text-white">{commitment.icon}</span>
                   </div>
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1f5c7a] transition-colors duration-300">{commitment.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{commitment.description}</p>
+                <h3 className="text-lg md:text-xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors duration-300">{commitment.title}</h3>
+                <p className="text-gray-100 text-sm leading-relaxed">{commitment.description}</p>
               </AnimatedCard>
             ))}
           </div>
@@ -294,8 +294,11 @@ export default function CertificationsPage() {
               />
             </svg>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Quality is Our Promise</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              At Rajat Products, quality assurance is not just a process—it's embedded in our DNA. Every product undergoes rigorous testing and verification to ensure it meets our exacting standards and exceeds your expectations.
+            </p>
             <p className="text-gray-700 leading-relaxed mb-6">
-              At Rajat Products, quality assurance is not just a process—it's embedded in our DNA. Every product undergoes rigorous testing and verification to ensure it meets our exacting standards and exceeds your expectations. Our commitment to excellence is backed by international certifications, state-of-the-art testing facilities, and decades of metallurgical expertise.
+              Our commitment to excellence is backed by international certifications, state-of-the-art testing facilities, and decades of metallurgical expertise.
             </p>
             <p className="text-[#1f5c7a] font-medium italic">
               "Quality is never an accident; it is always the result of intelligent effort."

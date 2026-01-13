@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
 import SubProductCard from '../components/SubProductCard';
 import productsData from '../data/products.json';
 import Button from '../components/Button';
@@ -7,7 +7,9 @@ import Button from '../components/Button';
 export default function ProductDetailPage() {
   const { productId } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const [selectedSubProduct, setSelectedSubProduct] = useState(null);
+  const [activeFilter, setActiveFilter] = useState('all');
 
   // Find the product
   const product = productsData.products_page.major_products.find(p => p.id === productId);
@@ -19,13 +21,39 @@ export default function ProductDetailPage() {
 
   // Handle subcategories (for RP Silver)
   let allSubProducts = [];
+  let cadmiumFreeProducts = [];
+  let cadmiumBearingProducts = [];
+  
   if (product.sub_categories) {
     product.sub_categories.forEach(category => {
+      if (category.id === 'rp-silver-cadmium-free') {
+        cadmiumFreeProducts = category.sub_products;
+      } else if (category.id === 'rp-silver-cadmium-bearing') {
+        cadmiumBearingProducts = category.sub_products;
+      }
       allSubProducts = [...allSubProducts, ...category.sub_products];
     });
   } else if (product.sub_products) {
     allSubProducts = product.sub_products;
   }
+
+  // Filter products based on active filter
+  const filteredProducts = 
+    activeFilter === 'cadmium-free' ? cadmiumFreeProducts :
+    activeFilter === 'cadmium-bearing' ? cadmiumBearingProducts :
+    allSubProducts;
+
+  // Handle hash navigation for RP Silver buttons
+  useEffect(() => {
+    if (productId === 'rp-silver' && location.hash) {
+      const hash = location.hash.replace('#', '');
+      if (hash === 'cadmium-free') {
+        setActiveFilter('cadmium-free');
+      } else if (hash === 'cadmium-bearing') {
+        setActiveFilter('cadmium-bearing');
+      }
+    }
+  }, [location.hash, productId]);
 
   return (
     <div>
@@ -62,7 +90,16 @@ export default function ProductDetailPage() {
               }}
             >
               <h1 className="text-4xl font-bold text-gray-900 mb-4">{product.title}</h1>
-              <p className="text-gray-600 mb-6 leading-relaxed">{product.description}</p>
+              
+              {/* Description Paragraphs */}
+              <div className="space-y-4 text-gray-600 mb-6 leading-relaxed">
+                {product.description.split('\n\n').map((paragraph, idx) => (
+                  <p key={idx}>{paragraph}</p>
+                ))}
+              </div>
+
+              {/* Divider with reduced opacity */}
+              <div className="border-t border-gray-300 opacity-30 my-6"></div>
 
               {/* Key Features */}
               {product.key_technical_features && (
@@ -176,13 +213,49 @@ export default function ProductDetailPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Available Products
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-600 mb-6">
               Select any product to view detailed technical specifications
             </p>
+
+            {/* Filter Buttons for RP Silver */}
+            {productId === 'rp-silver' && (
+              <div className="flex flex-wrap justify-center gap-3 mt-8">
+                <button
+                  onClick={() => setActiveFilter('all')}
+                  className={`px-6 py-2.5 rounded-lg font-medium transition-all duration-300 ${
+                    activeFilter === 'all'
+                      ? 'bg-[#2C7596] text-white shadow-lg'
+                      : 'bg-white text-[#2C7596] border-2 border-[#2C7596] hover:bg-[#2C7596]/10'
+                  }`}
+                >
+                  All RP Silver Alloys
+                </button>
+                <button
+                  onClick={() => setActiveFilter('cadmium-free')}
+                  className={`px-6 py-2.5 rounded-lg font-medium transition-all duration-300 ${
+                    activeFilter === 'cadmium-free'
+                      ? 'bg-[#2C7596] text-white shadow-lg'
+                      : 'bg-white text-[#2C7596] border-2 border-[#2C7596] hover:bg-[#2C7596]/10'
+                  }`}
+                >
+                  Cadmium Free Alloys
+                </button>
+                <button
+                  onClick={() => setActiveFilter('cadmium-bearing')}
+                  className={`px-6 py-2.5 rounded-lg font-medium transition-all duration-300 ${
+                    activeFilter === 'cadmium-bearing'
+                      ? 'bg-[#2C7596] text-white shadow-lg'
+                      : 'bg-white text-[#2C7596] border-2 border-[#2C7596] hover:bg-[#2C7596]/10'
+                  }`}
+                >
+                  Cadmium Bearing Alloys
+                </button>
+              </div>
+            )}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {allSubProducts.map((subProduct, index) => (
+            {filteredProducts.map((subProduct, index) => (
               <div
                 key={subProduct.id}
                 onClick={() => setSelectedSubProduct(subProduct)}
@@ -227,9 +300,17 @@ export default function ProductDetailPage() {
             </div>
 
             <div className="p-6 md:p-8">
+              {/* Description Paragraphs */}
               {selectedSubProduct.short_description && (
-                <p className="text-gray-600 mb-6 text-base leading-relaxed">{selectedSubProduct.short_description}</p>
+                <div className="space-y-4 text-gray-600 mb-6 text-base leading-relaxed">
+                  {selectedSubProduct.short_description.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+                </div>
               )}
+
+              {/* Divider with reduced opacity */}
+              <div className="border-t border-gray-300 opacity-30 my-6"></div>
 
               {selectedSubProduct.technical_specifications && (
                 <div className="overflow-x-auto">
@@ -239,14 +320,14 @@ export default function ProductDetailPage() {
                     </svg>
                     {selectedSubProduct.technical_specifications.table_title}
                   </h4>
-                  <div className="bg-linear-to-br from-gray-50 to-white rounded-xl overflow-hidden border-2 border-gray-200">
-                    <table className="min-w-full">
+                  <div className="bg-linear-to-br from-gray-50 to-white rounded-xl overflow-hidden border-2 border-gray-200 max-w-3xl mx-auto">
+                    <table className="w-full">
                       <thead>
                         <tr className="bg-linear-to-r from-[#2C7596] to-[#3d8aaf]">
-                          <th className="px-4 md:px-6 py-4 text-left text-xs md:text-sm font-bold text-white uppercase tracking-wider">
+                          <th className="px-3 md:px-4 py-3 text-left text-xs md:text-sm font-bold text-white uppercase tracking-wider w-1/2">
                             Parameter
                           </th>
-                          <th className="px-4 md:px-6 py-4 text-left text-xs md:text-sm font-bold text-white uppercase tracking-wider">
+                          <th className="px-3 md:px-4 py-3 text-left text-xs md:text-sm font-bold text-white uppercase tracking-wider w-1/2">
                             Value
                           </th>
                         </tr>
@@ -259,10 +340,10 @@ export default function ProductDetailPage() {
                               idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'
                             } hover:bg-[#2C7596]/5 transition-colors duration-150`}
                           >
-                            <td className="px-4 md:px-6 py-4 text-sm md:text-base font-semibold text-gray-900 border-b border-gray-200">
+                            <td className="px-3 md:px-4 py-3 text-xs md:text-sm font-semibold text-gray-900 border-b border-gray-200">
                               {row.parameter}
                             </td>
-                            <td className="px-4 md:px-6 py-4 text-sm md:text-base text-gray-700 border-b border-gray-200">
+                            <td className="px-3 md:px-4 py-3 text-xs md:text-sm text-gray-700 border-b border-gray-200">
                               {row.value}
                             </td>
                           </tr>

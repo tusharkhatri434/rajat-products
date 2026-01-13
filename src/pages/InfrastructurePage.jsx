@@ -246,7 +246,7 @@ export default function InfrastructurePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Testing Laboratories
             </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
               Comprehensive in-house testing facilities ensure every product meets stringent quality specifications.
             </p>
           </motion.div>

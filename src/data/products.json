@@ -9,7 +9,7 @@
         "title": "RP Phos",
         "imgName": "rp-phos.png",
         "short_description": "Copper–phosphorus brazing alloys for copper and copper–brass joints.",
-        "description": "RP Phos brazing alloys are filler metals formulated primarily for copper-to-copper and copper-to-brass joints. They are widely used in HVAC/R, plumbing, and electrical assemblies due to their excellent capillary flow and ability to create sound joints at relatively low brazing temperatures in air. Phosphorus enables self-fluxing on copper, while optional silver additions improve ductility, reduce melting range, and enhance gap-bridging and fillet formation.",
+        "description": "RP Phos brazing alloys are filler metals formulated primarily for copper-to-copper and copper-to-brass joints. They are widely used in HVAC/R, plumbing, and electrical assemblies due to their excellent capillary flow and ability to create sound joints at relatively low brazing temperatures in air.\n\nPhosphorus enables self-fluxing on copper, while optional silver additions improve ductility, reduce melting range, and enhance gap-bridging and fillet formation.",
         "key_technical_features": [
           "Typical tensile strength: 370–415 MPa",
           "Excellent capillary action for tight joint clearances",
@@ -174,7 +174,7 @@
   "title": "RP Silver",
   "imgName": "rp-silver-cadmium-free-alloy.png",
   "short_description": "Silver brazing alloys for strong, ductile, and leak-tight joints.",
-  "description": "RP Silver brazing alloys consist of cadmium-free and cadmium-bearing Ag-Cu-Zn based filler metals designed to deliver excellent wetting, low brazing temperatures, and high joint strength. These alloys are widely used in HVAC, refrigeration, plumbing, electrical, medical, food, aeronautical, and general industrial applications.",
+  "description": "RP Silver brazing alloys consist of cadmium-free and cadmium-bearing Ag-Cu-Zn based filler metals designed to deliver excellent wetting, low brazing temperatures, and high joint strength.\n\nThese alloys are widely used in HVAC, refrigeration, plumbing, electrical, medical, food, aeronautical, and general industrial applications.",
   "key_technical_features": [
     "No cadmium – avoiding toxic fume hazards and meeting RoHS and similar restrictions for food/medical and general industrial applications",
     "Low brazing temperatures with good flow – Tin-modified grades such as Ag-56Sn types offer among the lowest melting ranges and excellent flow among cadmium-free families",
@@ -202,6 +202,7 @@
         {
           "id": "rp-silver-25",
           "name": "RP SILVER 25",
+          "short_description": "Cost-effective cadmium-free alloy with good flow characteristics.\n\nIdeal for general-purpose brazing of ferrous and non-ferrous metals in HVAC and plumbing applications.",
           "technical_specifications": {
             "table_title": "Technical Specifications",
             "rows": [
@@ -221,6 +222,7 @@
         {
           "id": "rp-silver-30",
           "name": "RP SILVER 30",
+          "short_description": "Versatile alloy offering excellent wetting and capillary flow.\n\nSuitable for brazing copper, brass, and steel assemblies with moderate joint clearances.",
           "technical_specifications": {
             "table_title": "Technical Specifications",
             "rows": [
@@ -240,6 +242,7 @@
         {
           "id": "rp-silver-35",
           "name": "RP SILVER 35",
+          "short_description": "Higher silver content for improved ductility and joint strength.\n\nRecommended for applications requiring enhanced mechanical properties and corrosion resistance.",
           "technical_specifications": {
             "table_title": "Technical Specifications",
             "rows": [
@@ -836,7 +839,7 @@
   "title": "RP Copper",
   "imgName": "rp-copper.png",
   "short_description": "Copper and bronze welding alloys for high-quality, corrosion-resistant joints.",
-  "description": "RP Copper welding alloys are filler metals and consumables formulated to join pure copper and copper-based alloys while managing challenges such as high thermal conductivity, oxide formation, and porosity during welding operations. Bronze welding alloys, where tin, silicon, or aluminum are principal additions, are used to weld bronzes, brasses, steels for surfacing, and dissimilar joints with good corrosion resistance and aesthetic color matching.",
+  "description": "RP Copper welding alloys are filler metals and consumables formulated to join pure copper and copper-based alloys while managing challenges such as high thermal conductivity, oxide formation, and porosity during welding operations.\n\nBronze welding alloys, where tin, silicon, or aluminum are principal additions, are used to weld bronzes, brasses, steels for surfacing, and dissimilar joints with good corrosion resistance and aesthetic color matching.",
   "key_technical_features": [
     "Deoxidized fillers with silicon and manganese reduce porosity in oxygen-bearing copper",
     "Excellent corrosion resistance, especially with silicon bronze alloys",
@@ -850,10 +853,11 @@
   },
 
   "sub_products": [
-    {
-      "id": "rp-weld-92",
-      "name": "RP-WELD 92",
-      "technical_specifications": {
+        {
+          "id": "rp-weld-92",
+          "name": "RP-WELD 92",
+          "short_description": "Silicon bronze welding alloy with excellent corrosion resistance.\n\nIdeal for welding copper alloys, bronzes, and dissimilar metal joints in marine and industrial applications.",
+          "technical_specifications": {
         "table_title": "Technical Specifications",
         "rows": [
           { "parameter": "AWS Grade", "value": "ERCuSi-A" },
@@ -1045,7 +1049,7 @@
   "title": "RP Braze",
   "imgName": "rp-braze.png",
   "short_description": "Brass brazing alloys for strong, economical structural joints.",
-  "description": "RP Braze brass brazing alloys are copper–zinc filler metals used for high-temperature brazing and braze-welding of steels, copper alloys, cast irons, and carbide. They provide a cost-effective alternative to silver brazing alloys, offering excellent fillet formation, wider gap-bridging capability, and strong structural joints for fabrication and repair applications.",
+  "description": "RP Braze brass brazing alloys are copper–zinc filler metals used for high-temperature brazing and braze-welding of steels, copper alloys, cast irons, and carbide.\n\nThey provide a cost-effective alternative to silver brazing alloys, offering excellent fillet formation, wider gap-bridging capability, and strong structural joints for fabrication and repair applications.",
   "key_technical_features": [
     "Copper–zinc brass core system for strength and durability",
     "Modified with elements such as Ni, Si, Sn, or small Ag additions to improve wetting, color, and corrosion resistance",
@@ -1060,10 +1064,11 @@
   },
 
   "sub_products": [
-    {
-      "id": "rp-braze-90",
-      "name": "RP BRAZE 90",
-      "technical_specifications": {
+        {
+          "id": "rp-braze-90",
+          "name": "RP BRAZE 90",
+          "short_description": "High copper content brass alloy with excellent ductility.\n\nPerfect for applications requiring superior corrosion resistance and easy cold working properties.",
+          "technical_specifications": {
         "table_title": "Technical Specifications",
         "rows": [
           { "parameter": "ASTM Code", "value": "C 220" },

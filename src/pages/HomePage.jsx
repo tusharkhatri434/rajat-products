@@ -191,16 +191,16 @@ export default function HomePage() {
                 <AnimatedCard
                   key={industry.title}
                   index={index}
-                  className="group bg-white p-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer"
+                  className="group bg-[#2C7596] p-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer"
                 >
                   <div className="text-center">
                     <div className="flex justify-center mb-4">
-                      <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+                      <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
                         <IconComponent className="text-2xl text-white" />
                       </div>
                     </div>
-                    <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-[#2C7596] transition-colors duration-300">{industry.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{industry.description}</p>
+                    <h3 className="text-base font-bold text-white mb-2 group-hover:text-gray-100 transition-colors duration-300">{industry.title}</h3>
+                    <p className="text-gray-100 text-sm leading-relaxed">{industry.description}</p>
                   </div>
                 </AnimatedCard>
               );

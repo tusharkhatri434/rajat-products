@@ -125,7 +125,8 @@ export default function AboutPage() {
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Rajat Products</h1>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
-              Since the 1980s, we've been pioneering excellence in metallurgical solutions. Delivering world-class brazing alloys that set new standards in quality, consistency & reliability across metallurgical applications worldwide.
+              Since the 1980s, we've been pioneering excellence in metallurgical solutions.<br />
+              Delivering world-class brazing alloys that set new standards in quality, consistency & reliability across metallurgical applications worldwide.
             </p>
             <div className="mt-8">
               <Button to="/products" variant="outline">
@@ -407,15 +408,15 @@ export default function AboutPage() {
                 <AnimatedCard
                   key={value.title}
                   index={index}
-                  className="group bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  className="group bg-[#2C7596] p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
                   <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
                       <IconComponent className="text-2xl text-white" />
                     </div>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#1f5c7a] transition-colors duration-300">{value.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-gray-100 transition-colors duration-300">{value.title}</h3>
+                  <p className="text-gray-100 text-sm leading-relaxed">{value.description}</p>
                 </AnimatedCard>
               );
             })}
