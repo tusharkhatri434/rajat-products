@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import Button from '../components/Button';
+import AnimatedCard from '../components/AnimatedCard';
 import { FaShieldAlt, FaMicroscope, FaFileAlt, FaCheckCircle } from 'react-icons/fa';
 
 export default function InfrastructurePage() {
@@ -141,7 +143,7 @@ export default function InfrastructurePage() {
         <div className="absolute inset-0 bg-black/20"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -164,29 +166,31 @@ export default function InfrastructurePage() {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
               {stats.map((stat, index) => (
-                <div
+                <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                   className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
                   <div className="text-3xl md:text-4xl font-bold text-black mb-2">{stat.value}</div>
                   <div className="text-black text-xs md:text-sm uppercase tracking-wide">{stat.label}</div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Production Facilities */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -195,20 +199,17 @@ export default function InfrastructurePage() {
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               Our manufacturing infrastructure is designed for precision, efficiency & consistent quality output
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {facilities.map((facility, index) => (
-              <div
+              <AnimatedCard
                 key={facility.title}
-                initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 relative"
+                index={index}
+                className="group bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 relative"
               >
                 <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#2C7596] transition-colors duration-300">
                     {facility.title}
                   </h3>
                   <p className="text-gray-700 text-sm font-medium mb-4">{facility.subtitle}</p>
@@ -223,10 +224,10 @@ export default function InfrastructurePage() {
                 </div>
                 
                 {/* Shield Icon */}
-                <div className="absolute bottom-6 right-6">
+                <div className="absolute bottom-6 right-6 transition-transform duration-300 group-hover:scale-110">
                   <FaShieldAlt className="text-4xl text-gray-300" />
                 </div>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -235,10 +236,11 @@ export default function InfrastructurePage() {
       {/* Testing Laboratories */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -247,24 +249,17 @@ export default function InfrastructurePage() {
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               Comprehensive in-house testing facilities ensure every product meets stringent quality specifications.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {laboratories.map((lab, index) => (
-              <div
+              <AnimatedCard
                 key={lab.title}
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ 
-                  duration: 0.6,
-                  ease: [0.25, 0.46, 0.45, 0.94],
-                  delay: index * 0.08
-                }}
-                className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
+                index={index}
+                className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex justify-center mb-6">
-                  <div className="w-16 h-16 bg-[#4a7c92] rounded-lg flex items-center justify-center">
+                  <div className="w-16 h-16 bg-[#4a7c92] rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
                     <FaMicroscope className="text-3xl text-white" />
                   </div>
                 </div>
@@ -280,7 +275,7 @@ export default function InfrastructurePage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -289,10 +284,11 @@ export default function InfrastructurePage() {
       {/* Advanced Technologies */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -301,19 +297,18 @@ export default function InfrastructurePage() {
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               Leveraging cutting-edge technology to deliver superior brazing solutions.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
             {technologies.map((tech, index) => {
               const IconComponent = tech.icon;
               return (
-                <div
+                <AnimatedCard
                   key={tech.title}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  index={index}
                   className="flex items-start gap-6"
+                  disableHover={true}
+                  disableTap={true}
                 >
                   {/* Icon Box */}
                   <div className="flex-shrink-0">
@@ -327,7 +322,7 @@ export default function InfrastructurePage() {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{tech.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">{tech.description}</p>
                   </div>
-                </div>
+                </AnimatedCard>
               );
             })}
           </div>
@@ -337,26 +332,24 @@ export default function InfrastructurePage() {
       {/* Innovation at Our Core */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Innovation at Our Core
             </h2>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {innovation.map((item, index) => (
-              <div
+              <AnimatedCard
                 key={item.title}
-                initial={{ opacity: 0, x: index === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="bg-white p-8 rounded-lg border-2 border-gray-200"
+                index={index}
+                className="bg-white p-8 rounded-lg border-2 border-gray-200 shadow-md"
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
                 <p className="text-gray-600 mb-6">{item.description}</p>
@@ -374,7 +367,7 @@ export default function InfrastructurePage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -383,28 +376,29 @@ export default function InfrastructurePage() {
       {/* CTA */}
       <section className="py-16 bg-[#2C7596] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
             Experience Our Capabilities
-          </h2>
-          <p
+          </motion.h2>
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-100 mb-8"
           >
             Visit our facilities or schedule a virtual tour to see our world-class infrastructure in action
-          </p>
-          <div
+          </motion.p>
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-wrap gap-4 justify-center"
           >
             <Button to="/products" variant="outline">
@@ -413,10 +407,9 @@ export default function InfrastructurePage() {
             <Button to="/certifications" variant="outline">
               View Our Certifications
             </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
 }
-

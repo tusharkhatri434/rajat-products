@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import Button from '../components/Button';
+import AnimatedCard from '../components/AnimatedCard';
 import { FaAward, FaLightbulb, FaHandshake, FaLeaf } from 'react-icons/fa';
 
 export default function AboutPage() {
@@ -115,7 +117,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative bg-[#1f5c7a] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -130,23 +132,24 @@ export default function AboutPage() {
                 Explore Products
               </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Three Decades Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Three Decades of Metallurgical Mastery
             </h2>
-          </div>
+          </motion.div>
 
           <div className="prose prose-lg max-w-4xl mx-auto text-gray-600">
             <p className="mb-6">
@@ -170,28 +173,24 @@ export default function AboutPage() {
 
           {/* Mission and Vision */}
           <div className="grid md:grid-cols-2 gap-8 mt-16">
-            <div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 p-8 rounded-lg"
+            <AnimatedCard
+              index={0}
+              className="bg-gray-50 p-8 rounded-lg shadow-md"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
               To deliver world-class brazing alloys that set new benchmarks in quality, consistency & reliability empowering industries to achieve robust & efficient metal joining solutions in every application.
               </p>
-            </div>
-            <div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 p-8 rounded-lg"
+            </AnimatedCard>
+            <AnimatedCard
+              index={1}
+              className="bg-gray-50 p-8 rounded-lg shadow-md"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
               <p className="text-gray-600 leading-relaxed">
               To become the most trusted and innovative global supplier of silver and copper-phosphorus brazing alloys, driving advancements in manufacturing, sustainability & metallurgical excellence for a better-connected world.
               </p>
-            </div>
+            </AnimatedCard>
           </div>
         </div>
       </section>
@@ -199,17 +198,18 @@ export default function AboutPage() {
       {/* Journey Timeline */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Journey through Years
             </h2>
             <p className="text-gray-600 text-lg">Key milestones that shaped our company's growth & success</p>
-          </div>
+          </motion.div>
 
           {/* Desktop Timeline */}
           <div className="hidden lg:block relative py-12">
@@ -221,8 +221,8 @@ export default function AboutPage() {
               {/* Top Row Cards */}
               <div className="grid grid-cols-3 gap-8 mb-8 relative z-10">
                 {/* 1948s */}
-                <div className="relative">
-                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <AnimatedCard index={0} className="relative">
+                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg">
                     <h3 className="text-3xl font-bold mb-4 text-center">{timeline[0].year}</h3>
                     <p className="text-white text-center leading-relaxed">
                       {timeline[0].title}
@@ -230,11 +230,11 @@ export default function AboutPage() {
                   </div>
                   {/* Vertical connector down from card */}
                   <div className="absolute left-1/2 -bottom-8 w-[3px] h-8 bg-[#5b8ca3] -translate-x-1/2"></div>
-                </div>
+                </AnimatedCard>
 
                 {/* 2010 */}
-                <div className="relative">
-                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <AnimatedCard index={1} className="relative">
+                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg">
                     <h3 className="text-3xl font-bold mb-4 text-center">{timeline[2].year}</h3>
                     <p className="text-white text-center leading-relaxed">
                       {timeline[2].title}
@@ -242,11 +242,11 @@ export default function AboutPage() {
                   </div>
                   {/* Vertical connector down from card */}
                   <div className="absolute left-1/2 -bottom-8 w-[3px] h-8 bg-[#5b8ca3] -translate-x-1/2"></div>
-                </div>
+                </AnimatedCard>
 
                 {/* 2020+ */}
-                <div className="relative">
-                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <AnimatedCard index={2} className="relative">
+                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg">
                     <h3 className="text-3xl font-bold mb-4 text-center">{timeline[4].year}</h3>
                     <p className="text-white text-center leading-relaxed">
                       {timeline[4].title}
@@ -254,34 +254,34 @@ export default function AboutPage() {
                   </div>
                   {/* Vertical connector down from card */}
                   <div className="absolute left-1/2 -bottom-8 w-[3px] h-8 bg-[#5b8ca3] -translate-x-1/2"></div>
-                </div>
+                </AnimatedCard>
               </div>
 
               {/* Bottom Row Cards (offset) */}
               <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto mt-24 relative z-10">
                 {/* 2000 */}
-                <div className="relative">
+                <AnimatedCard index={3} className="relative">
                   {/* Vertical connector up to card */}
                   <div className="absolute left-1/2 -top-24 w-[3px] h-24 bg-[#5b8ca3] -translate-x-1/2"></div>
-                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg">
                     <h3 className="text-3xl font-bold mb-4 text-center">{timeline[1].year}</h3>
                     <p className="text-white text-center leading-relaxed">
                       {timeline[1].title}
                     </p>
                   </div>
-                </div>
+                </AnimatedCard>
 
                 {/* 2015 */}
-                <div className="relative">
+                <AnimatedCard index={4} className="relative">
                   {/* Vertical connector up to card */}
                   <div className="absolute left-1/2 -top-24 w-[3px] h-24 bg-[#5b8ca3] -translate-x-1/2"></div>
-                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg">
                     <h3 className="text-3xl font-bold mb-4 text-center">{timeline[3].year}</h3>
                     <p className="text-white text-center leading-relaxed">
                       {timeline[3].title}
                     </p>
                   </div>
-                </div>
+                </AnimatedCard>
               </div>
             </div>
           </div>
@@ -289,17 +289,14 @@ export default function AboutPage() {
           {/* Mobile/Tablet Timeline */}
           <div className="lg:hidden space-y-6">
             {timeline.map((item, index) => (
-              <div
+              <AnimatedCard
                 key={item.year}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="bg-[#4a7c92] text-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                index={index}
+                className="bg-[#4a7c92] text-white rounded-2xl p-6 shadow-lg"
               >
                 <h3 className="text-2xl font-bold mb-3">{item.year}</h3>
                 <p className="text-white text-sm leading-relaxed">{item.title}</p>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -308,31 +305,24 @@ export default function AboutPage() {
       {/* Capabilities */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Capabilities</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Advanced facilities and expertise for designing top-quality solutions
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {capabilities.map((capability, index) => (
-              <div
+              <AnimatedCard
                 key={capability.title}
-                initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ 
-                  y: -6,
-                  scale: 1.02,
-                  transition: { duration: 0.3 }
-                }}
+                index={index}
                 className="group bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-[#2C7596] hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden"
               >
                 {/* Colored Left Border */}
@@ -362,7 +352,7 @@ export default function AboutPage() {
                 
                 {/* Bottom Accent */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#3d8aaf] to-[#5aa3c5] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -371,14 +361,15 @@ export default function AboutPage() {
       {/* Strategic Focus */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Strategic Focus</h2>
-          </div>
+          </motion.div>
 
           <div className="prose prose-lg max-w-4xl mx-auto text-gray-600 space-y-6">
             <p>
@@ -396,51 +387,36 @@ export default function AboutPage() {
       {/* Values */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               The principles that guide everything we do at Rajat Products
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {values.map((value, index) => {
               const IconComponent = value.icon;
               return (
-                <div
+                <AnimatedCard
                   key={value.title}
-                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ 
-                    duration: 0.6,
-                    ease: [0.25, 0.46, 0.45, 0.94],
-                    delay: index * 0.08
-                  }}
-                  whileHover={{ 
-                    scale: 1.03, 
-                    y: -5,
-                    transition: { 
-                      type: "spring",
-                      stiffness: 400,
-                      damping: 25
-                    }
-                  }}
-                  className="bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  index={index}
+                  className="group bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
                   <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center">
+                    <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
                       <IconComponent className="text-2xl text-white" />
                     </div>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">{value.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#1f5c7a] transition-colors duration-300">{value.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
-                </div>
+                </AnimatedCard>
               );
             })}
           </div>
@@ -450,19 +426,20 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-16 bg-[#2C7596] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
             Ready to get started
-          </h2>
-          <div
+          </motion.h2>
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-wrap gap-4 justify-center"
           >
             <Button to="/infrastructure" variant="outline">
@@ -471,10 +448,9 @@ export default function AboutPage() {
             <Button to="/products" variant="outline">
               Get In Touch
             </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
 }
-

@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import Button from '../components/Button';
+import AnimatedCard from '../components/AnimatedCard';
 import { FaShieldAlt } from 'react-icons/fa';
 
 export default function CertificationsPage() {
@@ -94,7 +96,7 @@ export default function CertificationsPage() {
       {/* Hero Section */}
       <section className="relative bg-[#1f5c7a] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -106,17 +108,18 @@ export default function CertificationsPage() {
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
               Committed to international standards and meticulous quality control at every step
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Internationally Recognized Excellence */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -125,16 +128,13 @@ export default function CertificationsPage() {
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               Internationally recognized certifications that validate our commitment to quality & environmental responsibility
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {certifications.map((cert, index) => (
-              <div
+              <AnimatedCard
                 key={cert.title}
-                initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                index={index}
                 className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex flex-col items-center text-center">
@@ -147,7 +147,7 @@ export default function CertificationsPage() {
                   <p className="text-[#2C7596] font-medium mb-3">{cert.subtitle}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{cert.description}</p>
                 </div>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -156,10 +156,11 @@ export default function CertificationsPage() {
       {/* International Standards Compliance */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -168,28 +169,21 @@ export default function CertificationsPage() {
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               Our products meet and exceed global industry standards
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
             {standards.map((standard, index) => (
-              <div
+              <AnimatedCard
                 key={standard.code}
-                initial={{ opacity: 0, y: 20, scale: 0.92 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ 
-                  duration: 0.5,
-                  ease: [0.34, 1.56, 0.64, 1],
-                  delay: index * 0.06
-                }}
-                className="bg-white rounded-xl p-6 text-center border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
+                index={index}
+                className="group bg-white rounded-xl p-6 text-center border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-[#4a7c92] rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-[#4a7c92] rounded-lg flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
                   <FaShieldAlt className="text-3xl text-white" />
                 </div>
                 <h3 className="font-bold text-[#2C7596] text-xl mb-2">{standard.code}</h3>
                 <p className="text-sm text-gray-700 font-medium">{standard.full}</p>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -198,10 +192,11 @@ export default function CertificationsPage() {
       {/* Our Quality Process */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-14"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -210,21 +205,16 @@ export default function CertificationsPage() {
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               A systematic approach to quality that ensures every product meets the highest standards
             </p>
-          </div>
+          </motion.div>
 
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-14">
             {qualityProcess.map((process, index) => (
-              <div
+              <AnimatedCard
                 key={process.step}
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ 
-                  duration: 0.6,
-                  ease: [0.25, 0.46, 0.45, 0.94],
-                  delay: index * 0.08
-                }}
+                index={index}
                 className="relative"
+                disableHover={true}
+                disableTap={true}
               >
                 {/* Number Circle - positioned outside */}
                 <div className="absolute -left-6 top-1/2 -translate-y-1/2">
@@ -242,7 +232,7 @@ export default function CertificationsPage() {
                     {process.description}
                   </p>
                 </div>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -251,10 +241,11 @@ export default function CertificationsPage() {
       {/* Our Quality Commitment */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -263,39 +254,23 @@ export default function CertificationsPage() {
             <p className="text-gray-600 max-w-3xl mx-auto">
               Dedicated to delivering excellence through expertise, documentation, and continuous improvement
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {commitments.map((commitment, index) => (
-              <div
+              <AnimatedCard
                 key={commitment.title}
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ 
-                  duration: 0.6,
-                  ease: [0.34, 1.56, 0.64, 1],
-                  delay: index * 0.08
-                }}
-                whileHover={{
-                  y: -5,
-                  scale: 1.03,
-                  transition: {
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 25
-                  }
-                }}
-                className="bg-white p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                index={index}
+                className="group bg-white p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center text-3xl">
+                  <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center text-3xl transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
                     {commitment.icon}
                   </div>
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">{commitment.title}</h3>
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1f5c7a] transition-colors duration-300">{commitment.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{commitment.description}</p>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -304,10 +279,11 @@ export default function CertificationsPage() {
       {/* Quality Assurance Statement */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="bg-linear-to-br from-[#2C7596]/10 to-gray-50 rounded-lg p-8 md:p-12 text-center"
           >
             <svg className="w-16 h-16 text-[#2C7596] mx-auto mb-6" fill="currentColor" viewBox="0 0 20 20">
@@ -324,43 +300,43 @@ export default function CertificationsPage() {
             <p className="text-[#1f5c7a] font-medium italic">
               "Quality is never an accident; it is always the result of intelligent effort."
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-16 bg-[#2C7596] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
             Explore Our Products
-          </h2>
-          <p
+          </motion.h2>
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-100 mb-8"
           >
             Discover our comprehensive range of certified, high-quality brazing alloys
-          </p>
-          <div
+          </motion.p>
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Button to="/products" variant="outline">
               View Product Range
             </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
 }
-

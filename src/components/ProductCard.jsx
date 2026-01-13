@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
+import AnimatedCard from './AnimatedCard';
 
 export default function ProductCard({ product, index = 0 }) {
   return (
-    <div
-      className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 opacity-0 animate-fade-in-up hover:-translate-y-2"
-      style={{ animationDelay: `${index * 100}ms` }}
+    <AnimatedCard
+      index={index}
+      className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
     >
       {/* Image Container */}
       <div className="relative h-48 sm:h-56 md:h-64 bg-linear-to-br from-gray-800 to-gray-900 overflow-hidden">
@@ -43,6 +44,6 @@ export default function ProductCard({ product, index = 0 }) {
 
       {/* Bottom Accent Line */}
       <div className="h-1 bg-linear-to-r from-[#3d8aaf] to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-    </div>
+    </AnimatedCard>
   );
 }

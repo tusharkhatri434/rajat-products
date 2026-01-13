@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import Button from '../components/Button';
+import AnimatedCard from '../components/AnimatedCard';
 import productsData from '../data/products.json';
 import { FaIndustry, FaCar, FaOilCan, FaWind, FaBolt, FaCog, FaTrophy, FaCheckCircle, FaMicroscope, FaGlobe, FaShieldAlt } from 'react-icons/fa';
 
@@ -84,7 +86,7 @@ export default function HomePage() {
       <section className="relative bg-gradient-to-br from-gray-100 to-gray-200 py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1
+            <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -94,16 +96,16 @@ export default function HomePage() {
               <span className="text-[#2C7596]">next gen silver alloys</span>
               <br />
               for demanding applications
-            </h1>
-            <p
+            </motion.h1>
+            <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
             >
               Delivering trusted brazing solutions since 1989
-            </p>
-            <div
+            </motion.p>
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -115,7 +117,7 @@ export default function HomePage() {
               <Button to="/about" variant="secondary">
                 Contact us
               </Button>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -124,21 +126,30 @@ export default function HomePage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-            initial={{ opacity: 0, x: -60, scale: 0.95 }}
-            whileInView={{ opacity: 1, x: 0, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ 
-              duration: 0.8,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }}
+            <motion.div
+              initial={{ opacity: 0, x: -60, scale: 0.95 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ 
+                duration: 0.8,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}
               className="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl"
             >
               <div className="w-full h-full flex items-center justify-center">
                 <img src="/homePage/home_img1.png" alt="Manufacturing Excellence" className="w-full h-full object-cover" />
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ 
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Leading the Industry Since 1989
               </h2>
@@ -150,7 +161,7 @@ export default function HomePage() {
               <Button to="/about" variant="primary">
                 Know more about us
               </Button>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -158,10 +169,11 @@ export default function HomePage() {
       {/* Industries We Serve */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -170,43 +182,27 @@ export default function HomePage() {
             <p className="text-gray-600 max-w-3xl mx-auto">
               Comprehensive range of high-quality brazing alloys & specialized wires for diverse industrial applications.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
             {industries.map((industry, index) => {
               const IconComponent = industry.icon;
               return (
-                <div
+                <AnimatedCard
                   key={industry.title}
-                  initial={{ opacity: 0, y: 30, scale: 0.93 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ 
-                    duration: 0.6,
-                    ease: [0.34, 1.56, 0.64, 1],
-                    delay: index * 0.08
-                  }}
-                  whileHover={{ 
-                    scale: 1.03, 
-                    y: -5,
-                    transition: { 
-                      type: "spring",
-                      stiffness: 400,
-                      damping: 25
-                    }
-                  }}
+                  index={index}
                   className="group bg-white p-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer"
                 >
                   <div className="text-center">
                     <div className="flex justify-center mb-4">
-                      <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center">
+                      <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
                         <IconComponent className="text-2xl text-white" />
                       </div>
                     </div>
-                    <h3 className="text-base font-bold text-gray-900 mb-2">{industry.title}</h3>
+                    <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-[#2C7596] transition-colors duration-300">{industry.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">{industry.description}</p>
                   </div>
-                </div>
+                </AnimatedCard>
               );
             })}
           </div>
@@ -218,7 +214,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Section: Image + Text */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div
+            <motion.div
               initial={{ opacity: 0, x: -60, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -231,8 +227,16 @@ export default function HomePage() {
                 <div className="w-full h-full flex items-center justify-center">
                 <img src="/homePage/home_img2.png" alt="Why Choose Rajat Products" className="w-full h-full object-cover" />
               </div>
-            </div>
-            <div
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ 
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Why choose Rajat Products
@@ -254,7 +258,7 @@ export default function HomePage() {
                   <span>Modern facility with advanced production capabilities & on time order completion promises.</span>
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
 
           {/* Cards Section */}
@@ -262,28 +266,21 @@ export default function HomePage() {
             {whyChooseUs.map((item, index) => {
               const IconComponent = item.icon;
               return (
-                <div
+                <AnimatedCard
                   key={item.title}
-                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ 
-                    y: -5,
-                    transition: { duration: 0.3 }
-                  }}
+                  index={index}
                   className="group text-center bg-white p-6 rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300 cursor-pointer"
                 >
                   <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 bg-[#2C7596] rounded-full flex items-center justify-center">
+                    <div className="w-16 h-16 bg-[#2C7596] rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
                       <IconComponent className="text-2xl text-white" />
                     </div>
                   </div>
-                  <h3 className="text-base font-bold text-gray-900 mb-3">
+                  <h3 className="text-base font-bold text-gray-900 mb-3 group-hover:text-[#2C7596] transition-colors duration-300">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-                </div>
+                </AnimatedCard>
               );
             })}
           </div>
@@ -297,12 +294,20 @@ export default function HomePage() {
             {values.map((value, index) => {
               const IconComponent = value.icon;
               return (
-                <div
+                <motion.div
                   key={value.title}
-                  initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                  initial={{ opacity: 0, y: 40, scale: 0.95 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: index * 0.1,
+                    ease: [0.25, 0.46, 0.45, 0.94]
+                  }}
+                  whileHover={{
+                    scale: 1.05,
+                    transition: { duration: 0.3 }
+                  }}
                   className="text-center text-white"
                 >
                   <div className="flex justify-center mb-4">
@@ -312,7 +317,7 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-xl font-bold mb-3">{value.title}</h3>
                   <p className="text-gray-200 text-sm leading-relaxed">{value.description}</p>
-                </div>
+                </motion.div>
               );
             })}
           </div>

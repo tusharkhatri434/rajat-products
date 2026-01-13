@@ -1,8 +1,10 @@
+import AnimatedCard from './AnimatedCard';
+
 export default function SubProductCard({ subProduct, index = 0 }) {
   return (
-    <div
-      className="group bg-white rounded-xl border-2 border-gray-200 p-4 md:p-6 hover:border-[#3d8aaf] hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden opacity-0 animate-fade-in-up hover:-translate-y-1"
-      style={{ animationDelay: `${index * 60}ms` }}
+    <AnimatedCard
+      index={index}
+      className="group bg-white rounded-xl border-2 border-gray-200 p-4 md:p-6 hover:border-[#3d8aaf] hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden"
     >
       {/* Animated Background Gradient */}
       <div className="absolute inset-0 bg-linear-to-br from-[#2C7596]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -40,6 +42,6 @@ export default function SubProductCard({ subProduct, index = 0 }) {
 
       {/* Bottom accent line */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#3d8aaf] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-    </div>
+    </AnimatedCard>
   );
 }

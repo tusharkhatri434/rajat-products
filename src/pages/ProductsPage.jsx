@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import AnimatedCard from '../components/AnimatedCard';
 import productsData from '../data/products.json';
 
 export default function ProductsPage() {
@@ -33,42 +35,53 @@ export default function ProductsPage() {
       {/* Hero Section */}
       <section className="relative bg-[#1f5c7a] text-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Our Product Range</h1>
             <p className="text-base md:text-xl text-gray-100 max-w-3xl mx-auto">
               Comprehensive range of brazing alloys delivering exceptional performance for demanding industrial applications
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Custom Alloy Solutions */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 md:mb-12 opacity-0 animate-fade-in-up animation-delay-100">
+          <motion.div 
+            className="text-center mb-8 md:mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
               Custom Alloy Solutions
             </h2>
             <p className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto">
               Tailored brazing alloys & specialized formulations delivered precisely to meet unique manufacturing demands
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {customSolutions.map((solution, index) => (
-              <div
+              <AnimatedCard
                 key={solution.title}
-                className="bg-white p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-2 opacity-0 animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
+                index={index}
+                className="group bg-white p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center text-3xl">
+                  <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center text-3xl transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
                     {solution.icon}
                   </div>
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">{solution.title}</h3>
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1f5c7a] transition-colors duration-300">{solution.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{solution.description}</p>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -79,10 +92,11 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8 md:space-y-12">
             {majorProducts.map((product, index) => (
-              <div
+              <AnimatedCard
                 key={product.id}
-                className="bg-white rounded-3xl border-2 border-gray-200 p-6 md:p-8 lg:p-10 hover:border-gray-300 transition-all duration-300 opacity-0 animate-fade-in-up"
-                style={{ animationDelay: `${index * 150}ms` }}
+                index={index}
+                delay={index * 0.15}
+                className="group bg-white rounded-3xl border-2 border-gray-200 p-6 md:p-8 lg:p-10 hover:border-gray-300 transition-all duration-300"
               >
                 {/* Top Section: Image, Title, Description */}
                 <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 xl:gap-12 mb-6 lg:mb-8">
@@ -162,7 +176,7 @@ export default function ProductsPage() {
                     </div>
                   </div>
                 )}
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -171,40 +185,65 @@ export default function ProductsPage() {
       {/* Case Study */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 md:mb-12 opacity-0 animate-fade-in-up animation-delay-200">
+          <motion.div 
+            className="text-center mb-8 md:mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Real World Case Study
             </h2>
             <p className="text-sm md:text-base text-gray-600">
               How we solve real manufacturing challenges
             </p>
-          </div>
+          </motion.div>
 
           <div className="bg-linear-to-br from-[#2C7596]/10 to-gray-50 rounded-2xl p-6 md:p-8 lg:p-12">
             <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-              <div className="space-y-3 opacity-0 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+              <AnimatedCard 
+                index={0}
+                className="space-y-3 bg-transparent shadow-none"
+                disableHover={true}
+                disableTap={true}
+              >
                 <h3 className="text-lg md:text-xl font-bold text-gray-900">The Challenge</h3>
                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">{caseStudy.challenge}</p>
-              </div>
+              </AnimatedCard>
 
-              <div className="space-y-3 opacity-0 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+              <AnimatedCard 
+                index={1}
+                className="space-y-3 bg-transparent shadow-none"
+                disableHover={true}
+                disableTap={true}
+              >
                 <h3 className="text-lg md:text-xl font-bold text-gray-900">The Solution</h3>
                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">{caseStudy.solution}</p>
-              </div>
+              </AnimatedCard>
 
-              <div className="bg-[#2C7596] text-white p-6 rounded-xl space-y-3 opacity-0 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+              <AnimatedCard 
+                index={2}
+                className="bg-[#2C7596] text-white p-6 rounded-xl space-y-3 shadow-lg"
+              >
                 <h3 className="text-lg md:text-xl font-bold">Impact Achieved</h3>
                 <p className="text-sm md:text-base text-gray-100 leading-relaxed">{caseStudy.result}</p>
-              </div>
+              </AnimatedCard>
             </div>
 
-            <div className="mt-6 md:mt-8 text-center opacity-0 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+            <motion.div 
+              className="mt-6 md:mt-8 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               <div className="inline-block bg-white px-6 py-4 rounded-lg shadow-md border-l-4 border-[#2C7596]">
                 <p className="text-sm md:text-base text-gray-600">
                   <span className="font-bold text-[#2C7596]">"With Rajat's custom alloy solution,"</span> we've optimized our entire brazing process — reducing costs, improving quality, and accelerating time-to-market. Their technical team is an invaluable partner.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -212,28 +251,53 @@ export default function ProductsPage() {
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-[#2C7596] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 opacity-0 animate-fade-in-up">
+          <motion.h2 
+            className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             Need a Custom Solution?
-          </h2>
-          <p className="text-base md:text-xl text-gray-100 mb-6 md:mb-8 opacity-0 animate-fade-in-up animation-delay-100">
+          </motion.h2>
+          <motion.p 
+            className="text-base md:text-xl text-gray-100 mb-6 md:mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             Our R&D team is ready to develop the perfect brazing alloy for your specific application
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up animation-delay-200">
-            <a
+          </motion.p>
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <motion.a
               href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20request%20a%20consultation%20for%20custom%20brazing%20solutions."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 md:px-8 py-3 bg-white text-[#2C7596] rounded-lg hover:bg-[#2C7596]/10 hover:text-white hover:border-2 hover:border-white transition-all duration-300 font-medium text-sm md:text-base shadow-lg hover:scale-105"
+              className="inline-flex items-center justify-center px-6 md:px-8 py-3 bg-white text-[#2C7596] rounded-lg hover:bg-[#2C7596]/10 hover:text-white hover:border-2 hover:border-white transition-all duration-300 font-medium text-sm md:text-base shadow-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               Request Consultation
-            </a>
-            <Link
-              to="/about"
-              className="inline-flex items-center justify-center px-6 md:px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-[#2C7596] transition-all duration-300 font-medium text-sm md:text-base hover:scale-105"
+            </motion.a>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Learn More
-            </Link>
-          </div>
+              <Link
+                to="/about"
+                className="inline-flex items-center justify-center px-6 md:px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-[#2C7596] transition-all duration-300 font-medium text-sm md:text-base"
+              >
+                Learn More
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     </div>
