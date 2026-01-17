@@ -76,11 +76,15 @@ export default function ProductDetailPage() {
       {/* Product Header */}
       <section className="py-12 bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Product Title - Full Width */}
+          <div className="mb-8">
+            <h1 className="text-4xl font-bold text-gray-900">{product.title}</h1>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
-
-
-            {/* Content */}
+            {/* Content Source - Order 2 on mobile, Order 1 on desktop */}
             <div
+              className="order-2 md:order-1"
               initial={{ opacity: 0, x: 50, scale: 0.95 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{
@@ -89,8 +93,6 @@ export default function ProductDetailPage() {
                 delay: 0.2
               }}
             >
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">{product.title}</h1>
-
               {/* Description Paragraphs */}
               <div className="space-y-4 text-gray-600 mb-6 leading-relaxed">
                 {product.description.split('\n\n').map((paragraph, idx) => (
@@ -129,15 +131,15 @@ export default function ProductDetailPage() {
               )}
             </div>
 
-            {/* Image */}
+            {/* Image - Order 1 on mobile, Order 2 on desktop */}
             <div
+              className="order-1 md:order-2 relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center"
               initial={{ opacity: 0, x: -50, scale: 0.95 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{
                 duration: 0.7,
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
-              className="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center"
             >
               <img
                 src={`/images/${product.imgName}`}
@@ -152,7 +154,7 @@ export default function ProductDetailPage() {
                   href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20products."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-2 md:px-4 md:py-2 bg-primary text-white rounded-lg font-medium hover:bg-[#1f5c7a] transition-colors text-sm md:text-base shadow-lg inline-block"
+                  className="px-3 py-2 md:px-4 md:py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-colors text-sm md:text-base shadow-lg inline-block"
                 >
                   Get Your Quote
                 </a>
@@ -223,8 +225,8 @@ export default function ProductDetailPage() {
                 <button
                   onClick={() => setActiveFilter('all')}
                   className={`px-6 py-2.5 rounded-lg font-medium transition-all duration-300 ${activeFilter === 'all'
-                      ? 'bg-primary text-white shadow-lg'
-                      : 'bg-white text-primary border-2 border-primary hover:bg-primary/10'
+                    ? 'bg-primary text-white shadow-lg'
+                    : 'bg-white text-primary border-2 border-primary hover:bg-primary/10'
                     }`}
                 >
                   All RP Silver Alloys
@@ -232,8 +234,8 @@ export default function ProductDetailPage() {
                 <button
                   onClick={() => setActiveFilter('cadmium-free')}
                   className={`px-6 py-2.5 rounded-lg font-medium transition-all duration-300 ${activeFilter === 'cadmium-free'
-                      ? 'bg-primary text-white shadow-lg'
-                      : 'bg-white text-primary border-2 border-primary hover:bg-primary/10'
+                    ? 'bg-primary text-white shadow-lg'
+                    : 'bg-white text-primary border-2 border-primary hover:bg-primary/10'
                     }`}
                 >
                   Cadmium free alloy
@@ -241,8 +243,8 @@ export default function ProductDetailPage() {
                 <button
                   onClick={() => setActiveFilter('cadmium-bearing')}
                   className={`px-6 py-2.5 rounded-lg font-medium transition-all duration-300 ${activeFilter === 'cadmium-bearing'
-                      ? 'bg-primary text-white shadow-lg'
-                      : 'bg-white text-primary border-2 border-primary hover:bg-primary/10'
+                    ? 'bg-primary text-white shadow-lg'
+                    : 'bg-white text-primary border-2 border-primary hover:bg-primary/10'
                     }`}
                 >
                   Cadmium Bearing Alloys

@@ -8,15 +8,19 @@ export default function SubProductCard({ subProduct, index = 0 }) {
     >
       {/* Animated Background Gradient */}
       <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      
+
       {/* Corner Accent */}
-      <div 
+      <div
         className="absolute top-0 right-0 w-12 h-12 md:w-16 md:h-16 bg-[#3d8aaf] opacity-0 group-hover:opacity-10 transition-opacity duration-300"
         style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }}
       ></div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col h-full">
+        <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-2 min-h-[3.5rem]">
+          {subProduct.name}
+        </h3>
+
         {/* Icon Badge */}
         <div className="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center mb-2 md:mb-3 group-hover:bg-primary transition-all duration-300 group-hover:rotate-12">
           <svg className="w-4 h-4 md:w-6 md:h-6 text-primary group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
@@ -24,10 +28,6 @@ export default function SubProductCard({ subProduct, index = 0 }) {
           </svg>
         </div>
 
-        <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-2 min-h-[3.5rem]">
-          {subProduct.name}
-        </h3>
-        
         {subProduct.short_description && (
           <p className="text-gray-600 text-xs md:text-sm mb-3 md:mb-4 leading-relaxed line-clamp-3 flex-grow">
             {subProduct.short_description}

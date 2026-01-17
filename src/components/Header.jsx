@@ -5,6 +5,7 @@ import Logo from './Logo';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
+  const [isMobileProductsDropdownOpen, setIsMobileProductsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const location = useLocation();
 
@@ -54,8 +55,8 @@ export default function Header() {
                   <button
                     onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
                     className={`relative font-medium transition-colors duration-300 flex items-center ${isActive(item.path) || location.pathname.startsWith('/products/')
-                        ? 'text-primary'
-                        : 'text-gray-700 hover:text-primary'
+                      ? 'text-primary'
+                      : 'text-gray-700 hover:text-primary'
                       }`}
                   >
                     {item.name}
@@ -79,8 +80,8 @@ export default function Header() {
                           to={product.path}
                           onClick={() => setIsProductsDropdownOpen(false)}
                           className={`block px-4 py-2.5 text-sm font-medium transition-colors duration-200 ${isActive(product.path)
-                              ? 'text-primary bg-primary/10'
-                              : 'text-gray-700 hover:text-primary hover:bg-gray-50'
+                            ? 'text-primary bg-primary/10'
+                            : 'text-gray-700 hover:text-primary hover:bg-gray-50'
                             }`}
                         >
                           {product.name}
@@ -103,8 +104,8 @@ export default function Header() {
                   key={item.path}
                   to={item.path}
                   className={`relative font-medium transition-colors duration-300 ${isActive(item.path)
-                      ? 'text-primary'
-                      : 'text-gray-700 hover:text-primary'
+                    ? 'text-primary'
+                    : 'text-gray-700 hover:text-primary'
                     }`}
                 >
                   {item.name}
@@ -156,20 +157,20 @@ export default function Header() {
               item.hasDropdown ? (
                 <div key={item.path}>
                   <button
-                    onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
+                    onClick={() => setIsMobileProductsDropdownOpen(!isMobileProductsDropdownOpen)}
                     className={`w-full flex items-center justify-between px-4 py-2 rounded-md font-medium transition-colors duration-300 ${isActive(item.path) || location.pathname.startsWith('/products/')
-                        ? 'bg-primary/10 text-primary'
-                        : 'text-gray-700 hover:bg-gray-50'
+                      ? 'bg-primary/10 text-primary'
+                      : 'text-gray-700 hover:bg-gray-50'
                       }`}
                   >
                     <span>{item.name}</span>
-                    <svg className={`w-4 h-4 transition-transform duration-300 ${isProductsDropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className={`w-4 h-4 transition-transform duration-300 ${isMobileProductsDropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
 
                   {/* Mobile Dropdown */}
-                  {isProductsDropdownOpen && (
+                  {isMobileProductsDropdownOpen && (
                     <div className="ml-4 mt-2 space-y-1">
                       {productDropdownItems.map((product) => (
                         <Link
@@ -177,11 +178,11 @@ export default function Header() {
                           to={product.path}
                           onClick={() => {
                             setIsMenuOpen(false);
-                            setIsProductsDropdownOpen(false);
+                            setIsMobileProductsDropdownOpen(false);
                           }}
                           className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${isActive(product.path)
-                              ? 'bg-primary/10 text-primary'
-                              : 'text-gray-600 hover:bg-gray-50'
+                            ? 'bg-primary/10 text-primary'
+                            : 'text-gray-600 hover:bg-gray-50'
                             }`}
                         >
                           {product.name}
@@ -191,7 +192,7 @@ export default function Header() {
                         to="/products"
                         onClick={() => {
                           setIsMenuOpen(false);
-                          setIsProductsDropdownOpen(false);
+                          setIsMobileProductsDropdownOpen(false);
                         }}
                         className="block px-4 py-2 rounded-md text-sm font-medium text-primary hover:bg-gray-50 transition-colors duration-300"
                       >
@@ -206,8 +207,8 @@ export default function Header() {
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-4 py-2 rounded-md font-medium transition-colors duration-300 ${isActive(item.path)
-                      ? 'bg-primary/10 text-primary'
-                      : 'text-gray-700 hover:bg-gray-50'
+                    ? 'bg-primary/10 text-primary'
+                    : 'text-gray-700 hover:bg-gray-50'
                     }`}
                 >
                   {item.name}
