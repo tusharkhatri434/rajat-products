@@ -93,7 +93,7 @@ export default function HomePage() {
               className="text-3xl md:text-3xl lg:text-5xl font-bold text-gray-900 mb-6"
             >
               Where Purity meets{' '}
-              <span className="text-[#2C7596]">next gen silver alloys</span>
+              <span className="text-primary">next gen silver alloys</span>
               <br />
               for demanding applications
             </motion.h1>
@@ -191,7 +191,7 @@ export default function HomePage() {
                 <AnimatedCard
                   key={industry.title}
                   index={index}
-                  className="group bg-[#2C7596] p-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer"
+                  className="group bg-primary p-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer"
                 >
                   <div className="text-center">
                     <div className="flex justify-center mb-4">
@@ -246,15 +246,15 @@ export default function HomePage() {
               </p>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-[#2C7596] mr-2 mt-1">•</span>
+                  <span className="text-primary mr-2 mt-1">•</span>
                   <span>Proven track record and technical expertise since 1989.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#2C7596] mr-2 mt-1">•</span>
+                  <span className="text-primary mr-2 mt-1">•</span>
                   <span>Customer-focused innovation and reliability.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#2C7596] mr-2 mt-1">•</span>
+                  <span className="text-primary mr-2 mt-1">•</span>
                   <span>Modern facility with advanced production capabilities & on time order completion promises.</span>
                 </li>
               </ul>
@@ -272,11 +272,11 @@ export default function HomePage() {
                   className="group text-center bg-white p-6 rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300 cursor-pointer"
                 >
                   <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 bg-[#2C7596] rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
                       <IconComponent className="text-2xl text-white" />
                     </div>
                   </div>
-                  <h3 className="text-base font-bold text-gray-900 mb-3 group-hover:text-[#2C7596] transition-colors duration-300">
+                  <h3 className="text-base font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
@@ -288,7 +288,7 @@ export default function HomePage() {
       </section>
 
       {/* Value Propositions */}
-      <section className="py-16 bg-[#2C7596]">
+      <section className="py-16 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {values.map((value, index) => {
@@ -325,7 +325,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      {/* <section className="py-16 bg-[#2C7596] text-white">
+      {/* <section className="py-16 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2
             initial={{ opacity: 0, y: 30 }}

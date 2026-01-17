@@ -8,7 +8,7 @@ export default function InfrastructurePage() {
     { value: '500+ MT', label: 'Annual Production' },
     { value: '85%', label: 'Process Automation' },
     { value: '50+', label: 'Skilled Professionals' },
-    {value: '99.9%', label: 'First Pass Yield'}
+    { value: '99.9%', label: 'First Pass Yield' }
   ];
 
   const facilities = [
@@ -131,14 +131,14 @@ export default function InfrastructurePage() {
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center justify-center text-white py-20">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
+          style={{
             backgroundImage: 'url(/infra/banner.png)',
             // filter: 'grayscale(100%)'
           }}
         />
-        
+
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/20"></div>
 
@@ -209,7 +209,7 @@ export default function InfrastructurePage() {
                 className="group bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 relative"
               >
                 <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#2C7596] transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300">
                     {facility.title}
                   </h3>
                   <p className="text-gray-700 text-sm font-medium mb-4">{facility.subtitle}</p>
@@ -222,7 +222,7 @@ export default function InfrastructurePage() {
                     ))}
                   </ul>
                 </div>
-                
+
                 {/* Shield Icon */}
                 <div className="absolute bottom-6 right-6 transition-transform duration-300 group-hover:scale-110">
                   <FaShieldAlt className="text-4xl text-gray-300" />
@@ -246,7 +246,7 @@ export default function InfrastructurePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Testing Laboratories
             </h2>
-            <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
+            <p className="text-gray-600 text-base md:text-lg max-w-5xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
               Comprehensive in-house testing facilities ensure every product meets stringent quality specifications.
             </p>
           </motion.div>
@@ -259,11 +259,11 @@ export default function InfrastructurePage() {
                 className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex justify-center mb-6">
-                  <div className="w-16 h-16 bg-[#4a7c92] rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+                  <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
                     <FaMicroscope className="text-3xl text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#2C7596] mb-3 text-center">
+                <h3 className="text-xl font-bold text-primary mb-3 text-center">
                   {lab.title}
                 </h3>
                 <p className="text-gray-700 text-sm mb-6 text-center">{lab.description}</p>
@@ -312,11 +312,11 @@ export default function InfrastructurePage() {
                 >
                   {/* Icon Box */}
                   <div className="flex-shrink-0">
-                    <div className="w-24 h-24 bg-[#4a7c92] rounded-2xl flex items-center justify-center">
+                    <div className="w-24 h-24 bg-secondary rounded-2xl flex items-center justify-center">
                       <IconComponent className="text-4xl text-white" />
                     </div>
                   </div>
-                  
+
                   {/* Content */}
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{tech.title}</h3>
@@ -356,7 +356,7 @@ export default function InfrastructurePage() {
                 <ul className="grid grid-cols-2 gap-3">
                   {item.points.map((point, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-700">
-                      <svg className="w-4 h-4 text-[#2C7596] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"
                           d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -374,7 +374,7 @@ export default function InfrastructurePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#2C7596] text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}

@@ -9,7 +9,7 @@ export default function ProductsPage() {
   const customSolutions = [
     {
       icon: (
-        <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
@@ -18,7 +18,7 @@ export default function ProductsPage() {
     },
     {
       icon: (
-        <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
@@ -28,7 +28,7 @@ export default function ProductsPage() {
     },
     {
       icon: (
-        <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
@@ -48,14 +48,14 @@ export default function ProductsPage() {
       {/* Hero Section */}
       <section className="relative bg-[#1f5c7a] text-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Our Product Range</h1>
-            <p className="text-base md:text-xl text-gray-100 max-w-4xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
+            <p className="text-base md:text-xl text-gray-100 max-w-5xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
               Comprehensive range of brazing alloys delivering exceptional performance for demanding industrial applications
             </p>
           </motion.div>
@@ -65,7 +65,7 @@ export default function ProductsPage() {
       {/* Custom Alloy Solutions */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-8 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export default function ProductsPage() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
               Custom Alloy Solutions
             </h2>
-            <p className="text-sm md:text-base text-gray-600 max-w-4xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
+            <p className="text-sm md:text-base text-gray-600 max-w-5xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
               Tailored brazing alloys & specialized formulations delivered precisely to meet unique manufacturing demands
             </p>
           </motion.div>
@@ -88,7 +88,7 @@ export default function ProductsPage() {
                 className="group bg-white p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-[#2C7596] rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
                     {solution.icon}
                   </div>
                 </div>
@@ -146,7 +146,7 @@ export default function ProductsPage() {
                       <div className="flex flex-wrap gap-3 mt-6">
                         <Link
                           to="/products/rp-silver#cadmium-free"
-                          className="inline-flex items-center px-6 py-2.5 bg-[#2C7596] text-white rounded-lg hover:bg-[#1f5c7a] transition-all duration-300 font-medium shadow-md hover:shadow-lg text-sm"
+                          className="inline-flex items-center px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-[#1f5c7a] transition-all duration-300 font-medium shadow-md hover:shadow-lg text-sm"
                         >
                           Cadmium Free Alloy
                           <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -155,7 +155,7 @@ export default function ProductsPage() {
                         </Link>
                         <Link
                           to="/products/rp-silver#cadmium-bearing"
-                          className="inline-flex items-center px-6 py-2.5 bg-white text-[#2C7596] border-2 border-[#2C7596] rounded-lg hover:bg-[#2C7596] hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg text-sm"
+                          className="inline-flex items-center px-6 py-2.5 bg-white text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg text-sm"
                         >
                           Cadmium Bearing Alloy
                           <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -174,7 +174,7 @@ export default function ProductsPage() {
                       {/* Features - Takes More Space */}
                       <div className="flex-1">
                         <h3 className="text-xl md:text-2xl font-bold text-[#1f5c7a] mb-4 flex items-center">
-                          <svg className="w-6 h-6 mr-2 text-[#2C7596]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <svg className="w-6 h-6 mr-2 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                           </svg>
                           Features:
@@ -182,7 +182,7 @@ export default function ProductsPage() {
                         <ul className="grid md:grid-cols-2 gap-3">
                           {product.key_technical_features.map((feature, idx) => (
                             <li key={idx} className="flex items-start text-gray-700 text-[15px] md:text-base">
-                              <svg className="w-5 h-5 text-[#2C7596] mr-2 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                              <svg className="w-5 h-5 text-primary mr-2 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                               </svg>
                               <span>{feature}</span>
@@ -215,7 +215,7 @@ export default function ProductsPage() {
       {/* Case Study */}
       <section className="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-8 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -233,7 +233,7 @@ export default function ProductsPage() {
           <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
             <div className="grid md:grid-cols-3">
               {/* Challenge */}
-              <AnimatedCard 
+              <AnimatedCard
                 index={0}
                 className="p-6 md:p-8 bg-white border-r border-gray-200"
                 disableHover={true}
@@ -251,7 +251,7 @@ export default function ProductsPage() {
               </AnimatedCard>
 
               {/* Solution */}
-              <AnimatedCard 
+              <AnimatedCard
                 index={1}
                 className="p-6 md:p-8 bg-white border-r border-gray-200"
                 disableHover={true}
@@ -269,9 +269,9 @@ export default function ProductsPage() {
               </AnimatedCard>
 
               {/* Impact */}
-              <AnimatedCard 
+              <AnimatedCard
                 index={2}
-                className="p-6 md:p-8 bg-gradient-to-br from-[#2C7596] to-[#1f5c7a] text-white"
+                className="p-6 md:p-8 bg-gradient-to-br from-primary to-[#1f5c7a] text-white"
                 disableHover={true}
                 disableTap={true}
               >
@@ -288,7 +288,7 @@ export default function ProductsPage() {
             </div>
 
             {/* Testimonial */}
-            <motion.div 
+            <motion.div
               className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 md:p-8 border-t border-gray-200"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -296,14 +296,14 @@ export default function ProductsPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <div className="flex items-start max-w-4xl mx-auto">
-                <svg className="w-8 h-8 text-[#2C7596] mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                <svg className="w-8 h-8 text-primary mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
                 <div>
                   <p className="text-sm md:text-base text-gray-700 italic leading-relaxed mb-3">
                     "With Rajat's custom alloy solution, we've optimized our entire brazing process — reducing costs, improving quality, and accelerating time-to-market. Their technical team is an invaluable partner."
                   </p>
-                  <p className="text-sm font-semibold text-[#2C7596]">— Manufacturing Director, Global HVAC Leader</p>
+                  <p className="text-sm font-semibold text-primary">— Manufacturing Director, Global HVAC Leader</p>
                 </div>
               </div>
             </motion.div>
@@ -312,9 +312,9 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 bg-[#2C7596] text-white">
+      <section className="py-12 md:py-16 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2 
+          <motion.h2
             className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -323,7 +323,7 @@ export default function ProductsPage() {
           >
             Need a Custom Solution?
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-base md:text-xl text-gray-100 mb-6 md:mb-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -332,7 +332,7 @@ export default function ProductsPage() {
           >
             Our R&D team is ready to develop the perfect brazing alloy for your specific application
           </motion.p>
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -343,7 +343,7 @@ export default function ProductsPage() {
               href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20request%20a%20consultation%20for%20custom%20brazing%20solutions."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 md:px-8 py-3 bg-white text-[#2C7596] rounded-lg hover:bg-[#2C7596]/10 hover:text-white hover:border-2 hover:border-white transition-all duration-300 font-medium text-sm md:text-base shadow-lg"
+              className="inline-flex items-center justify-center px-6 md:px-8 py-3 bg-white text-primary rounded-lg hover:bg-primary/10 hover:text-white hover:border-2 hover:border-white transition-all duration-300 font-medium text-sm md:text-base shadow-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -355,7 +355,7 @@ export default function ProductsPage() {
             >
               <Link
                 to="/about"
-                className="inline-flex items-center justify-center px-6 md:px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-[#2C7596] transition-all duration-300 font-medium text-sm md:text-base"
+                className="inline-flex items-center justify-center px-6 md:px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-primary transition-all duration-300 font-medium text-sm md:text-base"
               >
                 Learn More
               </Link>

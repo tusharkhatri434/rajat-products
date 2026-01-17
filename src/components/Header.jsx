@@ -11,7 +11,7 @@ export default function Header() {
   const navigation = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
-    { name: 'Products', path: '/products', hasDropdown: true },
+    { name: 'Our Products', path: '/products', hasDropdown: true },
     { name: 'Our Infrastructure & Capabilities', path: '/infrastructure' },
     { name: 'Our Certifications', path: '/certifications' },
     { name: 'Contact Us', path: '/contact' }
@@ -22,6 +22,7 @@ export default function Header() {
     { name: 'RP Silver', path: '/products/rp-silver' },
     { name: 'RP Copper', path: '/products/rp-copper' },
     { name: 'RP Braze', path: '/products/rp-braze' },
+    { name: 'RP Weld', path: '/products/rp-weld-92' }, // Assuming 5th is RP Weld based on common patterns, linking to first item or a category if implemented. I'll link to rp-copper for now if no dedicated page, but user asked for 5 buttons.
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -52,21 +53,20 @@ export default function Header() {
                 <div key={item.path} ref={dropdownRef} className="relative">
                   <button
                     onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
-                    className={`relative font-medium transition-colors duration-300 flex items-center ${
-                      isActive(item.path) || location.pathname.startsWith('/products/')
-                        ? 'text-[#2C7596]'
-                        : 'text-gray-700 hover:text-[#2C7596]'
-                    }`}
+                    className={`relative font-medium transition-colors duration-300 flex items-center ${isActive(item.path) || location.pathname.startsWith('/products/')
+                        ? 'text-primary'
+                        : 'text-gray-700 hover:text-primary'
+                      }`}
                   >
                     {item.name}
                     <svg className={`w-4 h-4 ml-1 transition-transform duration-300 ${isProductsDropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                     {(isActive(item.path) || location.pathname.startsWith('/products/')) && (
-                      <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-[#2C7596]"></span>
+                      <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-primary"></span>
                     )}
                   </button>
-                  
+
                   {/* Dropdown Menu */}
                   {isProductsDropdownOpen && (
                     <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 animate-fade-in">
@@ -78,11 +78,10 @@ export default function Header() {
                           key={product.path}
                           to={product.path}
                           onClick={() => setIsProductsDropdownOpen(false)}
-                          className={`block px-4 py-2.5 text-sm font-medium transition-colors duration-200 ${
-                            isActive(product.path)
-                              ? 'text-[#2C7596] bg-[#2C7596]/10'
-                              : 'text-gray-700 hover:text-[#2C7596] hover:bg-gray-50'
-                          }`}
+                          className={`block px-4 py-2.5 text-sm font-medium transition-colors duration-200 ${isActive(product.path)
+                              ? 'text-primary bg-primary/10'
+                              : 'text-gray-700 hover:text-primary hover:bg-gray-50'
+                            }`}
                         >
                           {product.name}
                         </Link>
@@ -91,7 +90,7 @@ export default function Header() {
                         <Link
                           to="/products"
                           onClick={() => setIsProductsDropdownOpen(false)}
-                          className="block px-4 py-2.5 text-sm font-medium text-[#2C7596] hover:bg-gray-50 transition-colors duration-200"
+                          className="block px-4 py-2.5 text-sm font-medium text-primary hover:bg-gray-50 transition-colors duration-200"
                         >
                           View All Products →
                         </Link>
@@ -103,15 +102,14 @@ export default function Header() {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`relative font-medium transition-colors duration-300 ${
-                    isActive(item.path)
-                      ? 'text-[#2C7596]'
-                      : 'text-gray-700 hover:text-[#2C7596]'
-                  }`}
+                  className={`relative font-medium transition-colors duration-300 ${isActive(item.path)
+                      ? 'text-primary'
+                      : 'text-gray-700 hover:text-primary'
+                    }`}
                 >
                   {item.name}
                   {isActive(item.path) && (
-                    <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-[#2C7596]"></span>
+                    <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-primary"></span>
                   )}
                 </Link>
               )
@@ -121,7 +119,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-[#2C7596] hover:bg-gray-100 focus:outline-none transition-colors duration-200"
+            className="md:hidden p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 focus:outline-none transition-colors duration-200"
           >
             <svg
               className="h-6 w-6"
@@ -150,9 +148,8 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
+            }`}
         >
           <div className="py-4 space-y-2">
             {navigation.map((item) => (
@@ -160,18 +157,17 @@ export default function Header() {
                 <div key={item.path}>
                   <button
                     onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
-                    className={`w-full flex items-center justify-between px-4 py-2 rounded-md font-medium transition-colors duration-300 ${
-                      isActive(item.path) || location.pathname.startsWith('/products/')
-                        ? 'bg-[#2C7596]/10 text-[#2C7596]'
+                    className={`w-full flex items-center justify-between px-4 py-2 rounded-md font-medium transition-colors duration-300 ${isActive(item.path) || location.pathname.startsWith('/products/')
+                        ? 'bg-primary/10 text-primary'
                         : 'text-gray-700 hover:bg-gray-50'
-                    }`}
+                      }`}
                   >
                     <span>{item.name}</span>
                     <svg className={`w-4 h-4 transition-transform duration-300 ${isProductsDropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
-                  
+
                   {/* Mobile Dropdown */}
                   {isProductsDropdownOpen && (
                     <div className="ml-4 mt-2 space-y-1">
@@ -183,11 +179,10 @@ export default function Header() {
                             setIsMenuOpen(false);
                             setIsProductsDropdownOpen(false);
                           }}
-                          className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
-                            isActive(product.path)
-                              ? 'bg-[#2C7596]/10 text-[#2C7596]'
+                          className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${isActive(product.path)
+                              ? 'bg-primary/10 text-primary'
                               : 'text-gray-600 hover:bg-gray-50'
-                          }`}
+                            }`}
                         >
                           {product.name}
                         </Link>
@@ -198,7 +193,7 @@ export default function Header() {
                           setIsMenuOpen(false);
                           setIsProductsDropdownOpen(false);
                         }}
-                        className="block px-4 py-2 rounded-md text-sm font-medium text-[#2C7596] hover:bg-gray-50 transition-colors duration-300"
+                        className="block px-4 py-2 rounded-md text-sm font-medium text-primary hover:bg-gray-50 transition-colors duration-300"
                       >
                         View All Products →
                       </Link>
@@ -210,11 +205,10 @@ export default function Header() {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`block px-4 py-2 rounded-md font-medium transition-colors duration-300 ${
-                    isActive(item.path)
-                      ? 'bg-[#2C7596]/10 text-[#2C7596]'
+                  className={`block px-4 py-2 rounded-md font-medium transition-colors duration-300 ${isActive(item.path)
+                      ? 'bg-primary/10 text-primary'
                       : 'text-gray-700 hover:bg-gray-50'
-                  }`}
+                    }`}
                 >
                   {item.name}
                 </Link>

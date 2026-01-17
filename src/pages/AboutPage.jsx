@@ -6,7 +6,7 @@ import { FaAward, FaLightbulb, FaHandshake, FaLeaf } from 'react-icons/fa';
 export default function AboutPage() {
   const timeline = [
     {
-      year: '1948s',
+      year: '1948',
       title: 'Founded Maheshwari Industrial Corporation',
       description: ''
     },
@@ -180,7 +180,7 @@ export default function AboutPage() {
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
-              To deliver world-class brazing alloys that set new benchmarks in quality, consistency & reliability empowering industries to achieve robust & efficient metal joining solutions in every application.
+                To deliver world-class brazing alloys that set new benchmarks in quality, consistency & reliability empowering industries to achieve robust & efficient metal joining solutions in every application.
               </p>
             </AnimatedCard>
             <AnimatedCard
@@ -189,7 +189,7 @@ export default function AboutPage() {
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
               <p className="text-gray-600 leading-relaxed">
-              To become the most trusted and innovative global supplier of silver and copper-phosphorus brazing alloys, driving advancements in manufacturing, sustainability & metallurgical excellence for a better-connected world.
+                To become the most trusted and innovative global supplier of silver and copper-phosphorus brazing alloys, driving advancements in manufacturing, sustainability & metallurgical excellence for a better-connected world.
               </p>
             </AnimatedCard>
           </div>
@@ -214,57 +214,58 @@ export default function AboutPage() {
 
           {/* Desktop Timeline */}
           <div className="hidden lg:block relative py-12">
-            {/* Main Horizontal Line */}
-            <div className="absolute top-1/2 left-[8%] right-[8%] h-[3px] bg-[#5b8ca3] -translate-y-1/2"></div>
-            
-            {/* Timeline Container */}
             <div className="relative">
               {/* Top Row Cards */}
-              <div className="grid grid-cols-3 gap-8 mb-8 relative z-10">
+              <div className="grid grid-cols-3 gap-8 relative z-10">
                 {/* 1948s */}
-                <AnimatedCard index={0} className="relative">
-                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg">
+                <AnimatedCard index={0} className="relative h-full">
+                  <div className="bg-secondary text-white rounded-2xl p-8 shadow-lg h-full flex flex-col justify-center">
                     <h3 className="text-3xl font-bold mb-4 text-center">{timeline[0].year}</h3>
                     <p className="text-white text-center leading-relaxed">
                       {timeline[0].title}
                     </p>
                   </div>
                   {/* Vertical connector down from card */}
-                  <div className="absolute left-1/2 -bottom-8 w-[3px] h-8 bg-[#5b8ca3] -translate-x-1/2"></div>
+                  <div className="absolute left-1/2 -bottom-16 w-[3px] h-16 bg-accent -translate-x-1/2"></div>
                 </AnimatedCard>
 
                 {/* 2010 */}
-                <AnimatedCard index={1} className="relative">
-                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg">
+                <AnimatedCard index={1} className="relative h-full">
+                  <div className="bg-secondary text-white rounded-2xl p-8 shadow-lg h-full flex flex-col justify-center">
                     <h3 className="text-3xl font-bold mb-4 text-center">{timeline[2].year}</h3>
                     <p className="text-white text-center leading-relaxed">
                       {timeline[2].title}
                     </p>
                   </div>
                   {/* Vertical connector down from card */}
-                  <div className="absolute left-1/2 -bottom-8 w-[3px] h-8 bg-[#5b8ca3] -translate-x-1/2"></div>
+                  <div className="absolute left-1/2 -bottom-16 w-[3px] h-16 bg-accent -translate-x-1/2"></div>
                 </AnimatedCard>
 
                 {/* 2020+ */}
-                <AnimatedCard index={2} className="relative">
-                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg">
+                <AnimatedCard index={2} className="relative h-full">
+                  <div className="bg-secondary text-white rounded-2xl p-8 shadow-lg h-full flex flex-col justify-center">
                     <h3 className="text-3xl font-bold mb-4 text-center">{timeline[4].year}</h3>
                     <p className="text-white text-center leading-relaxed">
                       {timeline[4].title}
                     </p>
                   </div>
                   {/* Vertical connector down from card */}
-                  <div className="absolute left-1/2 -bottom-8 w-[3px] h-8 bg-[#5b8ca3] -translate-x-1/2"></div>
+                  <div className="absolute left-1/2 -bottom-16 w-[3px] h-16 bg-accent -translate-x-1/2"></div>
                 </AnimatedCard>
               </div>
 
+              {/* Spacer with Horizontal Line */}
+              <div className="relative h-32 w-full">
+                <div className="absolute top-1/2 left-[8%] right-[8%] h-[3px] bg-accent -translate-y-1/2"></div>
+              </div>
+
               {/* Bottom Row Cards (offset) */}
-              <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto mt-24 relative z-10">
+              <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto relative z-10">
                 {/* 2000 */}
-                <AnimatedCard index={3} className="relative">
+                <AnimatedCard index={3} className="relative h-full">
                   {/* Vertical connector up to card */}
-                  <div className="absolute left-1/2 -top-24 w-[3px] h-24 bg-[#5b8ca3] -translate-x-1/2"></div>
-                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg">
+                  <div className="absolute left-1/2 -top-16 w-[3px] h-16 bg-accent -translate-x-1/2"></div>
+                  <div className="bg-secondary text-white rounded-2xl p-8 shadow-lg h-full flex flex-col justify-center">
                     <h3 className="text-3xl font-bold mb-4 text-center">{timeline[1].year}</h3>
                     <p className="text-white text-center leading-relaxed">
                       {timeline[1].title}
@@ -273,10 +274,10 @@ export default function AboutPage() {
                 </AnimatedCard>
 
                 {/* 2015 */}
-                <AnimatedCard index={4} className="relative">
+                <AnimatedCard index={4} className="relative h-full">
                   {/* Vertical connector up to card */}
-                  <div className="absolute left-1/2 -top-24 w-[3px] h-24 bg-[#5b8ca3] -translate-x-1/2"></div>
-                  <div className="bg-[#4a7c92] text-white rounded-2xl p-8 shadow-lg">
+                  <div className="absolute left-1/2 -top-16 w-[3px] h-16 bg-accent -translate-x-1/2"></div>
+                  <div className="bg-secondary text-white rounded-2xl p-8 shadow-lg h-full flex flex-col justify-center">
                     <h3 className="text-3xl font-bold mb-4 text-center">{timeline[3].year}</h3>
                     <p className="text-white text-center leading-relaxed">
                       {timeline[3].title}
@@ -293,7 +294,7 @@ export default function AboutPage() {
               <AnimatedCard
                 key={item.year}
                 index={index}
-                className="bg-[#4a7c92] text-white rounded-2xl p-6 shadow-lg"
+                className="bg-secondary text-white rounded-2xl p-6 shadow-lg"
               >
                 <h3 className="text-2xl font-bold mb-3">{item.year}</h3>
                 <p className="text-white text-sm leading-relaxed">{item.title}</p>
@@ -324,21 +325,21 @@ export default function AboutPage() {
               <AnimatedCard
                 key={capability.title}
                 index={index}
-                className="group bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-[#2C7596] hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden"
+                className="group bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-primary hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden"
               >
                 {/* Colored Left Border */}
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#5aa3c5] to-[#2C7596] transform scale-y-100 group-hover:scale-y-105 transition-transform duration-300"></div>
-                
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#5aa3c5] to-primary transform scale-y-100 group-hover:scale-y-105 transition-transform duration-300"></div>
+
                 {/* Content */}
                 <div className="ml-4">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#2C7596] transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
                     {capability.title}
                   </h3>
                   <p className="text-gray-600 mb-4">{capability.description}</p>
                   <ul className="space-y-2">
                     {capability.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-700">
-                        <svg className="w-5 h-5 text-[#2C7596] mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-primary mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                           <path
                             fillRule="evenodd"
                             d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -350,7 +351,7 @@ export default function AboutPage() {
                     ))}
                   </ul>
                 </div>
-                
+
                 {/* Bottom Accent */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#3d8aaf] to-[#5aa3c5] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </AnimatedCard>
@@ -408,7 +409,7 @@ export default function AboutPage() {
                 <AnimatedCard
                   key={value.title}
                   index={index}
-                  className="group bg-[#2C7596] p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  className="group bg-primary p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
                   <div className="flex justify-center mb-4">
                     <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
@@ -425,7 +426,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#2C7596] text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}

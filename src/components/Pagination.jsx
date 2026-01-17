@@ -16,7 +16,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         className={`p-2 rounded-md transition-all duration-200 ${
           currentPage === 1
             ? 'text-gray-400 cursor-not-allowed'
-            : 'text-[#2C7596] hover:bg-[#2C7596]/10 hover:scale-110'
+            : 'text-primary hover:bg-primary/10 hover:scale-110'
         }`}
         aria-label="Previous page"
       >
@@ -33,7 +33,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
             onClick={() => handlePageChange(page)}
             className={`w-10 h-10 rounded-md font-medium transition-all duration-200 hover:scale-110 active:scale-95 ${
               page === currentPage
-                ? 'bg-[#2C7596] text-white shadow-md'
+                ? 'bg-primary text-white shadow-md'
                 : 'text-gray-700 hover:bg-gray-100'
             }`}
           >
@@ -49,7 +49,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         className={`p-2 rounded-md transition-all duration-200 ${
           currentPage === totalPages
             ? 'text-gray-400 cursor-not-allowed'
-            : 'text-[#2C7596] hover:bg-[#2C7596]/10 hover:scale-110'
+            : 'text-primary hover:bg-primary/10 hover:scale-110'
         }`}
         aria-label="Next page"
       >
