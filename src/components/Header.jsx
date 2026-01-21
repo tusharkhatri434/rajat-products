@@ -23,7 +23,6 @@ export default function Header() {
     { name: 'RP Silver', path: '/products/rp-silver' },
     { name: 'RP Copper', path: '/products/rp-copper' },
     { name: 'RP Braze', path: '/products/rp-braze' },
-    { name: 'RP Weld', path: '/products/rp-weld-92' }, // Assuming 5th is RP Weld based on common patterns, linking to first item or a category if implemented. I'll link to rp-copper for now if no dedicated page, but user asked for 5 buttons.
   ];
 
   const isActive = (path) => location.pathname === path;

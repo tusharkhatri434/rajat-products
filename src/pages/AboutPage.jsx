@@ -124,9 +124,9 @@ export default function AboutPage() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Rajat Products</h1>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
-              Since the 1980s, we've been pioneering excellence in metallurgical solutions.<br />
-              Delivering world-class brazing alloys that set new standards in quality, consistency & reliability across metallurgical applications worldwide.
+            <p className="text-base md:text-lg text-gray-100 max-w-4xl mx-auto leading-relaxed">
+              Since the 1980s, we&apos;ve been pioneering excellence in metallurgical solutions.<br className="hidden md:block" />
+              Delivering world-class brazing alloys that set new standards in quality, consistency & reliability worldwide.
             </p>
             <div className="mt-8">
               <Button to="/products" variant="outline">
@@ -206,84 +206,72 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               Our Journey through Years
             </h2>
             <p className="text-gray-600 text-lg">Key milestones that shaped our company's growth & success</p>
           </motion.div>
 
           {/* Desktop Timeline */}
-          <div className="hidden lg:block relative py-12">
-            <div className="relative">
-              {/* Top Row Cards */}
-              <div className="grid grid-cols-3 gap-8 relative z-10">
-                {/* 1948s */}
-                <AnimatedCard index={0} className="relative h-full">
-                  <div className="bg-secondary text-white rounded-2xl p-8 shadow-lg h-full flex flex-col justify-center">
-                    <h3 className="text-3xl font-bold mb-4 text-center">{timeline[0].year}</h3>
-                    <p className="text-white text-center leading-relaxed">
-                      {timeline[0].title}
-                    </p>
-                  </div>
-                  {/* Vertical connector down from card */}
-                  <div className="absolute left-1/2 -bottom-16 w-[3px] h-16 bg-accent -translate-x-1/2"></div>
-                </AnimatedCard>
+          <div className="hidden lg:block relative py-10">
+            {/* Main Horizontal Line */}
+            <div className="absolute top-1/2 left-[15%] right-[15%] h-1 bg-accent/40 rounded-full -translate-y-1/2"></div>
+
+            <div className="relative z-10">
+              {/* Top Row: 1948, 2010, 2020+ */}
+              <div className="flex justify-between px-[5%] mb-24">
+                {/* 1948 */}
+                <div className="w-64 relative">
+                  <AnimatedCard index={0} className="bg-secondary text-white rounded-2xl p-6 shadow-lg h-full">
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-center">{timeline[0].year}</h3>
+                    <p className="text-white/90 text-sm md:text-base text-center leading-relaxed">{timeline[0].title}</p>
+                  </AnimatedCard>
+                  <div className="absolute left-1/2 top-full w-1 h-12 bg-accent/60 -translate-x-1/2"></div>
+                  <div className="absolute left-1/2 top-[calc(100%+48px)] w-3 h-3 bg-accent rounded-full -translate-x-1/2 -translate-y-1/2 border-2 border-white shadow-sm"></div>
+                </div>
 
                 {/* 2010 */}
-                <AnimatedCard index={1} className="relative h-full">
-                  <div className="bg-secondary text-white rounded-2xl p-8 shadow-lg h-full flex flex-col justify-center">
-                    <h3 className="text-3xl font-bold mb-4 text-center">{timeline[2].year}</h3>
-                    <p className="text-white text-center leading-relaxed">
-                      {timeline[2].title}
-                    </p>
-                  </div>
-                  {/* Vertical connector down from card */}
-                  <div className="absolute left-1/2 -bottom-16 w-[3px] h-16 bg-accent -translate-x-1/2"></div>
-                </AnimatedCard>
+                <div className="w-64 relative">
+                  <AnimatedCard index={2} className="bg-secondary text-white rounded-2xl p-6 shadow-lg h-full">
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-center">{timeline[2].year}</h3>
+                    <p className="text-white/90 text-sm md:text-base text-center leading-relaxed">{timeline[2].title}</p>
+                  </AnimatedCard>
+                  <div className="absolute left-1/2 top-full w-1 h-12 bg-accent/60 -translate-x-1/2"></div>
+                  <div className="absolute left-1/2 top-[calc(100%+48px)] w-3 h-3 bg-accent rounded-full -translate-x-1/2 -translate-y-1/2 border-2 border-white shadow-sm"></div>
+                </div>
 
                 {/* 2020+ */}
-                <AnimatedCard index={2} className="relative h-full">
-                  <div className="bg-secondary text-white rounded-2xl p-8 shadow-lg h-full flex flex-col justify-center">
-                    <h3 className="text-3xl font-bold mb-4 text-center">{timeline[4].year}</h3>
-                    <p className="text-white text-center leading-relaxed">
-                      {timeline[4].title}
-                    </p>
-                  </div>
-                  {/* Vertical connector down from card */}
-                  <div className="absolute left-1/2 -bottom-16 w-[3px] h-16 bg-accent -translate-x-1/2"></div>
-                </AnimatedCard>
+                <div className="w-64 relative">
+                  <AnimatedCard index={4} className="bg-secondary text-white rounded-2xl p-6 shadow-lg h-full">
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-center">{timeline[4].year}</h3>
+                    <p className="text-white/90 text-sm md:text-base text-center leading-relaxed">{timeline[4].title}</p>
+                  </AnimatedCard>
+                  <div className="absolute left-1/2 top-full w-1 h-12 bg-accent/60 -translate-x-1/2"></div>
+                  <div className="absolute left-1/2 top-[calc(100%+48px)] w-3 h-3 bg-accent rounded-full -translate-x-1/2 -translate-y-1/2 border-2 border-white shadow-sm"></div>
+                </div>
               </div>
 
-              {/* Spacer with Horizontal Line */}
-              <div className="relative h-32 w-full">
-                <div className="absolute top-1/2 left-[8%] right-[8%] h-[3px] bg-accent -translate-y-1/2"></div>
-              </div>
-
-              {/* Bottom Row Cards (offset) */}
-              <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto relative z-10">
+              {/* Bottom Row: 2000, 2015 */}
+              <div className="flex justify-around px-[20%] mt-4">
                 {/* 2000 */}
-                <AnimatedCard index={3} className="relative h-full">
-                  {/* Vertical connector up to card */}
-                  <div className="absolute left-1/2 -top-16 w-[3px] h-16 bg-accent -translate-x-1/2"></div>
-                  <div className="bg-secondary text-white rounded-2xl p-8 shadow-lg h-full flex flex-col justify-center">
-                    <h3 className="text-3xl font-bold mb-4 text-center">{timeline[1].year}</h3>
-                    <p className="text-white text-center leading-relaxed">
-                      {timeline[1].title}
-                    </p>
-                  </div>
-                </AnimatedCard>
+                <div className="w-64 relative">
+                  <div className="absolute left-1/2 bottom-full w-1 h-12 bg-accent/60 -translate-x-1/2"></div>
+                  <div className="absolute left-1/2 bottom-[calc(100%+48px)] w-3 h-3 bg-accent rounded-full -translate-x-1/2 translate-y-1/2 border-2 border-white shadow-sm"></div>
+                  <AnimatedCard index={1} className="bg-secondary text-white rounded-2xl p-6 shadow-lg h-full">
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-center">{timeline[1].year}</h3>
+                    <p className="text-white/90 text-sm md:text-base text-center leading-relaxed">{timeline[1].title}</p>
+                  </AnimatedCard>
+                </div>
 
                 {/* 2015 */}
-                <AnimatedCard index={4} className="relative h-full">
-                  {/* Vertical connector up to card */}
-                  <div className="absolute left-1/2 -top-16 w-[3px] h-16 bg-accent -translate-x-1/2"></div>
-                  <div className="bg-secondary text-white rounded-2xl p-8 shadow-lg h-full flex flex-col justify-center">
-                    <h3 className="text-3xl font-bold mb-4 text-center">{timeline[3].year}</h3>
-                    <p className="text-white text-center leading-relaxed">
-                      {timeline[3].title}
-                    </p>
-                  </div>
-                </AnimatedCard>
+                <div className="w-64 relative">
+                  <div className="absolute left-1/2 bottom-full w-1 h-12 bg-accent/60 -translate-x-1/2"></div>
+                  <div className="absolute left-1/2 bottom-[calc(100%+48px)] w-3 h-3 bg-accent rounded-full -translate-x-1/2 translate-y-1/2 border-2 border-white shadow-sm"></div>
+                  <AnimatedCard index={3} className="bg-secondary text-white rounded-2xl p-6 shadow-lg h-full">
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-center">{timeline[3].year}</h3>
+                    <p className="text-white/90 text-sm md:text-base text-center leading-relaxed">{timeline[3].title}</p>
+                  </AnimatedCard>
+                </div>
               </div>
             </div>
           </div>

@@ -23,7 +23,6 @@ export default function Footer() {
     },
     { name: 'RP Copper', path: '/products/rp-copper' },
     { name: 'RP Braze', path: '/products/rp-braze' },
-    { name: 'RP Weld', path: '/products/rp-weld-92' }
   ];
 
   return (
