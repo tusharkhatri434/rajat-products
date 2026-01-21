@@ -25,7 +25,7 @@ export default function ProductCard({ product, index = 0 }) {
 
       {/* Content */}
       <div className="p-4 md:p-6">
-        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-[#2C7596] transition-colors duration-300">
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-primary transition-colors duration-300">
           {product.title}
         </h3>
         
@@ -36,7 +36,7 @@ export default function ProductCard({ product, index = 0 }) {
         {/* CTA Button */}
         <Link
           to={product.cta.route}
-          className="block w-full px-4 py-2.5 bg-[#2C7596] text-white text-center rounded-lg hover:bg-[#1f5c7a] transition-all duration-300 font-medium text-sm hover:scale-105 active:scale-95"
+          className="block w-full px-4 py-2.5 bg-primary text-white text-center rounded-lg hover:bg-[#1f5c7a] transition-all duration-300 font-medium text-sm hover:scale-105 active:scale-95"
         >
           {product.cta.label}
         </Link>

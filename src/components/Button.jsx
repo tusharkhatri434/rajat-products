@@ -11,9 +11,9 @@ export default function Button({
   const baseStyles = 'px-3 py-1 rounded-md font-medium transition-all duration-300 inline-block text-center hover:scale-105 active:scale-95';
   
   const variants = {
-    primary: 'bg-[#2C7596] text-white hover:bg-[#355a6d] shadow-md hover:shadow-lg',
-    secondary: 'bg-white text-[#2C7596] border-2 border-[#2C7596] hover:bg-gray-50',
-    outline: 'border-2 border-white text-white hover:bg-white hover:text-[#2C7596]'
+    primary: 'bg-primary text-white hover:bg-[#355a6d] shadow-md hover:shadow-lg',
+    secondary: 'bg-white text-primary border-2 border-primary hover:bg-gray-50',
+    outline: 'border-2 border-white text-white hover:bg-white hover:text-primary'
   };
 
   const classes = `${baseStyles} ${variants[variant]} ${className}`;
