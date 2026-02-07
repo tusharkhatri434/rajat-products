@@ -92,10 +92,8 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="text-3xl md:text-3xl lg:text-5xl font-bold text-gray-900 mb-6"
             >
-              Where Purity meets{' '}
-              <span className="text-[#2C7596]">next gen silver alloys</span>
-              <br />
-              for demanding applications
+              WHERE PURITY MEETS{' '}
+              <span className="text-primary">NEXT GEN SILVER ALLOYS</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -114,7 +112,7 @@ export default function HomePage() {
               <Button to="/products" variant="primary">
                 Explore Products
               </Button>
-              <Button to="/about" variant="secondary">
+              <Button to="/contact" variant="secondary">
                 Contact us
               </Button>
             </motion.div>
@@ -130,7 +128,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: -60, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
+              transition={{
                 duration: 0.8,
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
@@ -144,7 +142,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
+              transition={{
                 duration: 0.8,
                 delay: 0.2,
                 ease: [0.25, 0.46, 0.45, 0.94]
@@ -157,7 +155,7 @@ export default function HomePage() {
                 Located in Meerut's industrial hub, Rajat Products Pvt. Ltd. has been a trusted name in manufacturing high-quality silver and copper phosphorus brazing alloys, welding alloys and zari wire.
               </p>
               <p className="text-gray-800 mb-8 leading-relaxed">
-              When our customers are not aware of what alloy they might require for accomplishing their manufacturing, we are always there to assist them with our technical expertise.              </p>
+                When our customers are not aware of what alloy they might require for accomplishing their manufacturing, we are always there to assist them with our technical expertise.              </p>
               <Button to="/about" variant="primary">
                 Know more about us
               </Button>
@@ -191,16 +189,16 @@ export default function HomePage() {
                 <AnimatedCard
                   key={industry.title}
                   index={index}
-                  className="group bg-white p-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer"
+                  className="group bg-primary p-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer"
                 >
                   <div className="text-center">
                     <div className="flex justify-center mb-4">
-                      <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+                      <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
                         <IconComponent className="text-2xl text-white" />
                       </div>
                     </div>
-                    <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-[#2C7596] transition-colors duration-300">{industry.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{industry.description}</p>
+                    <h3 className="text-base font-bold text-white mb-2 group-hover:text-gray-100 transition-colors duration-300">{industry.title}</h3>
+                    <p className="text-gray-100 text-sm leading-relaxed">{industry.description}</p>
                   </div>
                 </AnimatedCard>
               );
@@ -218,13 +216,13 @@ export default function HomePage() {
               initial={{ opacity: 0, x: -60, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
+              transition={{
                 duration: 0.8,
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
               className="relative h-96 rounded-2xl overflow-hidden shadow-xl"
             >
-                <div className="w-full h-full flex items-center justify-center">
+              <div className="w-full h-full flex items-center justify-center">
                 <img src="/homePage/home_img2.png" alt="Why Choose Rajat Products" className="w-full h-full object-cover" />
               </div>
             </motion.div>
@@ -232,7 +230,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
+              transition={{
                 duration: 0.8,
                 delay: 0.2,
                 ease: [0.25, 0.46, 0.45, 0.94]
@@ -246,15 +244,15 @@ export default function HomePage() {
               </p>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-[#2C7596] mr-2 mt-1">•</span>
+                  <span className="text-primary mr-2 mt-1">•</span>
                   <span>Proven track record and technical expertise since 1989.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#2C7596] mr-2 mt-1">•</span>
+                  <span className="text-primary mr-2 mt-1">•</span>
                   <span>Customer-focused innovation and reliability.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#2C7596] mr-2 mt-1">•</span>
+                  <span className="text-primary mr-2 mt-1">•</span>
                   <span>Modern facility with advanced production capabilities & on time order completion promises.</span>
                 </li>
               </ul>
@@ -272,11 +270,11 @@ export default function HomePage() {
                   className="group text-center bg-white p-6 rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300 cursor-pointer"
                 >
                   <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 bg-[#2C7596] rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
                       <IconComponent className="text-2xl text-white" />
                     </div>
                   </div>
-                  <h3 className="text-base font-bold text-gray-900 mb-3 group-hover:text-[#2C7596] transition-colors duration-300">
+                  <h3 className="text-base font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
@@ -288,7 +286,7 @@ export default function HomePage() {
       </section>
 
       {/* Value Propositions */}
-      <section className="py-16 bg-[#2C7596]">
+      <section className="py-16 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {values.map((value, index) => {
@@ -299,8 +297,8 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 40, scale: 0.95 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  transition={{ 
-                    duration: 0.6, 
+                  transition={{
+                    duration: 0.6,
                     delay: index * 0.1,
                     ease: [0.25, 0.46, 0.45, 0.94]
                   }}
@@ -325,7 +323,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      {/* <section className="py-16 bg-[#2C7596] text-white">
+      {/* <section className="py-16 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2
             initial={{ opacity: 0, y: 30 }}

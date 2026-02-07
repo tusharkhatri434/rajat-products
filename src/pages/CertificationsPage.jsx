@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Button from '../components/Button';
 import AnimatedCard from '../components/AnimatedCard';
-import { FaShieldAlt } from 'react-icons/fa';
+import { FaShieldAlt, FaUsers, FaFileAlt, FaSync } from 'react-icons/fa';
 
 export default function CertificationsPage() {
   const certifications = [
@@ -75,17 +75,17 @@ export default function CertificationsPage() {
 
   const commitments = [
     {
-      icon: '👥',
+      icon: <FaUsers />,
       title: 'Expert Team',
       description: 'Seasoned R&D, quality, and production experts with decades of metallurgical experience'
     },
     {
-      icon: '📋',
+      icon: <FaFileAlt />,
       title: 'Documentation',
       description: 'Complete traceability and certification documentation for every batch'
     },
     {
-      icon: '🔄',
+      icon: <FaSync />,
       title: 'Continuous Improvement',
       description: 'Regular quality audits and process refinements to maintain highest standards'
     }
@@ -123,9 +123,9 @@ export default function CertificationsPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Internationally Recognized Excellence
+              Recognized Excellence
             </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-600 text-base md:text-lg max-w-6xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
               Internationally recognized certifications that validate our commitment to quality & environmental responsibility
             </p>
           </motion.div>
@@ -144,7 +144,7 @@ export default function CertificationsPage() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                     {cert.title}
                   </h3>
-                  <p className="text-[#2C7596] font-medium mb-3">{cert.subtitle}</p>
+                  <p className="text-primary font-medium mb-3">{cert.subtitle}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{cert.description}</p>
                 </div>
               </AnimatedCard>
@@ -178,10 +178,10 @@ export default function CertificationsPage() {
                 index={index}
                 className="group bg-white rounded-xl p-6 text-center border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-[#4a7c92] rounded-lg flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+                <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
                   <FaShieldAlt className="text-3xl text-white" />
                 </div>
-                <h3 className="font-bold text-[#2C7596] text-xl mb-2">{standard.code}</h3>
+                <h3 className="font-bold text-primary text-xl mb-2">{standard.code}</h3>
                 <p className="text-sm text-gray-700 font-medium">{standard.full}</p>
               </AnimatedCard>
             ))}
@@ -202,7 +202,7 @@ export default function CertificationsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Quality Process
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 text-base md:text-lg max-w-5xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
               A systematic approach to quality that ensures every product meets the highest standards
             </p>
           </motion.div>
@@ -261,15 +261,15 @@ export default function CertificationsPage() {
               <AnimatedCard
                 key={commitment.title}
                 index={index}
-                className="group bg-white p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group bg-primary p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-[#1f5c7a] rounded-full flex items-center justify-center text-3xl transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
-                    {commitment.icon}
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-3xl transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+                    <span className="text-white">{commitment.icon}</span>
                   </div>
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1f5c7a] transition-colors duration-300">{commitment.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{commitment.description}</p>
+                <h3 className="text-lg md:text-xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors duration-300">{commitment.title}</h3>
+                <p className="text-gray-100 text-sm leading-relaxed">{commitment.description}</p>
               </AnimatedCard>
             ))}
           </div>
@@ -284,9 +284,9 @@ export default function CertificationsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-linear-to-br from-[#2C7596]/10 to-gray-50 rounded-lg p-8 md:p-12 text-center"
+            className="bg-linear-to-br from-primary/10 to-gray-50 rounded-lg p-8 md:p-12 text-center"
           >
-            <svg className="w-16 h-16 text-[#2C7596] mx-auto mb-6" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-16 h-16 text-primary mx-auto mb-6" fill="currentColor" viewBox="0 0 20 20">
               <path
                 fillRule="evenodd"
                 d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -294,8 +294,11 @@ export default function CertificationsPage() {
               />
             </svg>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Quality is Our Promise</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              At Rajat Products, quality assurance is not just a process—it's embedded in our DNA. Every product undergoes rigorous testing and verification to ensure it meets our exacting standards and exceeds your expectations.
+            </p>
             <p className="text-gray-700 leading-relaxed mb-6">
-              At Rajat Products, quality assurance is not just a process—it's embedded in our DNA. Every product undergoes rigorous testing and verification to ensure it meets our exacting standards and exceeds your expectations. Our commitment to excellence is backed by international certifications, state-of-the-art testing facilities, and decades of metallurgical expertise.
+              Our commitment to excellence is backed by international certifications, state-of-the-art testing facilities, and decades of metallurgical expertise.
             </p>
             <p className="text-[#1f5c7a] font-medium italic">
               "Quality is never an accident; it is always the result of intelligent effort."
@@ -305,7 +308,7 @@ export default function CertificationsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#2C7596] text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
