@@ -92,10 +92,8 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="text-3xl md:text-3xl lg:text-5xl font-bold text-gray-900 mb-6"
             >
-              Where Purity meets{' '}
-              <span className="text-primary">next gen silver alloys</span>
-              <br />
-              for demanding applications
+              WHERE PURITY MEETS{' '}
+              <span className="text-primary">NEXT GEN SILVER ALLOYS</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -114,7 +112,7 @@ export default function HomePage() {
               <Button to="/products" variant="primary">
                 Explore Products
               </Button>
-              <Button to="/about" variant="secondary">
+              <Button to="/contact" variant="secondary">
                 Contact us
               </Button>
             </motion.div>
@@ -130,7 +128,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: -60, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
+              transition={{
                 duration: 0.8,
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
@@ -144,7 +142,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
+              transition={{
                 duration: 0.8,
                 delay: 0.2,
                 ease: [0.25, 0.46, 0.45, 0.94]
@@ -157,7 +155,7 @@ export default function HomePage() {
                 Located in Meerut's industrial hub, Rajat Products Pvt. Ltd. has been a trusted name in manufacturing high-quality silver and copper phosphorus brazing alloys, welding alloys and zari wire.
               </p>
               <p className="text-gray-800 mb-8 leading-relaxed">
-              When our customers are not aware of what alloy they might require for accomplishing their manufacturing, we are always there to assist them with our technical expertise.              </p>
+                When our customers are not aware of what alloy they might require for accomplishing their manufacturing, we are always there to assist them with our technical expertise.              </p>
               <Button to="/about" variant="primary">
                 Know more about us
               </Button>
@@ -218,13 +216,13 @@ export default function HomePage() {
               initial={{ opacity: 0, x: -60, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
+              transition={{
                 duration: 0.8,
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
               className="relative h-96 rounded-2xl overflow-hidden shadow-xl"
             >
-                <div className="w-full h-full flex items-center justify-center">
+              <div className="w-full h-full flex items-center justify-center">
                 <img src="/homePage/home_img2.png" alt="Why Choose Rajat Products" className="w-full h-full object-cover" />
               </div>
             </motion.div>
@@ -232,7 +230,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
+              transition={{
                 duration: 0.8,
                 delay: 0.2,
                 ease: [0.25, 0.46, 0.45, 0.94]
@@ -299,8 +297,8 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 40, scale: 0.95 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  transition={{ 
-                    duration: 0.6, 
+                  transition={{
+                    duration: 0.6,
                     delay: index * 0.1,
                     ease: [0.25, 0.46, 0.45, 0.94]
                   }}

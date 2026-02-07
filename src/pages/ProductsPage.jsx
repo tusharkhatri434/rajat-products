@@ -39,18 +39,17 @@ export default function ProductsPage() {
 
   const caseStudy = {
     title: 'BAG 24 Silver Alloy – Automotive Success Story',
-    challenge: 'Rising warranty claims and OEM non-compliance due to contact degradation',
-    solution: 'BAG 24 advanced engineered silver alloy with 92% Silver, Tin, Nickel and trace Cobalt',
+    challenge: 'RISING REJECTION WITH SILVER BRAZING RING SOURCED FROM THEIR OLD SUPPLIER.',
+    solution: 'BAG 24 advanced engineered silver alloy with 50% Silver, ZINC, COPPER AND Nickel .',
     results: [
-      '50% reduction in warranty-related returns',
-      'Contact resistance improved from 1.5 mΩ to 0.35 mΩ',
-      'Lifespan increased from 8,000 to 16,000+ cycles',
-      'OEM rejection rate reduced from 4.6% to 0.3%'
+      '100% PENETRATION PROOF RINGS',
+      'GAS POROSITY ACHIEVED UNDER RANGE',
+      'BRAZING LENGTH ACHIEVED PERFECTLY'
     ],
     testimonial: {
       text1: "BAG 24 gave us the edge we needed to compete in reliability-driven contracts.",
-      text2: "It's not just a material switch it's a performance transformation.",
-      author: 'Rajeev Khanna, Lead Materials Engineer, Imperial AutoTech, Faridabad'
+      text2: "It's not just an alloy switch it's a performance transformation.",
+      author: ''
     }
   };
 
@@ -70,44 +69,6 @@ export default function ProductsPage() {
               Comprehensive range of brazing alloys delivering exceptional performance for demanding industrial applications
             </p>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Custom Alloy Solutions */}
-      <section className="py-12 md:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-8 md:mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
-              Custom Alloy Solutions
-            </h2>
-            <p className="text-sm md:text-base text-gray-600 max-w-5xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
-              Tailored brazing alloys & specialized formulations delivered precisely to meet unique manufacturing demands
-            </p>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {customSolutions.map((solution, index) => (
-              <AnimatedCard
-                key={solution.title}
-                index={index}
-                className="group bg-white p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
-                    {solution.icon}
-                  </div>
-                </div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1f5c7a] transition-colors duration-300">{solution.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{solution.description}</p>
-              </AnimatedCard>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -223,6 +184,44 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      {/* Custom Alloy Solutions */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-8 md:mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
+              Custom Alloy Solutions
+            </h2>
+            <p className="text-sm md:text-base text-gray-600 max-w-5xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
+              Tailored brazing alloys & specialized formulations delivered precisely to meet unique manufacturing demands
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {customSolutions.map((solution, index) => (
+              <AnimatedCard
+                key={solution.title}
+                index={index}
+                className="group bg-white p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+                    {solution.icon}
+                  </div>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1f5c7a] transition-colors duration-300">{solution.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{solution.description}</p>
+              </AnimatedCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Case Study */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -287,9 +286,6 @@ export default function ProductsPage() {
             </p>
             <p className="text-base md:text-lg lg:text-xl text-gray-900 font-medium mb-5 leading-relaxed">
               &quot;{caseStudy.testimonial.text2}&quot;
-            </p>
-            <p className="text-base text-right text-gray-800 font-semibold">
-              — {caseStudy.testimonial.author}
             </p>
           </motion.div>
         </div>

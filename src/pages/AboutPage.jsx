@@ -125,7 +125,7 @@ export default function AboutPage() {
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Rajat Products</h1>
             <p className="text-base md:text-lg text-gray-100 max-w-4xl mx-auto leading-relaxed">
-              Since the 1980s, we&apos;ve been pioneering excellence in metallurgical solutions.<br className="hidden md:block" />
+              Since 1989, we&apos;ve been pioneering excellence in metallurgical solutions.<br className="hidden md:block" />
               Delivering world-class brazing alloys that set new standards in quality, consistency & reliability worldwide.
             </p>
             <div className="mt-8">
@@ -154,7 +154,7 @@ export default function AboutPage() {
 
           <div className="prose prose-lg max-w-4xl mx-auto text-gray-600">
             <p className="mb-6">
-              Rajat Products was founded in the 1990s as a clean pioneer for metallurgy and an unwavering vision to
+              Rajat Products was founded in 1989 as a clean pioneer for metallurgy and an unwavering vision to
               deliver the highest quality brazing alloys to industries worldwide.
             </p>
             <p className="mb-6">
@@ -435,7 +435,7 @@ export default function AboutPage() {
             <Button to="/infrastructure" variant="outline">
               View Our Capabilities
             </Button>
-            <Button to="/products" variant="outline">
+            <Button to="/contact" variant="outline">
               Get In Touch
             </Button>
           </motion.div>

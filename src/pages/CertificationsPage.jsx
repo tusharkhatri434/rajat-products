@@ -123,7 +123,7 @@ export default function CertificationsPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Internationally Recognized Excellence
+              Recognized Excellence
             </h2>
             <p className="text-gray-600 text-base md:text-lg max-w-6xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
               Internationally recognized certifications that validate our commitment to quality & environmental responsibility

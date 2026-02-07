@@ -5,7 +5,7 @@ import { FaShieldAlt, FaMicroscope, FaFileAlt, FaCheckCircle } from 'react-icons
 
 export default function InfrastructurePage() {
   const stats = [
-    { value: '500+ MT', label: 'Annual Production' },
+    { value: '5MT', label: 'Annual Production' },
     { value: '85%', label: 'Process Automation' },
     { value: '50+', label: 'Skilled Professionals' },
     { value: '99.9%', label: 'First Pass Yield' }
@@ -376,15 +376,7 @@ export default function InfrastructurePage() {
       {/* CTA */}
       <section className="py-16 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold mb-6"
-          >
-            Experience Our Capabilities
-          </motion.h2>
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

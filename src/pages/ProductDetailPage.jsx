@@ -360,7 +360,7 @@ export default function ProductDetailPage() {
                   Close
                 </button>
                 <a
-                  href="https://wa.me/919837053328?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20products."
+                  href="https://wa.me/919837065599?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20products."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-[#1f5c7a] transition-all duration-300 font-medium shadow-lg hover:shadow-xl text-center"

@@ -33,7 +33,7 @@ export default function ContactPage() {
     const encodedMessage = encodeURIComponent(message);
 
     // Redirect to WhatsApp
-    window.open(`https://wa.me/919837053328?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/919837065599?text=${encodedMessage}`, '_blank');
 
     // Optional: Reset form after submission
     setFormData({
@@ -207,7 +207,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                      <a href="tel:+919837053328" className="text-primary hover:underline block text-sm">+91 9837053328</a>
+                      <a href="tel:+919837065599" className="text-primary hover:underline block text-sm">+91 9837065599</a>
                       <a href="tel:+919837002076" className="text-primary hover:underline block text-sm">+91 9837002076</a>
                       <a href="tel:+919837053569" className="text-primary hover:underline block text-sm">+91 9837053569</a>
                     </div>
@@ -222,7 +222,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Whatsapp</h4>
-                      <a href="https://wa.me/919837053328" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm">+91 9837053328</a>
+                      <a href="https://wa.me/919837065599" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm">+91 9837065599</a>
                     </div>
                   </div>
 
