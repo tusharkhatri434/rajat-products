@@ -5,7 +5,7 @@ import { FaShieldAlt, FaMicroscope, FaFileAlt, FaCheckCircle } from 'react-icons
 
 export default function InfrastructurePage() {
   const stats = [
-    { value: '5MT', label: 'Annual Production' },
+    { value: '200 MT', label: 'Annual Production' },
     { value: '85%', label: 'Process Automation' },
     { value: '50+', label: 'Skilled Professionals' },
     { value: '99.9%', label: 'First Pass Yield' }
@@ -40,12 +40,12 @@ export default function InfrastructurePage() {
       ]
     },
     {
-      title: 'Rolling Mill',
-      subtitle: 'Precision rolling equipment for sheets and strips production',
+      title: 'Extrusion Press Technology',
+      subtitle: 'Advanced extrusion technology for precise alloy shaping and forming',
       features: [
-        'Hot & cold rolling',
-        'Thickness control',
-        'Surface finishing'
+        'Hot Extrusion Process',
+        '600 Ton Capacity',
+        'Precision Drawing'
       ]
     }
   ];

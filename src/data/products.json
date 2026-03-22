@@ -335,7 +335,7 @@
         "short_description": "Silver brazing alloys for strong, ductile, and leak-tight joints.",
         "description": "RP Silver brazing alloys consist of cadmium-free and cadmium-bearing Ag-Cu-Zn based filler metals designed to deliver excellent wetting, low brazing temperatures, and high joint strength.\n\nThese alloys are widely used in HVAC, refrigeration, plumbing, electrical, medical, food, aeronautical, and general industrial applications.",
         "key_technical_features": [
-          "No cadmium – avoiding toxic fume hazards and meeting RoHS and similar restrictions for food/medical and general industrial applications",
+          "Fine Wire from 0.1 mm to 2 mm machining capacity for all the alloys listed.",
           "Low brazing temperatures with good flow – Tin-modified grades such as Ag-56Sn types offer among the lowest melting ranges and excellent flow among cadmium-free families",
           "Excellent capillary action and minimizing heat input to parts",
           "Suitable for most steels, stainless steels, copper/brass/bronze and many nickel alloys"
@@ -1872,11 +1872,10 @@
         "short_description": "Copper and bronze welding alloys for high-quality, corrosion-resistant joints.",
         "description": "RP Copper welding alloys are filler metals and consumables formulated to join pure copper and copper-based alloys while managing challenges such as high thermal conductivity, oxide formation, and porosity during welding operations.\n\nBronze welding alloys, where tin, silicon, or aluminum are principal additions, are used to weld bronzes, brasses, steels for surfacing, and dissimilar joints with good corrosion resistance and aesthetic color matching.",
         "key_technical_features": [
-          "Deoxidized fillers with silicon and manganese reduce porosity in oxygen-bearing copper",
+          "Fine Wire from 0.1 mm to 2 mm machining capacity for all the alloys listed.",
           "Excellent corrosion resistance, especially with silicon bronze alloys",
           "Compatible with TIG, MIG, and torch welding processes",
-          "Argon shielding gas recommended for TIG and MIG welding",
-          "Filler selection should match the base alloy for optimal performance"
+          "Argon shielding gas recommended for TIG and MIG welding"
         ],
         "cta": {
           "label": "View Products",
@@ -2559,6 +2558,349 @@
                   "parameter": "Appearance",
                   "value": "Warm golden-yellow color with good polishability"
                 }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "rp-aluminium",
+        "title": "RP Aluminium",
+        "imgName": "rp-aluminium.png",
+        "short_description": "Aluminium alloy welding wires for smooth performance, arc stability, and strong joints.",
+        "description": "RP Aluminium Alloy Welding Wires are engineered to deliver smooth welding performance, excellent arc stability, and strong weld joints. Manufactured using high-quality aluminium alloys with controlled chemical composition, these welding wires ensure consistent weld quality and reliable results across a wide range of aluminium welding applications.\n\nThese wires are suitable for TIG and MIG welding processes and are widely used in industries such as automotive manufacturing, marine fabrication, structural engineering, transportation equipment, and aluminium component manufacturing.",
+        "key_technical_features": [
+          "Smooth welding performance with excellent arc stability",
+          "Available as TIG rods (1.6 mm\u20134.0 mm) and MIG spools (0.8 mm\u20132.4 mm)",
+          "Wide range of aluminium alloy grades for diverse applications",
+          "Excellent corrosion resistance and weld strength",
+          "Suitable for automotive, marine, and structural engineering"
+        ],
+        "cta": {
+          "label": "View Products",
+          "route": "/products/rp-aluminium"
+        },
+        "sub_products": [
+          {
+            "id": "rp1100-aluminium",
+            "name": "RP1100 Aluminium",
+            "short_description": "Commercially pure aluminium welding wire (99% Al min). Provides excellent corrosion resistance and high electrical conductivity for welding pure aluminium components.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Aluminium (Al)", "value": "99.00 Min" },
+                { "parameter": "Silicon (Si)", "value": "0.95 Max" },
+                { "parameter": "Iron (Fe)", "value": "0.05 \u2013 0.20" },
+                { "parameter": "Copper (Cu)", "value": "<0.05" },
+                { "parameter": "Manganese (Mn)", "value": "<0.05" },
+                { "parameter": "Chromium (Cr)", "value": "<0.10" },
+                { "parameter": "Titanium (Ti)", "value": "<0.03" },
+                { "parameter": "Tensile Strength", "value": "70 N/mm\u00b2" },
+                { "parameter": "Elongation", "value": "25%" }
+              ]
+            }
+          },
+          {
+            "id": "rp4043-aluminium",
+            "name": "RP4043 Aluminium",
+            "short_description": "Aluminium welding wire with ~5% silicon. Excellent weld fluidity and crack resistance. Widely used for welding aluminium castings and general fabrication.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Aluminium (Al)", "value": "Remainder" },
+                { "parameter": "Silicon (Si)", "value": "4.5 \u2013 6.0" },
+                { "parameter": "Iron (Fe)", "value": "<0.60" },
+                { "parameter": "Copper (Cu)", "value": "<0.30" },
+                { "parameter": "Manganese (Mn)", "value": "<0.30" },
+                { "parameter": "Magnesium (Mg)", "value": "<0.15" },
+                { "parameter": "Zinc (Zn)", "value": "<0.10" },
+                { "parameter": "Titanium (Ti)", "value": "<0.15" },
+                { "parameter": "Tensile Strength", "value": "120 N/mm\u00b2" },
+                { "parameter": "Elongation", "value": "30%" }
+              ]
+            }
+          },
+          {
+            "id": "rp4047-aluminium",
+            "name": "RP4047 Aluminium",
+            "short_description": "High-silicon aluminium wire (11\u201313% Si). Improves weld flow and reduces shrinkage cracking. Ideal for casting welds and brazing applications.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Aluminium (Al)", "value": "Remainder" },
+                { "parameter": "Silicon (Si)", "value": "11.0 \u2013 13.0" },
+                { "parameter": "Iron (Fe)", "value": "<0.60" },
+                { "parameter": "Copper (Cu)", "value": "<0.30" },
+                { "parameter": "Manganese (Mn)", "value": "<0.30" },
+                { "parameter": "Tensile Strength", "value": "130 N/mm\u00b2" },
+                { "parameter": "Elongation", "value": "5%" }
+              ]
+            }
+          },
+          {
+            "id": "rp5087-aluminium",
+            "name": "RP5087 Aluminium",
+            "short_description": "High-strength Al-Mg welding wire for high-performance alloys. Excellent corrosion resistance in marine and structural applications.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Aluminium (Al)", "value": "Remainder" },
+                { "parameter": "Silicon (Si)", "value": "<0.25" },
+                { "parameter": "Magnesium (Mg)", "value": "4.5 \u2013 5.2" },
+                { "parameter": "Manganese (Mn)", "value": "0.50 \u2013 1.0" },
+                { "parameter": "Zirconium (Zr)", "value": "0.10 \u2013 0.20" },
+                { "parameter": "Tensile Strength", "value": "275 N/mm\u00b2" },
+                { "parameter": "Elongation", "value": "17%" }
+              ]
+            }
+          },
+          {
+            "id": "rp5183-aluminium",
+            "name": "RP5183 Aluminium",
+            "short_description": "Al-Mg welding wire for high strength and corrosion resistance. Widely used in structural fabrication and marine equipment.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Aluminium (Al)", "value": "Remainder" },
+                { "parameter": "Silicon (Si)", "value": "<0.25" },
+                { "parameter": "Magnesium (Mg)", "value": "4.5 \u2013 5.5" },
+                { "parameter": "Manganese (Mn)", "value": "0.50 \u2013 0.20" },
+                { "parameter": "Chromium (Cr)", "value": "0.05 \u2013 0.25" },
+                { "parameter": "Tensile Strength", "value": "275 N/mm\u00b2" },
+                { "parameter": "Elongation", "value": "17%" }
+              ]
+            }
+          },
+          {
+            "id": "rp5356-aluminium",
+            "name": "RP5356 Aluminium",
+            "short_description": "Most widely used Al-Mg welding wire. Excellent weld strength and corrosion resistance for marine, automotive, and structural applications.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Aluminium (Al)", "value": "Remainder" },
+                { "parameter": "Silicon (Si)", "value": "<0.25" },
+                { "parameter": "Magnesium (Mg)", "value": "4.3 \u2013 5.2" },
+                { "parameter": "Manganese (Mn)", "value": "0.05 \u2013 1.0" },
+                { "parameter": "Titanium (Ti)", "value": "0.05 \u2013 0.20" },
+                { "parameter": "Tensile Strength", "value": "240 N/mm\u00b2" },
+                { "parameter": "Elongation", "value": "17%" }
+              ]
+            }
+          },
+          {
+            "id": "rp5554-aluminium",
+            "name": "RP5554 Aluminium",
+            "short_description": "Al-Mg wire for high-temperature applications. Strong weld joints with excellent corrosion resistance.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Aluminium (Al)", "value": "Remainder" },
+                { "parameter": "Silicon (Si)", "value": "<0.25" },
+                { "parameter": "Magnesium (Mg)", "value": "2.4 \u2013 3.0" },
+                { "parameter": "Manganese (Mn)", "value": "0.05 \u2013 1.0" },
+                { "parameter": "Titanium (Ti)", "value": "0.05 \u2013 0.20" },
+                { "parameter": "Tensile Strength", "value": "215 N/mm\u00b2" },
+                { "parameter": "Elongation", "value": "17%" }
+              ]
+            }
+          },
+          {
+            "id": "rp5556-aluminium",
+            "name": "RP5556 Aluminium",
+            "short_description": "High-strength Al-Mg wire for heavy structural welding. Excellent fatigue resistance and corrosion protection.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Aluminium (Al)", "value": "Remainder" },
+                { "parameter": "Silicon (Si)", "value": "<0.25" },
+                { "parameter": "Magnesium (Mg)", "value": "4.7 \u2013 5.5" },
+                { "parameter": "Manganese (Mn)", "value": "0.05 \u2013 1.0" },
+                { "parameter": "Titanium (Ti)", "value": "0.05 \u2013 0.20" },
+                { "parameter": "Tensile Strength", "value": "275 N/mm\u00b2" },
+                { "parameter": "Elongation", "value": "17%" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "brazing-fluxes",
+        "title": "Brazing Fluxes",
+        "imgName": "brazing-flux.png",
+        "short_description": "Chemical compounds for oxide removal and optimal filler metal flow during brazing.",
+        "description": "Brazing Fluxes are chemical compounds used during the brazing process to prevent oxidation and remove metal oxides from the joint surface. They improve the wetting and flow of filler metals, ensuring strong and clean metal joints.\n\nWidely used in HVAC, electrical equipment, refrigeration systems, automotive components, and heat exchangers.",
+        "key_technical_features": [
+          "Prevents oxidation during the brazing process",
+          "Removes surface oxides for optimal filler metal flow",
+          "Available in powder and paste forms",
+          "Compatible with aluminium, brass, copper, and ferrous alloys",
+          "Water-soluble residues for easy post-braze cleaning"
+        ],
+        "cta": {
+          "label": "View Products",
+          "route": "/products/brazing-fluxes"
+        },
+        "sub_products": [
+          {
+            "id": "aluminium-brazing-flux",
+            "name": "Aluminium Brazing Flux (ER 4047)",
+            "short_description": "Chloride-fluoride based powder flux for brazing aluminium and aluminium alloys. Removes oxide layers and promotes smooth flow of aluminium filler metals.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Standard", "value": "EN 1045 FL 10" },
+                { "parameter": "Activity Range", "value": "500\u00b0C \u2013 650\u00b0C" },
+                { "parameter": "Compatible Filler", "value": "AL 4047 (12% Silicon Aluminium Filler Alloy)" },
+                { "parameter": "Physical State", "value": "Powder" },
+                { "parameter": "Packaging", "value": "250 g / 500 g plastic jar" },
+                { "parameter": "Shelf Life", "value": "1 Year" }
+              ]
+            }
+          },
+          {
+            "id": "brass-brazing-flux",
+            "name": "Brass Brazing Flux",
+            "short_description": "Powder flux for brazing brass, copper, and copper-based alloys. Removes surface oxides and protects the joint area during heating.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Standard", "value": "EN 1045 FH21" },
+                { "parameter": "pH", "value": "4 \u2013 7" },
+                { "parameter": "Physical State", "value": "Powder" },
+                { "parameter": "Colour", "value": "Brown / White" },
+                { "parameter": "Contains", "value": "Potassium Salts" },
+                { "parameter": "Moisture", "value": "< 3%" },
+                { "parameter": "Chlorine", "value": "Nil" }
+              ]
+            }
+          },
+          {
+            "id": "silver-brazing-flux",
+            "name": "Silver Brazing Flux",
+            "short_description": "Paste flux for brazing copper, brass, steel, and ferrous/non-ferrous metals. Ensures proper flow of silver brazing filler alloys.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Standard", "value": "AWS A5.31 \u2013 Type FB-3-A" },
+                { "parameter": "pH", "value": "7.5 \u2013 9" },
+                { "parameter": "Physical State", "value": "Paste" },
+                { "parameter": "Colour", "value": "White" },
+                { "parameter": "Activity Range", "value": "565\u00b0C \u2013 870\u00b0C" },
+                { "parameter": "Moisture", "value": "15 \u2013 35%" },
+                { "parameter": "Chlorine", "value": "Nil" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "copper-paste",
+        "title": "Copper Paste",
+        "imgName": "rp-copper.png",
+        "short_description": "High-performance copper brazing paste for furnace brazing. Flux-free, precision filler metal for consistent, clean joints.",
+        "description": "Copper Brazing Paste is a high-performance, precision filler metal engineered for furnace brazing applications. It consists of high-purity copper powder suspended in a specially formulated organic binder system.\n\nThe optimized rheology ensures easy application, stable placement before brazing, and complete binder burnout during furnace heating. This results in strong, metallurgically sound brazed joints with minimal post-braze cleaning.\n\nDesigned for flux-free brazing in controlled atmospheres, it delivers consistent joint quality, excellent capillary flow, and clean results in hydrogen, dissociated ammonia, or vacuum environments.",
+        "key_technical_features": [
+          "Eliminates manual placement of foils or rings",
+          "Reduces filler waste and rework",
+          "Improves joint repeatability",
+          "Enables automation and precise dosage control",
+          "Results in strong, metallurgically sound joints",
+          "Requires minimal post-braze cleaning"
+        ],
+        "cta": {
+          "label": "View Products",
+          "route": "/products/copper-paste"
+        },
+        "sub_products": [
+          {
+            "id": "copper-paste-mw-cp",
+            "name": "Copper Brazing Paste (MW-CP)",
+            "short_description": "Standard copper brazing paste for furnace brazing of carbon steel, stainless steel, and PM components in controlled atmospheres.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Product Code", "value": "MW-CP" },
+                { "parameter": "Material", "value": "High-purity copper powder in organic binder" },
+                { "parameter": "Brazing Temperature", "value": "1083\u2013 1100\u00b0C" },
+                { "parameter": "Joint Clearance", "value": "0.02\u2013 0.08 mm" },
+                { "parameter": "Heating Method", "value": "Controlled furnace cycle" },
+                { "parameter": "Applications", "value": "Carbon / low-alloy steels, stainless steel, PM components" },
+                { "parameter": "Packaging", "value": "1 kg, 5 kg, 10 kg containers" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "zari-wire",
+        "title": "Zari Wire",
+        "imgName": "rp-phos.png",
+        "short_description": "Premium quality zari wire for textile, embroidery and decorative craftsmanship.",
+        "description": "Zari Wire blends heritage craftsmanship with modern metallurgy. Produced using high-quality copper, silver, and metallic coatings, our Zari wires are ideal for intricate hand embroidery, weaving, and embellishments in ethnic and contemporary textiles.\n\nWith uniform coating for consistent luster and resistance to tarnishing, our Zari Wires are designed for both bulk production and boutique designer applications.",
+        "key_technical_features": [
+          "High tensile strength with excellent flexibility",
+          "Uniform coating for consistent luster",
+          "Resistance to tarnishing and corrosion",
+          "Lightweight and easy to weave or embroider",
+          "Available in multiple shades and finishes",
+          "Non-toxic, skin-friendly materials for safe textile integration"
+        ],
+        "cta": {
+          "label": "View Products",
+          "route": "/products/zari-wire"
+        },
+        "sub_products": [
+          {
+            "id": "zari-wire-silver-plated",
+            "name": "Silver Plated Zari Wire",
+            "short_description": "Silver-plated zari wire on copper/brass base. Excellent luster with tarnish resistance for high-end textile embroidery.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Material", "value": "Copper / Brass (base metal)" },
+                { "parameter": "Purity", "value": "Copper \u2265 99.90%" },
+                { "parameter": "Coating", "value": "Silver-plated" },
+                { "parameter": "Wire Diameter", "value": "0.2 \u2013 1.5 mm" },
+                { "parameter": "Elongation", "value": "8 \u2013 12%" },
+                { "parameter": "Surface Finish", "value": "Bright / Matte / Embossed" },
+                { "parameter": "Packaging", "value": "Plastic bobbins, reels, cones" },
+                { "parameter": "Standard Lengths", "value": "50m, 100m, 250m (custom on request)" }
+              ]
+            }
+          },
+          {
+            "id": "zari-wire-gold-plated",
+            "name": "Gold Plated Zari Wire",
+            "short_description": "Gold-plated zari wire for traditional saree, lehenga, and ethnic garment embroidery. Rich luster with excellent colour retention.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Material", "value": "Copper / Brass (base metal)" },
+                { "parameter": "Purity", "value": "Brass alloys as per IS 319" },
+                { "parameter": "Coating", "value": "Gold-plated" },
+                { "parameter": "Wire Diameter", "value": "0.2 \u2013 1.5 mm" },
+                { "parameter": "Elongation", "value": "8 \u2013 12%" },
+                { "parameter": "Surface Finish", "value": "Bright / Matte" },
+                { "parameter": "Packaging", "value": "Plastic bobbins, reels, hand bundles, cones" },
+                { "parameter": "Standard Lengths", "value": "50m, 100m, 250m (custom on request)" }
+              ]
+            }
+          },
+          {
+            "id": "zari-wire-colour-coated",
+            "name": "Colour Coated Zari Wire",
+            "short_description": "Enamel colour-coated zari wire in Red, Green, Blue and other shades. Ideal for contemporary and fashion embroidery.",
+            "technical_specifications": {
+              "table_title": "Technical Specifications",
+              "rows": [
+                { "parameter": "Material", "value": "Copper / Brass (base metal)" },
+                { "parameter": "Coating", "value": "Color-coated Enamel (Red, Green, Blue, etc.)" },
+                { "parameter": "Wire Diameter", "value": "0.2 \u2013 1.5 mm" },
+                { "parameter": "Elongation", "value": "8 \u2013 12%" },
+                { "parameter": "Surface Finish", "value": "Bright" },
+                { "parameter": "Packaging", "value": "Plastic bobbins, reels, cones" },
+                { "parameter": "Standard Lengths", "value": "50m, 100m, 250m (custom on request)" }
               ]
             }
           }

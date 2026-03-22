@@ -93,19 +93,24 @@ export default function CertificationsPage() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative bg-[#1f5c7a] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section – Banner Image */}
+      <section className="relative min-h-[380px] flex items-center justify-center text-white overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/images/certifications_banner.jpeg)' }}
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
               Certifications & Quality Assurance
             </h1>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto drop-shadow">
               Committed to international standards and meticulous quality control at every step
             </p>
           </motion.div>

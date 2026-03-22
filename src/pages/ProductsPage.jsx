@@ -55,127 +55,102 @@ export default function ProductsPage() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative bg-[#1f5c7a] text-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section – Banner Image */}
+      <section className="relative overflow-hidden" style={{ minHeight: '320px' }}>
+        <img
+          src="/images/product_banner.png"
+          alt="Our Products"
+          className="w-full h-full object-cover absolute inset-0"
+          style={{ minHeight: '320px' }}
+        />
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center" style={{ minHeight: '320px' }}>
           <motion.div
-            className="text-center"
+            className="text-center w-full py-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Our Product Range</h1>
-            <p className="text-base md:text-xl text-gray-100 max-w-5xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white drop-shadow-lg">Our Product Range</h1>
+            <p className="text-base md:text-xl text-gray-100 max-w-5xl mx-auto px-4 drop-shadow">
               Comprehensive range of brazing alloys delivering exceptional performance for demanding industrial applications
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Major Products - Layout matching design */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      {/* Major Products – Compact Grid */}
+      <section className="py-10 md:py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8 md:space-y-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-5 md:gap-6">
             {majorProducts.map((product, index) => (
               <AnimatedCard
                 key={product.id}
                 index={index}
-                delay={index * 0.15}
-                className="group bg-white rounded-3xl border-2 border-gray-200 p-6 md:p-8 lg:p-10 hover:border-gray-300 transition-all duration-300"
+                delay={index * 0.08}
+                className="group bg-white rounded-2xl border-2 border-gray-200 p-5 hover:border-primary hover:shadow-lg transition-all duration-300"
               >
-                {/* Top Section: Image, Title, Description */}
-                <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 xl:gap-12 mb-6 lg:mb-8">
-                  {/* Image - Compact on Left */}
-                  <div className="shrink-0">
-                    <div className="relative w-full lg:w-[280px] xl:w-[340px] h-64 lg:h-[340px] bg-linear-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center overflow-hidden group">
-                      <img
-                        src={`/images/${product.imgName}`}
-                        alt={product.title}
-                        className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                        }}
-                      />
-                    </div>
+                <div className="flex gap-4 mb-4">
+                  {/* Compact image */}
+                  <div className="shrink-0 w-24 h-24 bg-gray-900 rounded-xl overflow-hidden flex items-center justify-center">
+                    <img
+                      src={`/images/${product.imgName}`}
+                      alt={product.title}
+                      className="w-full h-full object-contain"
+                      onError={(e) => { e.target.style.display = 'none'; }}
+                    />
                   </div>
-
-                  {/* Title & Description on Right */}
-                  <div className="flex-1 flex flex-col">
-                    {/* Title */}
-                    <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-[#1f5c7a] mb-4 lg:mb-6 leading-tight">
-                      {product.title}
-                    </h2>
-
-                    {/* Description Paragraphs */}
-                    <div className="space-y-4 text-gray-700 leading-relaxed text-[15px] md:text-base text-justify mb-6">
-                      {product.description.split('\n\n').map((paragraph, idx) => (
-                        <p key={idx}>{paragraph}</p>
-                      ))}
-                    </div>
-
-                    {/* RP Silver Buttons */}
-                    {product.id === 'rp-silver' && (
-                      <div className="flex flex-wrap gap-3 mt-6">
-                        <Link
-                          to="/products/rp-silver#cadmium-free"
-                          className="inline-flex items-center px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-[#1f5c7a] transition-all duration-300 font-medium shadow-md hover:shadow-lg text-sm"
-                        >
-                          Cadmium Free Alloy
-                          <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </Link>
-                        <Link
-                          to="/products/rp-silver#cadmium-bearing"
-                          className="inline-flex items-center px-6 py-2.5 bg-white text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg text-sm"
-                        >
-                          Cadmium Bearing Alloy
-                          <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </Link>
-                      </div>
-                    )}
+                  {/* Title + short description */}
+                  <div className="flex-1 min-w-0">
+                    <h2 className="text-lg font-bold text-[#1f5c7a] mb-1 leading-tight">{product.title}</h2>
+                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">{product.short_description}</p>
                   </div>
                 </div>
 
-                {/* Bottom Section: Features & CTA */}
+                {/* Features – compact 2-col list */}
                 {product.key_technical_features && (
-                  <div className="border-t-2 border-gray-200 pt-6 lg:pt-8">
-                    <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
-                      {/* Features - Takes More Space */}
-                      <div className="flex-1">
-                        <h3 className="text-xl md:text-2xl font-bold text-[#1f5c7a] mb-4 flex items-center">
-                          <svg className="w-6 h-6 mr-2 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                          </svg>
-                          Features:
-                        </h3>
-                        <ul className="grid md:grid-cols-2 gap-3">
-                          {product.key_technical_features.map((feature, idx) => (
-                            <li key={idx} className="flex items-start text-gray-700 text-[15px] md:text-base">
-                              <svg className="w-5 h-5 text-primary mr-2 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                              </svg>
-                              <span>{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                  <ul className="grid grid-cols-1 gap-1.5 mb-4">
+                    {product.key_technical_features.slice(0, 3).map((feature, idx) => (
+                      <li key={idx} className="flex items-start text-xs text-gray-700">
+                        <svg className="w-4 h-4 text-primary mr-1.5 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span className="line-clamp-2">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
-                      {/* CTA Button - Right Side */}
-                      <div className="shrink-0 lg:self-end">
-                        <Link
-                          to={product.cta.route}
-                          className="inline-flex items-center px-8 py-3 bg-[#1f5c7a] text-white rounded-lg hover:bg-[#1a4f65] transition-all duration-300 font-medium shadow-md hover:shadow-lg text-base whitespace-nowrap hover:scale-105 active:scale-95"
-                        >
-                          {product.cta.label}
-                          <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </Link>
-                      </div>
-                    </div>
+                {/* RP Silver sub-category buttons */}
+                {product.id === 'rp-silver' && (
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <Link
+                      to="/products/rp-silver#cadmium-free"
+                      className="inline-flex items-center px-4 py-1.5 bg-primary text-white rounded-lg hover:bg-[#1f5c7a] transition-all duration-300 font-medium text-xs"
+                    >
+                      Cadmium Free Alloy
+                    </Link>
+                    <Link
+                      to="/products/rp-silver#cadmium-bearing"
+                      className="inline-flex items-center px-4 py-1.5 bg-white text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-medium text-xs"
+                    >
+                      Cadmium Bearing Alloy
+                    </Link>
+                  </div>
+                )}
+
+                {/* CTA */}
+                {product.cta && (
+                  <div className="flex justify-end">
+                    <Link
+                      to={product.cta.route}
+                      className="inline-flex items-center px-5 py-2 bg-[#1f5c7a] text-white rounded-lg hover:bg-[#1a4f65] transition-all duration-300 font-medium text-sm shadow hover:shadow-md whitespace-nowrap hover:scale-105 active:scale-95"
+                    >
+                      {product.cta.label}
+                      <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                   </div>
                 )}
               </AnimatedCard>

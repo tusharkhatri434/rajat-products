@@ -52,15 +52,6 @@ export default function AboutPage() {
       ]
     },
     {
-      title: 'Custom Alloy Development',
-      description: 'Specialized teams that design and innovate custom alloys tailored to specific industrial applications',
-      features: [
-        'Application-specific solutions',
-        'Rapid prototyping',
-        'Technical consultation'
-      ]
-    },
-    {
       title: 'Comprehensive Product Range',
       description: 'Diverse brazing alloys—from silver-phosphorus alloys to specialty formulations for critical industries',
       features: [
@@ -76,15 +67,6 @@ export default function AboutPage() {
         'Multi-standard certification',
         'Global compliance',
         'Traceability systems'
-      ]
-    },
-    {
-      title: 'Expert Technical Guidance',
-      description: 'Seasoned R&T engineers providing comprehensive support for joint design, alloy selection and process optimization',
-      features: [
-        '24/7 technical support',
-        'On-site consultation',
-        'Training programs'
       ]
     }
   ];
@@ -114,17 +96,22 @@ export default function AboutPage() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative bg-[#1f5c7a] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section – Banner Image */}
+      <section className="relative min-h-[420px] flex items-center justify-center text-white overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/images/about_banner.jpeg)' }}
+        />
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Rajat Products</h1>
-            <p className="text-base md:text-lg text-gray-100 max-w-4xl mx-auto leading-relaxed">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">About Rajat Products</h1>
+            <p className="text-base md:text-lg text-gray-100 max-w-4xl mx-auto leading-relaxed drop-shadow">
               Since 1989, we&apos;ve been pioneering excellence in metallurgical solutions.<br className="hidden md:block" />
               Delivering world-class brazing alloys that set new standards in quality, consistency & reliability worldwide.
             </p>
@@ -154,21 +141,16 @@ export default function AboutPage() {
 
           <div className="prose prose-lg max-w-4xl mx-auto text-gray-600">
             <p className="mb-6">
-              Rajat Products was founded in 1989 as a clean pioneer for metallurgy and an unwavering vision to
-              deliver the highest quality brazing alloys to industries worldwide.
+              In 1989, Rajat Products was established as a clean metallurgy pioneer with the unshakeable goal of providing the best brazing alloys to businesses across the globe.
             </p>
             <p className="mb-6">
-              Our journey began with a team of seasoned L&T technicians dedicated to refining silver compositions tailored
-              to demanding applications. Over the decades, we've evolved from a local manufacturer to a globally recognized
-              leader in metallurgy and brazing.
+              Our adventure started with a group of skilled L&T technicians committed to perfecting silver compositions for challenging uses. Over the years, we have transformed from a regional producer to a well-known worldwide leader in brazing and metallurgy.
             </p>
             <p className="mb-6">
-              Recognizing the diverse need for reliable, precise silver and copper–phosphorus alloys, we invested heavily in
-              research and development, pioneering formulations that set new industry benchmarks.
+              We made significant investments in research and development after realising the wide range of applications for accurate, dependable silver and copper-phosphorus alloys, leading to the development of innovative formulas that established new standards for the sector.
             </p>
             <p>
-              Today, we operate in an "Everything in one place" environment for our customers, guiding them with our
-              expertise to help make them the "worry about brazing or welding problems for their manufacturing pipeline."
+              We now provide our clients with a &ldquo;All in one place&rdquo; experience, using our knowledge to help them eliminate the &ldquo;worry about brazing or welding problems for their manufacturing pipeline.&rdquo;
             </p>
           </div>
 
@@ -293,7 +275,7 @@ export default function AboutPage() {
       </section>
 
       {/* Capabilities */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white" id="capabilities">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

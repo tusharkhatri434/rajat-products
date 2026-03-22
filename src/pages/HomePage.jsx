@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Button from '../components/Button';
@@ -5,7 +6,25 @@ import AnimatedCard from '../components/AnimatedCard';
 import productsData from '../data/products.json';
 import { FaIndustry, FaCar, FaOilCan, FaWind, FaBolt, FaCog, FaTrophy, FaCheckCircle, FaMicroscope, FaGlobe, FaShieldAlt } from 'react-icons/fa';
 
+const forms = [
+  { label: 'ROD', description: 'Precision-cut rods for torch and furnace brazing.' },
+  { label: 'RINGS', description: 'Pre-formed rings for consistent joint repeatability.' },
+  { label: 'STRIPS', description: 'Rolled strips for complex assemblies and volume production.' },
+  { label: 'FOILS', description: 'Ultra-thin foils for precision electronic and medical joints.' },
+  { label: 'FINE WIRES', description: '0.1mm – 2mm fine wires for the most demanding applications.' },
+];
+
 export default function HomePage() {
+  const [currentFormSlide, setCurrentFormSlide] = useState(0);
+
+  // Auto-advance slider
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentFormSlide(prev => (prev + 1) % forms.length);
+    }, 2800);
+    return () => clearInterval(timer);
+  }, []);
+
   const industries = [
     {
       title: 'Induction Motor',
@@ -35,7 +54,8 @@ export default function HomePage() {
     {
       title: 'View All Products',
       description: 'Explore our complete range of solutions',
-      icon: FaCog
+      icon: FaCog,
+      isLink: true
     }
   ];
 
@@ -82,24 +102,33 @@ export default function HomePage() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-100 to-gray-200 py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+      {/* Hero Section – Banner Image */}
+      <section className="relative overflow-hidden" style={{ minHeight: '520px' }}>
+        <img
+          src="/homePage/homepage_banner.jpeg"
+          alt="Rajat Products – Where Purity Meets Next Gen Silver Alloys"
+          className="w-full h-full object-cover absolute inset-0"
+          style={{ minHeight: '520px' }}
+        />
+        {/* Subtle dark overlay for text legibility */}
+        <div className="absolute inset-0 bg-black/30" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center" style={{ minHeight: '520px' }}>
+          <div className="text-center py-20">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-3xl md:text-3xl lg:text-5xl font-bold text-gray-900 mb-6"
+              className="text-3xl md:text-3xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg"
             >
               WHERE PURITY MEETS{' '}
-              <span className="text-primary">NEXT GEN SILVER ALLOYS</span>
+              <span className="text-[#7ecbee]">NEXT GEN SILVER ALLOYS</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
+              className="text-lg md:text-xl text-gray-100 mb-8 max-w-3xl mx-auto drop-shadow"
             >
               Delivering trusted brazing solutions since 1989
             </motion.p>
@@ -152,14 +181,81 @@ export default function HomePage() {
                 Leading the Industry Since 1989
               </h2>
               <p className="text-gray-800 mb-6 leading-relaxed">
-                Located in Meerut's industrial hub, Rajat Products Pvt. Ltd. has been a trusted name in manufacturing high-quality silver and copper phosphorus brazing alloys, welding alloys and zari wire.
+                Located in Meerut's industrial hub, Rajat Products Pvt. Ltd. has been a trusted name in manufacturing high-quality silver and copper phosphorus brazing alloys, welding alloys and zari wire. We are known for having a customer centric approach, focusing on value creation, digital engagement and personalized solutions.
               </p>
               <p className="text-gray-800 mb-8 leading-relaxed">
-                When our customers are not aware of what alloy they might require for accomplishing their manufacturing, we are always there to assist them with our technical expertise.              </p>
+                Our team at Rajat Products is focused on Data Driven Customization- bridging the gap between our customers and their needs.
+              </p>
               <Button to="/about" variant="primary">
                 Know more about us
               </Button>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Different Available Forms Slider */}
+      <section className="py-16 bg-primary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10"
+          >
+            <p className="text-sm uppercase tracking-widest text-white/70 mb-2">Silver & Copper Expertise</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+              A GLIMPSE AT OUR SILVER AND COPPER EXPERTISE
+            </h2>
+            <p className="text-white/80 text-lg font-medium tracking-wide">DIFFERENT AVAILABLE FORMS</p>
+          </motion.div>
+
+          {/* Desktop: all 5 cards side by side */}
+          <div className="hidden md:grid grid-cols-5 gap-4">
+            {forms.map((form, index) => (
+              <AnimatedCard
+                key={form.label}
+                index={index}
+                className="group bg-white/10 border border-white/20 p-6 rounded-2xl text-center hover:bg-white/20 transition-all duration-300 cursor-default"
+              >
+                <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <FaShieldAlt className="text-2xl text-white" />
+                </div>
+                <h3 className="text-base font-bold text-white mb-2">{form.label}</h3>
+                <p className="text-white/80 text-sm leading-relaxed">{form.description}</p>
+              </AnimatedCard>
+            ))}
+          </div>
+
+          {/* Mobile: auto-scrolling single card */}
+          <div className="md:hidden">
+            <div className="relative overflow-hidden rounded-2xl">
+              <motion.div
+                key={currentFormSlide}
+                initial={{ opacity: 0, x: 60 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -60 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white/10 border border-white/20 p-8 rounded-2xl text-center"
+              >
+                <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FaShieldAlt className="text-2xl text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{forms[currentFormSlide].label}</h3>
+                <p className="text-white/80 text-sm leading-relaxed">{forms[currentFormSlide].description}</p>
+              </motion.div>
+            </div>
+            {/* Dots indicator */}
+            <div className="flex justify-center mt-4 gap-2">
+              {forms.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentFormSlide(i)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === currentFormSlide ? 'bg-white w-6' : 'bg-white/40'}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -185,7 +281,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
             {industries.map((industry, index) => {
               const IconComponent = industry.icon;
-              return (
+              const card = (
                 <AnimatedCard
                   key={industry.title}
                   index={index}
@@ -201,6 +297,16 @@ export default function HomePage() {
                     <p className="text-gray-100 text-sm leading-relaxed">{industry.description}</p>
                   </div>
                 </AnimatedCard>
+              );
+
+              return industry.isLink ? (
+                <Link key={industry.title} to="/products" className="block">
+                  {card}
+                </Link>
+              ) : (
+                <div key={industry.title}>
+                  {card}
+                </div>
               );
             })}
           </div>
@@ -321,40 +427,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      {/* <section className="py-16 bg-primary text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold mb-6"
-          >
-            Ready to Experience Excellence?
-          </h2>
-          <p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-gray-100 mb-8"
-          >
-            Let's discuss how our premium brazing solutions can elevate your manufacturing processes
-          </p>
-          <div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-          >
-            <Button to="/products" variant="outline">
-              View Our Products
-            </Button>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 }
-

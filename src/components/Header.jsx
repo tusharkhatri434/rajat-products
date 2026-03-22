@@ -23,6 +23,10 @@ export default function Header() {
     { name: 'RP Silver', path: '/products/rp-silver' },
     { name: 'RP Copper', path: '/products/rp-copper' },
     { name: 'RP Braze', path: '/products/rp-braze' },
+    { name: 'RP Aluminium', path: '/products/rp-aluminium' },
+    { name: 'Brazing Fluxes', path: '/products/brazing-fluxes' },
+    { name: 'Copper Paste', path: '/products/copper-paste' },
+    { name: 'Zari Wire', path: '/products/zari-wire' },
   ];
 
   const isActive = (path) => location.pathname === path;
