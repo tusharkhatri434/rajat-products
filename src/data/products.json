@@ -336,9 +336,9 @@
         "description": "RP Silver brazing alloys consist of cadmium-free and cadmium-bearing Ag-Cu-Zn based filler metals designed to deliver excellent wetting, low brazing temperatures, and high joint strength.\n\nThese alloys are widely used in HVAC, refrigeration, plumbing, electrical, medical, food, aeronautical, and general industrial applications.",
         "key_technical_features": [
           "Fine Wire from 0.1 mm to 2 mm machining capacity for all the alloys listed.",
-          "Low brazing temperatures with good flow – Tin-modified grades such as Ag-56Sn types offer among the lowest melting ranges and excellent flow among cadmium-free families",
           "Excellent capillary action and minimizing heat input to parts",
-          "Suitable for most steels, stainless steels, copper/brass/bronze and many nickel alloys"
+          "Suitable for most steels, stainless steels, copper/brass/bronze and many nickel alloys",
+          "Low brazing temperatures with good flow – Tin-modified grades such as Ag-56Sn types offer among the lowest melting ranges and excellent flow among cadmium-free families"
         ],
         "cta": {
           "label": "View Products",
@@ -2588,15 +2588,42 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Aluminium (Al)", "value": "99.00 Min" },
-                { "parameter": "Silicon (Si)", "value": "0.95 Max" },
-                { "parameter": "Iron (Fe)", "value": "0.05 \u2013 0.20" },
-                { "parameter": "Copper (Cu)", "value": "<0.05" },
-                { "parameter": "Manganese (Mn)", "value": "<0.05" },
-                { "parameter": "Chromium (Cr)", "value": "<0.10" },
-                { "parameter": "Titanium (Ti)", "value": "<0.03" },
-                { "parameter": "Tensile Strength", "value": "70 N/mm\u00b2" },
-                { "parameter": "Elongation", "value": "25%" }
+                {
+                  "parameter": "Aluminium (Al)",
+                  "value": "99.00 Min"
+                },
+                {
+                  "parameter": "Silicon (Si)",
+                  "value": "0.95 Max"
+                },
+                {
+                  "parameter": "Iron (Fe)",
+                  "value": "0.05 \u2013 0.20"
+                },
+                {
+                  "parameter": "Copper (Cu)",
+                  "value": "<0.05"
+                },
+                {
+                  "parameter": "Manganese (Mn)",
+                  "value": "<0.05"
+                },
+                {
+                  "parameter": "Chromium (Cr)",
+                  "value": "<0.10"
+                },
+                {
+                  "parameter": "Titanium (Ti)",
+                  "value": "<0.03"
+                },
+                {
+                  "parameter": "Tensile Strength",
+                  "value": "70 N/mm\u00b2"
+                },
+                {
+                  "parameter": "Elongation",
+                  "value": "25%"
+                }
               ]
             }
           },
@@ -2607,16 +2634,46 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Aluminium (Al)", "value": "Remainder" },
-                { "parameter": "Silicon (Si)", "value": "4.5 \u2013 6.0" },
-                { "parameter": "Iron (Fe)", "value": "<0.60" },
-                { "parameter": "Copper (Cu)", "value": "<0.30" },
-                { "parameter": "Manganese (Mn)", "value": "<0.30" },
-                { "parameter": "Magnesium (Mg)", "value": "<0.15" },
-                { "parameter": "Zinc (Zn)", "value": "<0.10" },
-                { "parameter": "Titanium (Ti)", "value": "<0.15" },
-                { "parameter": "Tensile Strength", "value": "120 N/mm\u00b2" },
-                { "parameter": "Elongation", "value": "30%" }
+                {
+                  "parameter": "Aluminium (Al)",
+                  "value": "Remainder"
+                },
+                {
+                  "parameter": "Silicon (Si)",
+                  "value": "4.5 \u2013 6.0"
+                },
+                {
+                  "parameter": "Iron (Fe)",
+                  "value": "<0.60"
+                },
+                {
+                  "parameter": "Copper (Cu)",
+                  "value": "<0.30"
+                },
+                {
+                  "parameter": "Manganese (Mn)",
+                  "value": "<0.30"
+                },
+                {
+                  "parameter": "Magnesium (Mg)",
+                  "value": "<0.15"
+                },
+                {
+                  "parameter": "Zinc (Zn)",
+                  "value": "<0.10"
+                },
+                {
+                  "parameter": "Titanium (Ti)",
+                  "value": "<0.15"
+                },
+                {
+                  "parameter": "Tensile Strength",
+                  "value": "120 N/mm\u00b2"
+                },
+                {
+                  "parameter": "Elongation",
+                  "value": "30%"
+                }
               ]
             }
           },
@@ -2627,13 +2684,34 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Aluminium (Al)", "value": "Remainder" },
-                { "parameter": "Silicon (Si)", "value": "11.0 \u2013 13.0" },
-                { "parameter": "Iron (Fe)", "value": "<0.60" },
-                { "parameter": "Copper (Cu)", "value": "<0.30" },
-                { "parameter": "Manganese (Mn)", "value": "<0.30" },
-                { "parameter": "Tensile Strength", "value": "130 N/mm\u00b2" },
-                { "parameter": "Elongation", "value": "5%" }
+                {
+                  "parameter": "Aluminium (Al)",
+                  "value": "Remainder"
+                },
+                {
+                  "parameter": "Silicon (Si)",
+                  "value": "11.0 \u2013 13.0"
+                },
+                {
+                  "parameter": "Iron (Fe)",
+                  "value": "<0.60"
+                },
+                {
+                  "parameter": "Copper (Cu)",
+                  "value": "<0.30"
+                },
+                {
+                  "parameter": "Manganese (Mn)",
+                  "value": "<0.30"
+                },
+                {
+                  "parameter": "Tensile Strength",
+                  "value": "130 N/mm\u00b2"
+                },
+                {
+                  "parameter": "Elongation",
+                  "value": "5%"
+                }
               ]
             }
           },
@@ -2644,13 +2722,34 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Aluminium (Al)", "value": "Remainder" },
-                { "parameter": "Silicon (Si)", "value": "<0.25" },
-                { "parameter": "Magnesium (Mg)", "value": "4.5 \u2013 5.2" },
-                { "parameter": "Manganese (Mn)", "value": "0.50 \u2013 1.0" },
-                { "parameter": "Zirconium (Zr)", "value": "0.10 \u2013 0.20" },
-                { "parameter": "Tensile Strength", "value": "275 N/mm\u00b2" },
-                { "parameter": "Elongation", "value": "17%" }
+                {
+                  "parameter": "Aluminium (Al)",
+                  "value": "Remainder"
+                },
+                {
+                  "parameter": "Silicon (Si)",
+                  "value": "<0.25"
+                },
+                {
+                  "parameter": "Magnesium (Mg)",
+                  "value": "4.5 \u2013 5.2"
+                },
+                {
+                  "parameter": "Manganese (Mn)",
+                  "value": "0.50 \u2013 1.0"
+                },
+                {
+                  "parameter": "Zirconium (Zr)",
+                  "value": "0.10 \u2013 0.20"
+                },
+                {
+                  "parameter": "Tensile Strength",
+                  "value": "275 N/mm\u00b2"
+                },
+                {
+                  "parameter": "Elongation",
+                  "value": "17%"
+                }
               ]
             }
           },
@@ -2661,13 +2760,34 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Aluminium (Al)", "value": "Remainder" },
-                { "parameter": "Silicon (Si)", "value": "<0.25" },
-                { "parameter": "Magnesium (Mg)", "value": "4.5 \u2013 5.5" },
-                { "parameter": "Manganese (Mn)", "value": "0.50 \u2013 0.20" },
-                { "parameter": "Chromium (Cr)", "value": "0.05 \u2013 0.25" },
-                { "parameter": "Tensile Strength", "value": "275 N/mm\u00b2" },
-                { "parameter": "Elongation", "value": "17%" }
+                {
+                  "parameter": "Aluminium (Al)",
+                  "value": "Remainder"
+                },
+                {
+                  "parameter": "Silicon (Si)",
+                  "value": "<0.25"
+                },
+                {
+                  "parameter": "Magnesium (Mg)",
+                  "value": "4.5 \u2013 5.5"
+                },
+                {
+                  "parameter": "Manganese (Mn)",
+                  "value": "0.50 \u2013 0.20"
+                },
+                {
+                  "parameter": "Chromium (Cr)",
+                  "value": "0.05 \u2013 0.25"
+                },
+                {
+                  "parameter": "Tensile Strength",
+                  "value": "275 N/mm\u00b2"
+                },
+                {
+                  "parameter": "Elongation",
+                  "value": "17%"
+                }
               ]
             }
           },
@@ -2678,13 +2798,34 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Aluminium (Al)", "value": "Remainder" },
-                { "parameter": "Silicon (Si)", "value": "<0.25" },
-                { "parameter": "Magnesium (Mg)", "value": "4.3 \u2013 5.2" },
-                { "parameter": "Manganese (Mn)", "value": "0.05 \u2013 1.0" },
-                { "parameter": "Titanium (Ti)", "value": "0.05 \u2013 0.20" },
-                { "parameter": "Tensile Strength", "value": "240 N/mm\u00b2" },
-                { "parameter": "Elongation", "value": "17%" }
+                {
+                  "parameter": "Aluminium (Al)",
+                  "value": "Remainder"
+                },
+                {
+                  "parameter": "Silicon (Si)",
+                  "value": "<0.25"
+                },
+                {
+                  "parameter": "Magnesium (Mg)",
+                  "value": "4.3 \u2013 5.2"
+                },
+                {
+                  "parameter": "Manganese (Mn)",
+                  "value": "0.05 \u2013 1.0"
+                },
+                {
+                  "parameter": "Titanium (Ti)",
+                  "value": "0.05 \u2013 0.20"
+                },
+                {
+                  "parameter": "Tensile Strength",
+                  "value": "240 N/mm\u00b2"
+                },
+                {
+                  "parameter": "Elongation",
+                  "value": "17%"
+                }
               ]
             }
           },
@@ -2695,13 +2836,34 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Aluminium (Al)", "value": "Remainder" },
-                { "parameter": "Silicon (Si)", "value": "<0.25" },
-                { "parameter": "Magnesium (Mg)", "value": "2.4 \u2013 3.0" },
-                { "parameter": "Manganese (Mn)", "value": "0.05 \u2013 1.0" },
-                { "parameter": "Titanium (Ti)", "value": "0.05 \u2013 0.20" },
-                { "parameter": "Tensile Strength", "value": "215 N/mm\u00b2" },
-                { "parameter": "Elongation", "value": "17%" }
+                {
+                  "parameter": "Aluminium (Al)",
+                  "value": "Remainder"
+                },
+                {
+                  "parameter": "Silicon (Si)",
+                  "value": "<0.25"
+                },
+                {
+                  "parameter": "Magnesium (Mg)",
+                  "value": "2.4 \u2013 3.0"
+                },
+                {
+                  "parameter": "Manganese (Mn)",
+                  "value": "0.05 \u2013 1.0"
+                },
+                {
+                  "parameter": "Titanium (Ti)",
+                  "value": "0.05 \u2013 0.20"
+                },
+                {
+                  "parameter": "Tensile Strength",
+                  "value": "215 N/mm\u00b2"
+                },
+                {
+                  "parameter": "Elongation",
+                  "value": "17%"
+                }
               ]
             }
           },
@@ -2712,13 +2874,34 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Aluminium (Al)", "value": "Remainder" },
-                { "parameter": "Silicon (Si)", "value": "<0.25" },
-                { "parameter": "Magnesium (Mg)", "value": "4.7 \u2013 5.5" },
-                { "parameter": "Manganese (Mn)", "value": "0.05 \u2013 1.0" },
-                { "parameter": "Titanium (Ti)", "value": "0.05 \u2013 0.20" },
-                { "parameter": "Tensile Strength", "value": "275 N/mm\u00b2" },
-                { "parameter": "Elongation", "value": "17%" }
+                {
+                  "parameter": "Aluminium (Al)",
+                  "value": "Remainder"
+                },
+                {
+                  "parameter": "Silicon (Si)",
+                  "value": "<0.25"
+                },
+                {
+                  "parameter": "Magnesium (Mg)",
+                  "value": "4.7 \u2013 5.5"
+                },
+                {
+                  "parameter": "Manganese (Mn)",
+                  "value": "0.05 \u2013 1.0"
+                },
+                {
+                  "parameter": "Titanium (Ti)",
+                  "value": "0.05 \u2013 0.20"
+                },
+                {
+                  "parameter": "Tensile Strength",
+                  "value": "275 N/mm\u00b2"
+                },
+                {
+                  "parameter": "Elongation",
+                  "value": "17%"
+                }
               ]
             }
           }
@@ -2749,12 +2932,30 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Standard", "value": "EN 1045 FL 10" },
-                { "parameter": "Activity Range", "value": "500\u00b0C \u2013 650\u00b0C" },
-                { "parameter": "Compatible Filler", "value": "AL 4047 (12% Silicon Aluminium Filler Alloy)" },
-                { "parameter": "Physical State", "value": "Powder" },
-                { "parameter": "Packaging", "value": "250 g / 500 g plastic jar" },
-                { "parameter": "Shelf Life", "value": "1 Year" }
+                {
+                  "parameter": "Standard",
+                  "value": "EN 1045 FL 10"
+                },
+                {
+                  "parameter": "Activity Range",
+                  "value": "500\u00b0C \u2013 650\u00b0C"
+                },
+                {
+                  "parameter": "Compatible Filler",
+                  "value": "AL 4047 (12% Silicon Aluminium Filler Alloy)"
+                },
+                {
+                  "parameter": "Physical State",
+                  "value": "Powder"
+                },
+                {
+                  "parameter": "Packaging",
+                  "value": "250 g / 500 g plastic jar"
+                },
+                {
+                  "parameter": "Shelf Life",
+                  "value": "1 Year"
+                }
               ]
             }
           },
@@ -2765,13 +2966,34 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Standard", "value": "EN 1045 FH21" },
-                { "parameter": "pH", "value": "4 \u2013 7" },
-                { "parameter": "Physical State", "value": "Powder" },
-                { "parameter": "Colour", "value": "Brown / White" },
-                { "parameter": "Contains", "value": "Potassium Salts" },
-                { "parameter": "Moisture", "value": "< 3%" },
-                { "parameter": "Chlorine", "value": "Nil" }
+                {
+                  "parameter": "Standard",
+                  "value": "EN 1045 FH21"
+                },
+                {
+                  "parameter": "pH",
+                  "value": "4 \u2013 7"
+                },
+                {
+                  "parameter": "Physical State",
+                  "value": "Powder"
+                },
+                {
+                  "parameter": "Colour",
+                  "value": "Brown / White"
+                },
+                {
+                  "parameter": "Contains",
+                  "value": "Potassium Salts"
+                },
+                {
+                  "parameter": "Moisture",
+                  "value": "< 3%"
+                },
+                {
+                  "parameter": "Chlorine",
+                  "value": "Nil"
+                }
               ]
             }
           },
@@ -2782,13 +3004,34 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Standard", "value": "AWS A5.31 \u2013 Type FB-3-A" },
-                { "parameter": "pH", "value": "7.5 \u2013 9" },
-                { "parameter": "Physical State", "value": "Paste" },
-                { "parameter": "Colour", "value": "White" },
-                { "parameter": "Activity Range", "value": "565\u00b0C \u2013 870\u00b0C" },
-                { "parameter": "Moisture", "value": "15 \u2013 35%" },
-                { "parameter": "Chlorine", "value": "Nil" }
+                {
+                  "parameter": "Standard",
+                  "value": "AWS A5.31 \u2013 Type FB-3-A"
+                },
+                {
+                  "parameter": "pH",
+                  "value": "7.5 \u2013 9"
+                },
+                {
+                  "parameter": "Physical State",
+                  "value": "Paste"
+                },
+                {
+                  "parameter": "Colour",
+                  "value": "White"
+                },
+                {
+                  "parameter": "Activity Range",
+                  "value": "565\u00b0C \u2013 870\u00b0C"
+                },
+                {
+                  "parameter": "Moisture",
+                  "value": "15 \u2013 35%"
+                },
+                {
+                  "parameter": "Chlorine",
+                  "value": "Nil"
+                }
               ]
             }
           }
@@ -2820,13 +3063,34 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Product Code", "value": "MW-CP" },
-                { "parameter": "Material", "value": "High-purity copper powder in organic binder" },
-                { "parameter": "Brazing Temperature", "value": "1083\u2013 1100\u00b0C" },
-                { "parameter": "Joint Clearance", "value": "0.02\u2013 0.08 mm" },
-                { "parameter": "Heating Method", "value": "Controlled furnace cycle" },
-                { "parameter": "Applications", "value": "Carbon / low-alloy steels, stainless steel, PM components" },
-                { "parameter": "Packaging", "value": "1 kg, 5 kg, 10 kg containers" }
+                {
+                  "parameter": "Product Code",
+                  "value": "MW-CP"
+                },
+                {
+                  "parameter": "Material",
+                  "value": "High-purity copper powder in organic binder"
+                },
+                {
+                  "parameter": "Brazing Temperature",
+                  "value": "1083\u2013 1100\u00b0C"
+                },
+                {
+                  "parameter": "Joint Clearance",
+                  "value": "0.02\u2013 0.08 mm"
+                },
+                {
+                  "parameter": "Heating Method",
+                  "value": "Controlled furnace cycle"
+                },
+                {
+                  "parameter": "Applications",
+                  "value": "Carbon / low-alloy steels, stainless steel, PM components"
+                },
+                {
+                  "parameter": "Packaging",
+                  "value": "1 kg, 5 kg, 10 kg containers"
+                }
               ]
             }
           }
@@ -2858,14 +3122,38 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Material", "value": "Copper / Brass (base metal)" },
-                { "parameter": "Purity", "value": "Copper \u2265 99.90%" },
-                { "parameter": "Coating", "value": "Silver-plated" },
-                { "parameter": "Wire Diameter", "value": "0.2 \u2013 1.5 mm" },
-                { "parameter": "Elongation", "value": "8 \u2013 12%" },
-                { "parameter": "Surface Finish", "value": "Bright / Matte / Embossed" },
-                { "parameter": "Packaging", "value": "Plastic bobbins, reels, cones" },
-                { "parameter": "Standard Lengths", "value": "50m, 100m, 250m (custom on request)" }
+                {
+                  "parameter": "Material",
+                  "value": "Copper / Brass (base metal)"
+                },
+                {
+                  "parameter": "Purity",
+                  "value": "Copper \u2265 99.90%"
+                },
+                {
+                  "parameter": "Coating",
+                  "value": "Silver-plated"
+                },
+                {
+                  "parameter": "Wire Diameter",
+                  "value": "0.2 \u2013 1.5 mm"
+                },
+                {
+                  "parameter": "Elongation",
+                  "value": "8 \u2013 12%"
+                },
+                {
+                  "parameter": "Surface Finish",
+                  "value": "Bright / Matte / Embossed"
+                },
+                {
+                  "parameter": "Packaging",
+                  "value": "Plastic bobbins, reels, cones"
+                },
+                {
+                  "parameter": "Standard Lengths",
+                  "value": "50m, 100m, 250m (custom on request)"
+                }
               ]
             }
           },
@@ -2876,14 +3164,38 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Material", "value": "Copper / Brass (base metal)" },
-                { "parameter": "Purity", "value": "Brass alloys as per IS 319" },
-                { "parameter": "Coating", "value": "Gold-plated" },
-                { "parameter": "Wire Diameter", "value": "0.2 \u2013 1.5 mm" },
-                { "parameter": "Elongation", "value": "8 \u2013 12%" },
-                { "parameter": "Surface Finish", "value": "Bright / Matte" },
-                { "parameter": "Packaging", "value": "Plastic bobbins, reels, hand bundles, cones" },
-                { "parameter": "Standard Lengths", "value": "50m, 100m, 250m (custom on request)" }
+                {
+                  "parameter": "Material",
+                  "value": "Copper / Brass (base metal)"
+                },
+                {
+                  "parameter": "Purity",
+                  "value": "Brass alloys as per IS 319"
+                },
+                {
+                  "parameter": "Coating",
+                  "value": "Gold-plated"
+                },
+                {
+                  "parameter": "Wire Diameter",
+                  "value": "0.2 \u2013 1.5 mm"
+                },
+                {
+                  "parameter": "Elongation",
+                  "value": "8 \u2013 12%"
+                },
+                {
+                  "parameter": "Surface Finish",
+                  "value": "Bright / Matte"
+                },
+                {
+                  "parameter": "Packaging",
+                  "value": "Plastic bobbins, reels, hand bundles, cones"
+                },
+                {
+                  "parameter": "Standard Lengths",
+                  "value": "50m, 100m, 250m (custom on request)"
+                }
               ]
             }
           },
@@ -2894,13 +3206,34 @@
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
-                { "parameter": "Material", "value": "Copper / Brass (base metal)" },
-                { "parameter": "Coating", "value": "Color-coated Enamel (Red, Green, Blue, etc.)" },
-                { "parameter": "Wire Diameter", "value": "0.2 \u2013 1.5 mm" },
-                { "parameter": "Elongation", "value": "8 \u2013 12%" },
-                { "parameter": "Surface Finish", "value": "Bright" },
-                { "parameter": "Packaging", "value": "Plastic bobbins, reels, cones" },
-                { "parameter": "Standard Lengths", "value": "50m, 100m, 250m (custom on request)" }
+                {
+                  "parameter": "Material",
+                  "value": "Copper / Brass (base metal)"
+                },
+                {
+                  "parameter": "Coating",
+                  "value": "Color-coated Enamel (Red, Green, Blue, etc.)"
+                },
+                {
+                  "parameter": "Wire Diameter",
+                  "value": "0.2 \u2013 1.5 mm"
+                },
+                {
+                  "parameter": "Elongation",
+                  "value": "8 \u2013 12%"
+                },
+                {
+                  "parameter": "Surface Finish",
+                  "value": "Bright"
+                },
+                {
+                  "parameter": "Packaging",
+                  "value": "Plastic bobbins, reels, cones"
+                },
+                {
+                  "parameter": "Standard Lengths",
+                  "value": "50m, 100m, 250m (custom on request)"
+                }
               ]
             }
           }

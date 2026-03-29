@@ -79,80 +79,87 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Major Products – Compact Grid */}
+      {/* Major Products – Compact 3-Column Grid */}
       <section className="py-10 md:py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-5 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 pb-12">
             {majorProducts.map((product, index) => (
               <AnimatedCard
                 key={product.id}
                 index={index}
-                delay={index * 0.08}
-                className="group bg-white rounded-2xl border-2 border-gray-200 p-5 hover:border-primary hover:shadow-lg transition-all duration-300"
+                delay={index * 0.1}
+                className="group bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full"
               >
-                <div className="flex gap-4 mb-4">
-                  {/* Compact image */}
-                  <div className="shrink-0 w-24 h-24 bg-gray-900 rounded-xl overflow-hidden flex items-center justify-center">
-                    <img
-                      src={`/images/${product.imgName}`}
-                      alt={product.title}
-                      className="w-full h-full object-contain"
-                      onError={(e) => { e.target.style.display = 'none'; }}
-                    />
-                  </div>
-                  {/* Title + short description */}
-                  <div className="flex-1 min-w-0">
-                    <h2 className="text-lg font-bold text-[#1f5c7a] mb-1 leading-tight">{product.title}</h2>
-                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">{product.short_description}</p>
-                  </div>
+                {/* Compact Product Image */}
+                <div className="relative h-48 overflow-hidden bg-gray-50 flex items-center justify-center p-6">
+                  <div className="absolute inset-0 bg-linear-to-t from-black/5 to-transparent z-10" />
+                  <motion.img
+                    src={`/images/${product.imgName}`}
+                    alt={product.title}
+                    className="w-full h-full object-contain relative z-20 transition-transform duration-500 group-hover:scale-105"
+                    onError={(e) => { e.target.style.display = 'none'; }}
+                  />
+                  {/* Subtle backdrop decoration */}
+                  <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/5 rounded-full blur-2xl" />
                 </div>
 
-                {/* Features – compact 2-col list */}
-                {product.key_technical_features && (
-                  <ul className="grid grid-cols-1 gap-1.5 mb-4">
-                    {product.key_technical_features.slice(0, 3).map((feature, idx) => (
-                      <li key={idx} className="flex items-start text-xs text-gray-700">
-                        <svg className="w-4 h-4 text-primary mr-1.5 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                        <span className="line-clamp-2">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-
-                {/* RP Silver sub-category buttons */}
-                {product.id === 'rp-silver' && (
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    <Link
-                      to="/products/rp-silver#cadmium-free"
-                      className="inline-flex items-center px-4 py-1.5 bg-primary text-white rounded-lg hover:bg-[#1f5c7a] transition-all duration-300 font-medium text-xs"
-                    >
-                      Cadmium Free Alloy
-                    </Link>
-                    <Link
-                      to="/products/rp-silver#cadmium-bearing"
-                      className="inline-flex items-center px-4 py-1.5 bg-white text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-medium text-xs"
-                    >
-                      Cadmium Bearing Alloy
-                    </Link>
+                {/* Content area */}
+                <div className="p-5 flex flex-col flex-1 bg-white">
+                  <div className="mb-4">
+                    <h2 className="text-xl font-bold text-[#1a415a] mb-2 group-hover:text-primary transition-colors duration-300 line-clamp-1">
+                      {product.title}
+                    </h2>
+                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+                      {product.short_description}
+                    </p>
                   </div>
-                )}
 
-                {/* CTA */}
-                {product.cta && (
-                  <div className="flex justify-end">
+                  {/* Concise technical features */}
+                  {product.key_technical_features && (
+                    <div className="space-y-2 mb-6 flex-1">
+                      {product.key_technical_features.slice(0, 3).map((feature, idx) => (
+                        <div key={idx} className="flex items-start">
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 mr-2 shrink-0" />
+                          <span className="text-xs md:text-sm text-gray-600 leading-tight">
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* RP Silver sub-category specific links - Ultra Compact */}
+                  {product.id === 'rp-silver' && (
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      <Link
+                        to="/products/rp-silver#cadmium-free"
+                        className="px-3 py-1 bg-gray-50 text-[#1a415a] border border-gray-100 rounded text-[10px] md:text-xs font-semibold hover:border-primary transition-colors"
+                      >
+                        Cadmium Free
+                      </Link>
+                      <Link
+                        to="/products/rp-silver#cadmium-bearing"
+                        className="px-3 py-1 bg-gray-50 text-[#1a415a] border border-gray-100 rounded text-[10px] md:text-xs font-semibold hover:border-primary transition-colors"
+                      >
+                        Cadmium Bearing
+                      </Link>
+                    </div>
+                  )}
+
+                  {/* Footer with CTA */}
+                  <div className="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between">
+                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Premium Grade</span>
                     <Link
                       to={product.cta.route}
-                      className="inline-flex items-center px-5 py-2 bg-[#1f5c7a] text-white rounded-lg hover:bg-[#1a4f65] transition-all duration-300 font-medium text-sm shadow hover:shadow-md whitespace-nowrap hover:scale-105 active:scale-95"
+                      className="inline-flex items-center text-primary font-bold text-sm hover:translate-x-1 transition-transform"
                     >
                       {product.cta.label}
                       <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5-5 5M6 7l5 5-5 5" />
                       </svg>
                     </Link>
                   </div>
-                )}
+                </div>
               </AnimatedCard>
             ))}
           </div>
