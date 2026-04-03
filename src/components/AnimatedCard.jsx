@@ -1,72 +1,71 @@
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
+import { SCROLL_REVEAL_EASE, SCROLL_REVEAL_VIEWPORT } from '../utils/scrollMotion';
+
+const MotionDiv = motion.div;
+
+const REVEAL_FROM = {
+  'fade-up': { opacity: 0, y: 32 },
+  'fade-down': { opacity: 0, y: -32 },
+  'fade-left': { opacity: 0, x: -28 },
+  'fade-right': { opacity: 0, x: 28 },
+  fade: { opacity: 0 },
+  'zoom-in': { opacity: 0, y: 26 },
+};
 
 /**
- * Reusable AnimatedCard component with scroll, hover, and tap animations
- * 
- * @param {Object} props
- * @param {React.ReactNode} props.children - Card content
- * @param {number} props.index - Index for staggered animations (default: 0)
- * @param {number} props.delay - Custom delay in seconds (overrides index-based delay)
- * @param {string} props.className - Additional Tailwind classes
- * @param {Function} props.onClick - Optional click handler
- * @param {boolean} props.disableHover - Disable hover animations (default: false)
- * @param {boolean} props.disableTap - Disable tap animations (default: false)
+ * Reusable AnimatedCard with scroll, hover, and tap animations.
+ * @param {'fade-up'|'fade-down'|'fade-left'|'fade-right'|'fade'|'zoom-in'} [props.reveal]
  */
 export default function AnimatedCard({ 
   children, 
   index = 0, 
   delay,
+  reveal = 'fade-up',
   className = '', 
   onClick,
   disableHover = false,
   disableTap = false,
   ...restProps
 }) {
-  // Calculate stagger delay: 0.1s per index
+  const prefersReducedMotion = useReducedMotion();
   const staggerDelay = delay !== undefined ? delay : index * 0.1;
+  const from = REVEAL_FROM[reveal] ?? REVEAL_FROM['fade-up'];
+  const to = { opacity: 1, x: 0, y: 0, scale: 1 };
+
+  if (prefersReducedMotion) {
+    return (
+      <div data-aos={reveal} className={className} onClick={onClick} {...restProps}>
+        {children}
+      </div>
+    );
+  }
 
   return (
-    <motion.div
-      // Initial state: invisible and slightly below
-      initial={{ 
-        opacity: 0, 
-        y: 40 
-      }}
-      
-      // Animate when scrolled into view
-      whileInView={{ 
-        opacity: 1, 
-        y: 0 
-      }}
-      
-      // Animation configuration
+    <MotionDiv
+      initial={from}
+      whileInView={to}
+      data-aos={reveal}
       transition={{
-        duration: 0.6,
+        duration: 0.58,
         delay: staggerDelay,
-        ease: [0.25, 0.46, 0.45, 0.94] // easeOutQuad
+        ease: SCROLL_REVEAL_EASE,
       }}
+      viewport={SCROLL_REVEAL_VIEWPORT}
       
-      // Run animation only once
-      viewport={{ 
-        once: true,
-        margin: "-50px" // Trigger 50px before entering viewport
-      }}
-      
-      // Hover: scale up + increase shadow
+      // Hover: slight lift (no scale — avoids center "bloom" on cards)
       whileHover={!disableHover ? { 
-        scale: 1.04,
+        y: -4,
         transition: { 
-          duration: 0.3,
-          ease: "easeOut"
-        }
+          duration: 0.25,
+          ease: 'easeOut',
+        },
       } : undefined}
       
-      // Tap: subtle press effect
       whileTap={!disableTap ? { 
-        scale: 0.98,
+        y: 0,
         transition: { 
-          duration: 0.15 
-        }
+          duration: 0.12,
+        },
       } : undefined}
       
       // Base styles + custom classes
@@ -74,11 +73,11 @@ export default function AnimatedCard({
       onClick={onClick}
       
       // Prevent layout shift by using will-change
-      style={{ willChange: 'transform, opacity' }}
+      style={{ transformOrigin: 'top center', willChange: 'transform, opacity' }}
       
       {...restProps}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   );
 }

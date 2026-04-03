@@ -56,15 +56,15 @@ export default function ProductsPage() {
   return (
     <div>
       {/* Hero Section – Banner Image */}
-      <section className="relative overflow-hidden" style={{ minHeight: '320px' }}>
+      <section className="relative overflow-hidden" style={{ minHeight: '400px' }}>
         <img
           src="/images/product_banner.png"
           alt="Our Products"
           className="w-full h-full object-cover absolute inset-0"
-          style={{ minHeight: '320px' }}
+          style={{ minHeight: '400px' }}
         />
         <div className="absolute inset-0 bg-black/45" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center" style={{ minHeight: '320px' }}>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center" style={{ minHeight: '400px' }}>
           <motion.div
             className="text-center w-full py-16"
             initial={{ opacity: 0, y: 30 }}
@@ -79,82 +79,70 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Major Products – Compact 3-Column Grid */}
-      <section className="py-10 md:py-12 bg-gray-50">
+      {/* Major Products — compact card grid */}
+      <section className="py-8 md:py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 pb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 pb-10">
             {majorProducts.map((product, index) => (
               <AnimatedCard
                 key={product.id}
                 index={index}
-                delay={index * 0.1}
-                className="group bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full"
+                delay={index * 0.06}
+                reveal={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+                className="group bg-white rounded-xl border border-gray-200/80 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
               >
-                {/* Compact Product Image */}
-                <div className="relative h-48 overflow-hidden bg-gray-50 flex items-center justify-center p-6">
-                  <div className="absolute inset-0 bg-linear-to-t from-black/5 to-transparent z-10" />
+                {/* Product image — tall portrait ratio (no max-height clamp) */}
+                <div className="relative aspect-4/5 md:aspect-3/4 overflow-hidden bg-gray-50">
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent z-10 opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                   <motion.img
-                    src={`/images/${product.imgName}`}
+                    src={`/images/${product.cardImgName || product.imgName}`}
                     alt={product.title}
-                    className="w-full h-full object-contain relative z-20 transition-transform duration-500 group-hover:scale-105"
-                    onError={(e) => { e.target.style.display = 'none'; }}
+                    className="w-full h-full object-cover relative z-0 transition-transform duration-700 group-hover:scale-110"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
                   />
-                  {/* Subtle backdrop decoration */}
-                  <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/5 rounded-full blur-2xl" />
+
+                  <div className="absolute top-3 left-3 z-20 md:top-4 md:left-4">
+                    <span className="px-2.5 py-1 bg-white/90 backdrop-blur-sm text-[#1a415a] text-[10px] font-bold uppercase tracking-widest rounded shadow-sm">
+                      {product.id === 'rp-silver' ? 'Silver Alloy' : 'Premium Alloy'}
+                    </span>
+                  </div>
                 </div>
 
-                {/* Content area */}
-                <div className="p-5 flex flex-col flex-1 bg-white">
-                  <div className="mb-4">
-                    <h2 className="text-xl font-bold text-[#1a415a] mb-2 group-hover:text-primary transition-colors duration-300 line-clamp-1">
-                      {product.title}
-                    </h2>
-                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
-                      {product.short_description}
-                    </p>
-                  </div>
+                <div className="p-4 flex flex-col grow bg-white">
+                  <h2 className="text-base font-bold text-gray-900 line-clamp-2 leading-snug mb-2">
+                    {product.title}
+                  </h2>
 
-                  {/* Concise technical features */}
+                  <p className="text-gray-600 text-xs leading-relaxed line-clamp-2 mb-3">
+                    {product.short_description}
+                  </p>
+
                   {product.key_technical_features && (
-                    <div className="space-y-2 mb-6 flex-1">
-                      {product.key_technical_features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className="flex items-start">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 mr-2 shrink-0" />
-                          <span className="text-xs md:text-sm text-gray-600 leading-tight">
+                    <ul className="space-y-1.5 mb-4 grow">
+                      {product.key_technical_features.slice(0, 2).map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <span className="mt-1.5 shrink-0 w-1 h-1 rounded-full bg-primary" />
+                          <span className="text-[11px] text-gray-700 leading-snug line-clamp-2">
                             {feature}
                           </span>
-                        </div>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   )}
 
-                  {/* RP Silver sub-category specific links - Ultra Compact */}
-                  {product.id === 'rp-silver' && (
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      <Link
-                        to="/products/rp-silver#cadmium-free"
-                        className="px-3 py-1 bg-gray-50 text-[#1a415a] border border-gray-100 rounded text-[10px] md:text-xs font-semibold hover:border-primary transition-colors"
-                      >
-                        Cadmium Free
-                      </Link>
-                      <Link
-                        to="/products/rp-silver#cadmium-bearing"
-                        className="px-3 py-1 bg-gray-50 text-[#1a415a] border border-gray-100 rounded text-[10px] md:text-xs font-semibold hover:border-primary transition-colors"
-                      >
-                        Cadmium Bearing
-                      </Link>
-                    </div>
-                  )}
-
-                  {/* Footer with CTA */}
-                  <div className="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between">
-                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Premium Grade</span>
+                  <div className="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <span className="text-[9px] font-bold text-gray-400 uppercase tracking-wide px-1.5 py-0.5 bg-gray-50 rounded shrink-0">
+                      Premium
+                    </span>
                     <Link
                       to={product.cta.route}
-                      className="inline-flex items-center text-primary font-bold text-sm hover:translate-x-1 transition-transform"
+                      className="inline-flex items-center text-primary font-bold text-xs group/link shrink-0"
                     >
-                      {product.cta.label}
-                      <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <span className="relative">
+                        {product.cta.label}
+                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover/link:w-full" />
+                      </span>
+                      <svg className="w-4 h-4 ml-1 transform group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5-5 5M6 7l5 5-5 5" />
                       </svg>
                     </Link>
@@ -189,6 +177,7 @@ export default function ProductsPage() {
               <AnimatedCard
                 key={solution.title}
                 index={index}
+                reveal={index % 3 === 1 ? 'fade-up' : index % 3 === 0 ? 'fade-right' : 'fade-left'}
                 className="group bg-white p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="flex justify-center mb-4">
@@ -311,6 +300,6 @@ export default function ProductsPage() {
           </motion.div>
         </div>
       </section>
-    </div >
+    </div>
   );
 }

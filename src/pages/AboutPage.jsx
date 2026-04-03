@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Button from '../components/Button';
 import AnimatedCard from '../components/AnimatedCard';
+import ScrollReveal from '../components/ScrollReveal';
 import { FaAward, FaLightbulb, FaHandshake, FaLeaf } from 'react-icons/fa';
 
 export default function AboutPage() {
@@ -97,7 +98,7 @@ export default function AboutPage() {
   return (
     <div>
       {/* Hero Section – Banner Image */}
-      <section className="relative min-h-[420px] flex items-center justify-center text-white overflow-hidden">
+      <section className="relative min-h-[600px] flex items-center justify-center text-white overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(/images/about_banner.jpeg)' }}
@@ -139,7 +140,7 @@ export default function AboutPage() {
             </h2>
           </motion.div>
 
-          <div className="prose prose-lg max-w-4xl mx-auto text-gray-600">
+          <ScrollReveal animation="fade-up" className="prose prose-lg max-w-4xl mx-auto text-gray-600">
             <p className="mb-6">
               In 1989, Rajat Products was established as a clean metallurgy pioneer with the unshakeable goal of providing the best brazing alloys to businesses across the globe.
             </p>
@@ -152,12 +153,13 @@ export default function AboutPage() {
             <p>
               We now provide our clients with a &ldquo;All in one place&rdquo; experience, using our knowledge to help them eliminate the &ldquo;worry about brazing or welding problems for their manufacturing pipeline.&rdquo;
             </p>
-          </div>
+          </ScrollReveal>
 
           {/* Mission and Vision */}
           <div className="grid md:grid-cols-2 gap-8 mt-16">
             <AnimatedCard
               index={0}
+              reveal="fade-right"
               className="bg-gray-50 p-8 rounded-lg shadow-md"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
@@ -167,6 +169,7 @@ export default function AboutPage() {
             </AnimatedCard>
             <AnimatedCard
               index={1}
+              reveal="fade-left"
               className="bg-gray-50 p-8 rounded-lg shadow-md"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
@@ -295,6 +298,7 @@ export default function AboutPage() {
               <AnimatedCard
                 key={capability.title}
                 index={index}
+                reveal={index % 2 === 0 ? 'fade-right' : 'fade-left'}
                 className="group bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-primary hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden"
               >
                 {/* Colored Left Border */}
@@ -343,7 +347,7 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Strategic Focus</h2>
           </motion.div>
 
-          <div className="prose prose-lg max-w-4xl mx-auto text-gray-600 space-y-6">
+          <ScrollReveal animation="fade-up" className="prose prose-lg max-w-4xl mx-auto text-gray-600 space-y-6">
             <p>
               <strong>Continuous improvement of alloy compositions and manufacturing processes,</strong> ensuring compliance with
               international standards such as AWS, DIN, EN, IS & EN.
@@ -352,7 +356,7 @@ export default function AboutPage() {
               <strong>Customer-centric development,</strong> providing tailored solutions for HVAC, electrical, plumbing, and precision
               engineering sectors.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -379,6 +383,7 @@ export default function AboutPage() {
                 <AnimatedCard
                   key={value.title}
                   index={index}
+                  reveal="zoom-in"
                   className="group bg-primary p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
                   <div className="flex justify-center mb-4">

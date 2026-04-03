@@ -206,6 +206,7 @@ export default function InfrastructurePage() {
               <AnimatedCard
                 key={facility.title}
                 index={index}
+                reveal={index % 2 === 0 ? 'fade-right' : 'fade-left'}
                 className="group bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 relative"
               >
                 <div className="mb-4">
@@ -256,6 +257,7 @@ export default function InfrastructurePage() {
               <AnimatedCard
                 key={lab.title}
                 index={index}
+                reveal="fade-up"
                 className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex justify-center mb-6">
@@ -306,6 +308,7 @@ export default function InfrastructurePage() {
                 <AnimatedCard
                   key={tech.title}
                   index={index}
+                  reveal={index % 2 === 0 ? 'fade-right' : 'fade-left'}
                   className="flex items-start gap-6"
                   disableHover={true}
                   disableTap={true}
@@ -349,6 +352,7 @@ export default function InfrastructurePage() {
               <AnimatedCard
                 key={item.title}
                 index={index}
+                reveal={index === 0 ? 'fade-right' : 'fade-left'}
                 className="bg-white p-8 rounded-lg border-2 border-gray-200 shadow-md"
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>

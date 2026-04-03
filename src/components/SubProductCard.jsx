@@ -1,47 +1,53 @@
-import AnimatedCard from './AnimatedCard';
-
-export default function SubProductCard({ subProduct, index = 0 }) {
+export default function SubProductCard({ subProduct }) {
   return (
-    <AnimatedCard
-      index={index}
-      className="group bg-white rounded-xl border-2 border-gray-200 p-4 md:p-6 hover:border-[#3d8aaf] hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden h-full flex flex-col"
+    <div
+      className="
+        group h-full flex flex-col cursor-pointer
+        bg-white
+        border-[1.5px] border-gray-500
+        rounded-[10px]
+        p-5
+
+        shadow-[-8px_0px_0px_#6B7280]
+        hover:shadow-[-12px_0px_0px_#6B7280]
+
+        hover:-translate-x-[4px] hover:-translate-y-[4px]
+        transition-all duration-200
+      "
     >
-      {/* Animated Background Gradient */}
-      <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      {/* Title */}
+      <h3
+        className="
+          text-[16px] font-extrabold text-black
+          mb-3 leading-tight tracking-wide uppercase
+        "
+      >
+        {subProduct.name}
+      </h3>
 
-      {/* Corner Accent */}
+      {/* Description */}
+      {subProduct.short_description && (
+        <p
+          className="
+            text-[13px] text-[#3F3F3F]
+            leading-relaxed mb-4 grow
+          "
+        >
+          {subProduct.short_description}
+        </p>
+      )}
+
+      {/* Bottom */}
       <div
-        className="absolute top-0 right-0 w-12 h-12 md:w-16 md:h-16 bg-[#3d8aaf] opacity-0 group-hover:opacity-10 transition-opacity duration-300"
-        style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }}
-      ></div>
-
-      {/* Content */}
-      <div className="relative z-10 flex flex-col h-full">
-        <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-2 min-h-[3.5rem]">
-          {subProduct.name}
-        </h3>
-
-        {/* Icon Badge */}
-        <div className="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center mb-2 md:mb-3 group-hover:bg-primary transition-all duration-300 group-hover:rotate-12">
-          <svg className="w-4 h-4 md:w-6 md:h-6 text-primary group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-          </svg>
-        </div>
-
-        {subProduct.short_description && (
-          <p className="text-gray-600 text-xs md:text-sm mb-3 md:mb-4 leading-relaxed line-clamp-3 flex-grow">
-            {subProduct.short_description}
-          </p>
-        )}
-
-        {/* View Specs button would trigger modal */}
-        <button className="text-primary text-xs md:text-sm font-medium hover:text-[#1f5c7a] transition-colors duration-200 hover:underline mt-auto">
-          View Specifications →
-        </button>
+        className="
+          mt-auto flex items-center
+          text-[12px] font-bold text-gray-500
+          gap-1 group-hover:gap-2 transition-all
+        "
+      >
+        <span>Specifications</span>
+        <span className="text-[14px] font-black">›</span>
       </div>
-
-      {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#3d8aaf] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-    </AnimatedCard>
+    </div>
   );
 }
