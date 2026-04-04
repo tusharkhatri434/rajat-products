@@ -251,8 +251,8 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
                       <p className="text-gray-600 text-sm">
-                        19 A & B, Mohkampur Industrial Area<br />
-                        Phase- II, Rithani, Meerut, U.P., India, 250103
+                        1, Mohkampur Industrial Complex<br />
+                        Phase - II, Rithani, Meerut, U.P, 250103
                       </p>
                     </div>
                   </div>
@@ -309,7 +309,7 @@ export default function ContactPage() {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Rajat Products Private Limited - Mohkampur Industrial Area, Meerut"
+              title="Rajat Products Private Limited - Mohkampur Industrial Complex, Meerut"
             ></iframe>
           </ScrollReveal>
           <ScrollReveal animation="fade-up" delay={0.12} className="text-center mt-6">

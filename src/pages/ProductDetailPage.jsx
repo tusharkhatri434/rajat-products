@@ -1,11 +1,54 @@
 import { useState } from 'react';
 import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
+import { FaCheckCircle } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import SubProductCard from '../components/SubProductCard';
 import ScrollReveal from '../components/ScrollReveal';
 import productsData from '../data/products.json';
 
 const MotionDiv = motion.div;
+
+const RP_SILVER_INFO = {
+  cadmiumFree: {
+    title: 'Cadmium Free Alloy',
+    description:
+      'Cadmium-free silver brazing alloys designed to eliminate toxic cadmium fumes while delivering strong, ductile, leak-tight joints at relatively low brazing temperatures.',
+    bullets: [
+      'No cadmium – safe and RoHS compliant',
+      'Excellent flow and capillary action',
+      'Suitable for steels, stainless steels, copper alloys, brass, bronze, and nickel alloys',
+      'Available in rods, wires, rings, strips, pastes, and flux-coated forms',
+    ],
+  },
+  cadmiumBearing: {
+    title: 'Cadmium Bearing Alloy',
+    description:
+      'Cadmium-bearing silver brazing alloys formulated for extremely low brazing temperatures, narrow melting ranges, and exceptional capillary flow where cadmium use is permitted.',
+    bullets: [
+      'Very low melting points',
+      'Exceptional capillary flow',
+      'Broad base-metal compatibility',
+      'Requires proper fume extraction due to cadmium toxicity',
+    ],
+  },
+};
+
+function RpSilverInfoCard({ title, description, bullets }) {
+  return (
+    <div className="rounded-xl border border-gray-200/80 bg-white p-6 shadow-md md:p-8">
+      <h3 className="text-lg font-bold text-gray-900 md:text-xl">{title}</h3>
+      <p className="mt-3 text-sm leading-relaxed text-gray-600 md:text-[15px]">{description}</p>
+      <ul className="mt-5 space-y-2.5">
+        {bullets.map((line) => (
+          <li key={line} className="flex gap-2.5 text-sm text-gray-700">
+            <FaCheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden />
+            <span>{line}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default function ProductDetailPage() {
   const { productId } = useParams();
@@ -141,7 +184,7 @@ export default function ProductDetailPage() {
               <div className="mx-auto flex w-full max-w-xl flex-col overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-200/90 md:ml-auto md:mr-0 md:max-w-lg">
                 <div className="flex h-[220px] w-full shrink-0 items-center justify-center overflow-hidden bg-gray-100 sm:h-[280px] md:h-[400px] lg:h-[440px]">
                   <img
-                    src={`/images/${heroImageName}`}
+                    src={`/media/products/${heroImageName}`}
                     alt={product.title}
                     className="h-full w-full object-cover"
                     onError={(e) => {
@@ -151,7 +194,7 @@ export default function ProductDetailPage() {
                         return;
                       }
                       t.dataset.fallbackApplied = '1';
-                      t.src = `/images/${product.imgName}`;
+                      t.src = `/media/products/${product.imgName}`;
                     }}
                   />
                 </div>
@@ -161,15 +204,66 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
+      {productId === 'rp-silver' && (
+        <section className="border-t border-gray-100 bg-gray-50 py-10 md:py-12">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+              <RpSilverInfoCard {...RP_SILVER_INFO.cadmiumFree} />
+              <RpSilverInfoCard {...RP_SILVER_INFO.cadmiumBearing} />
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Products */}
       <section className="border-t border-gray-200 py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <ScrollReveal animation="fade-up" className="text-center mb-7 md:mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+          <ScrollReveal animation="fade-up" className="mb-6 text-center md:mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
               Available Products
             </h2>
+            {productId === 'rp-silver' && (
+              <p className="mx-auto mt-2 max-w-2xl text-sm text-gray-600 md:text-base">
+                Select any product to view detailed technical specifications.
+              </p>
+            )}
           </ScrollReveal>
+
+          {productId === 'rp-silver' && (
+            <div className="mb-8 flex flex-wrap justify-center gap-3">
+              <button
+                type="button"
+                onClick={() => navigate('/products/rp-silver', { replace: true })}
+                className={`rounded-lg px-4 py-2.5 text-sm font-semibold transition-all md:px-5 md:text-[15px] ${activeFilter === 'all'
+                  ? 'bg-[#1a415a] text-white shadow-md'
+                  : 'border-2 border-[#1a415a] bg-white text-[#1a415a] hover:bg-gray-50'
+                  }`}
+              >
+                All RP Silver Alloys
+              </button>
+              <button
+                type="button"
+                onClick={() => navigate({ pathname: '/products/rp-silver', hash: 'cadmium-free' }, { replace: true })}
+                className={`rounded-lg px-4 py-2.5 text-sm font-semibold transition-all md:px-5 md:text-[15px] ${activeFilter === 'cadmium-free'
+                  ? 'bg-[#1a415a] text-white shadow-md'
+                  : 'border-2 border-[#1a415a] bg-white text-[#1a415a] hover:bg-gray-50'
+                  }`}
+              >
+                Cadmium free alloy
+              </button>
+              <button
+                type="button"
+                onClick={() => navigate({ pathname: '/products/rp-silver', hash: 'cadmium-bearing' }, { replace: true })}
+                className={`rounded-lg px-4 py-2.5 text-sm font-semibold md:px-5 md:text-[15px] ${activeFilter === 'cadmium-bearing'
+                  ? 'bg-[#1a415a] text-white shadow-md'
+                  : 'border-2 border-[#1a415a] bg-white text-[#1a415a] hover:bg-gray-50'
+                  }`}
+              >
+                Cadmium Bearing Alloys
+              </button>
+            </div>
+          )}
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {filteredProducts.map((subProduct, i) => (

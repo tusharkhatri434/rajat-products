@@ -97,7 +97,7 @@ export default function CertificationsPage() {
       <section className="relative min-h-[600px] flex items-center justify-center text-white overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/images/certifications_banner.jpeg)' }}
+          style={{ backgroundImage: 'url(/media/banners/certifications-hero.png)' }}
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">

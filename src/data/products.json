@@ -6,7 +6,7 @@
       {
         "id": "rp-phos",
         "title": "RP Phos",
-        "imgName": "rp-phos.png",
+        "imgName": "rp_phos.png",
         "cardImgName": "rp_phos.png",
         "short_description": "Copper–phosphorus brazing alloys for copper and copper–brass joints.",
         "description": "RP Phos brazing alloys are filler metals formulated primarily for copper-to-copper and copper-to-brass joints. They are widely used in HVAC/R, plumbing, and electrical assemblies due to their excellent capillary flow and ability to create sound joints at relatively low brazing temperatures in air.\n\nPhosphorus enables self-fluxing on copper, while optional silver additions improve ductility, reduce melting range, and enhance gap-bridging and fillet formation.",
@@ -17,7 +17,6 @@
           "Silver additions improve ductility and gap filling",
           "Flux required for brass joints; avoid sulfur-bearing environments"
         ],
-        "thumbnail": "/assets/major-products/rp-phos.jpg",
         "cta": {
           "label": "View Products",
           "route": "/products/rp-phos"
@@ -1870,7 +1869,7 @@
       {
         "id": "rp-copper",
         "title": "RP Copper",
-        "imgName": "rp-copper.png",
+        "imgName": "rp_copper.png",
         "cardImgName": "rp_copper.png",
         "short_description": "Copper and bronze welding alloys for high-quality, corrosion-resistant joints.",
         "description": "RP Copper welding alloys are filler metals and consumables formulated to join pure copper and copper-based alloys while managing challenges such as high thermal conductivity, oxide formation, and porosity during welding operations.\n\nBronze welding alloys, where tin, silicon, or aluminum are principal additions, are used to weld bronzes, brasses, steels for surfacing, and dissimilar joints with good corrosion resistance and aesthetic color matching.",
@@ -2570,7 +2569,7 @@
       {
         "id": "rp-aluminium",
         "title": "RP Aluminium",
-        "imgName": "rp-aluminium.png",
+        "imgName": "rp_aluminium.png",
         "cardImgName": "rp_aluminium.png",
         "short_description": "Aluminium alloy welding wires for smooth performance, arc stability, and strong joints.",
         "description": "RP Aluminium Alloy Welding Wires are engineered to deliver smooth welding performance, excellent arc stability, and strong weld joints. Manufactured using high-quality aluminium alloys with controlled chemical composition, these welding wires ensure consistent weld quality and reliable results across a wide range of aluminium welding applications.\n\nThese wires are suitable for TIG and MIG welding processes and are widely used in industries such as automotive manufacturing, marine fabrication, structural engineering, transportation equipment, and aluminium component manufacturing.",
@@ -3046,7 +3045,7 @@
       {
         "id": "copper-paste",
         "title": "Copper Paste",
-        "imgName": "rp-copper.png",
+        "imgName": "rp_copper.png",
         "cardImgName": "copper_paste.png",
         "short_description": "High-performance copper brazing paste for furnace brazing. Flux-free, precision filler metal for consistent, clean joints.",
         "description": "Copper Brazing Paste is a high-performance, precision filler metal engineered for furnace brazing applications. It consists of high-purity copper powder suspended in a specially formulated organic binder system.\n\nThe optimized rheology ensures easy application, stable placement before brazing, and complete binder burnout during furnace heating. This results in strong, metallurgically sound brazed joints with minimal post-braze cleaning.\n\nDesigned for flux-free brazing in controlled atmospheres, it delivers consistent joint quality, excellent capillary flow, and clean results in hydrogen, dissociated ammonia, or vacuum environments.",
@@ -3106,7 +3105,7 @@
       {
         "id": "zari-wire",
         "title": "Zari Wire",
-        "imgName": "rp-phos.png",
+        "imgName": "rp_phos.png",
         "cardImgName": "zari_wire.png",
         "short_description": "Premium quality zari wire for textile, embroidery and decorative craftsmanship.",
         "description": "Zari Wire blends heritage craftsmanship with modern metallurgy. Produced using high-quality copper, silver, and metallic coatings, our Zari wires are ideal for intricate hand embroidery, weaving, and embellishments in ethnic and contemporary textiles.\n\nWith uniform coating for consistent luster and resistance to tarnishing, our Zari Wires are designed for both bulk production and boutique designer applications.",

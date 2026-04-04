@@ -17,8 +17,8 @@ export default function Footer() {
       name: 'RP Silver',
       path: '/products/rp-silver',
       subProducts: [
-        { name: 'Cadmium Free Alloy', path: '/products/rp-silver' },
-        { name: 'Cadmium Bearing Alloy', path: '/products/rp-silver' }
+        { name: 'Cadmium Free Alloy', path: '/products/rp-silver#cadmium-free' },
+        { name: 'Cadmium Bearing Alloy', path: '/products/rp-silver#cadmium-bearing' }
       ]
     },
     { name: 'RP Copper', path: '/products/rp-copper' },
@@ -41,7 +41,7 @@ export default function Footer() {
             <div className="mb-6">
               <Link to="/" className="inline-block">
                 <img
-                  src="/logo/image.png"
+                  src="/media/brand/logo.png"
                   alt="Rajat Products"
                   className="max-h-15 w-auto object-contain hover:opacity-80 transition-opacity"
                 />
@@ -165,8 +165,8 @@ export default function Footer() {
                       rel="noopener noreferrer"
                       className="hover:text-primary transition-colors"
                     >
-                      19 A & B, Mohkampur Industrial Area<br />
-                      Phase- II, Rithani, Meerut, U.P., India, 250103
+                      1, Mohkampur Industrial Complex<br />
+                      Phase - II, Rithani, Meerut, U.P, 250103
                     </a>
                   </p>
                 </div>

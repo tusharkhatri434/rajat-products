@@ -101,7 +101,7 @@ export default function AboutPage() {
       <section className="relative min-h-[600px] flex items-center justify-center text-white overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/images/about_banner.jpeg)' }}
+          style={{ backgroundImage: 'url(/media/banners/about.jpeg)' }}
         />
         <div className="absolute inset-0 bg-black/45" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">

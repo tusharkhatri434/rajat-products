@@ -4,64 +4,67 @@ import { motion } from 'framer-motion';
 import Button from '../components/Button';
 import AnimatedCard from '../components/AnimatedCard';
 import ScrollReveal from '../components/ScrollReveal';
-import { FaIndustry, FaCar, FaOilCan, FaWind, FaBolt, FaCog, FaTrophy, FaCheckCircle, FaMicroscope, FaGlobe, FaShieldAlt, FaChevronLeft, FaChevronRight, FaArrowRight } from 'react-icons/fa';
+import { FaCog, FaTrophy, FaCheckCircle, FaMicroscope, FaGlobe, FaShieldAlt, FaChevronLeft, FaChevronRight, FaArrowRight } from 'react-icons/fa';
+import glimpsRod from '../assets/glimps/rods.png';
+import glimpsRings from '../assets/glimps/rings.png';
+import glimpsStrips from '../assets/glimps/strips.png';
+import glimpsFoils from '../assets/glimps/foils.png';
+import glimpsWire from '../assets/glimps/wire.png';
 
 const forms = [
-  { 
-    label: 'Molly Wire', 
-    category: 'Non-ferrous Wire',
-    description: 'High-performance molybdenum wire for extreme temperatures, corrosion, and high load environments.', 
-    image: '/images/rp_braze.png',
-    bullets: [
-      'Extremely High Melting Point (2620°C)',
-      'Excellent Dimensional Stability',
-      'Corrosion & Oxidation Resistant'
-    ]
+  {
+    label: 'Rod',
+    description: 'Precision-cut rods for torch and furnace brazing.',
+    image: glimpsRod,
   },
-  { 
-    label: 'Er Cu SnC', 
-    category: 'Brazing and Welding',
-    description: 'Provides corrosion-resistant strong joints in copper piping.', 
-    image: '/images/rp_copper.png',
-    bullets: [
-      'Improved corrosion resistance',
-      'Strong joints',
-      'Ideal for piping and tubing applications'
-    ]
+  {
+    label: 'Rings',
+    description: 'Pre-formed rings for consistent joint repeatability.',
+    image: glimpsRings,
   },
-  { 
-    label: 'Induction Brazing Rings', 
-    category: 'Brazing and Welding',
-    description: 'Rings for induction heating and joining in industrial applications.', 
-    image: '/images/rp_phos.png',
-    bullets: [
-      'Pre-formed rings for uniform joints',
-      'Excellent repeatability',
-      'Reduces manual brazing time'
-    ]
+  {
+    label: 'Strips',
+    description: 'Rolled strips for complex assemblies and volume production.',
+    image: glimpsStrips,
   },
-  { 
-    label: 'Pure Silver Wires', 
-    category: 'Fine Wires',
-    description: 'Ultra-thin, high-purity silver wires for high-precision electronic and scientific equipment.', 
-    image: '/images/zari_wire.png',
-    bullets: [
-      'Exceptional electrical conductivity',
-      'Minimal surface oxidation',
-      'High thermal sensitivity for sensors'
-    ]
-  }
+  {
+    label: 'Foils',
+    description: 'Ultra-thin foils for precision electronic and medical joints.',
+    image: glimpsFoils,
+  },
+  {
+    label: 'Fine wires',
+    description: '0.1mm – 2mm fine wires for the most demanding applications.',
+    image: glimpsWire,
+  },
 ];
 
 export default function HomePage() {
   const [currentFormSlide, setCurrentFormSlide] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(() => {
+    if (typeof window === 'undefined') return 2;
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
+  });
 
-  // Build the full slides array (products + "View All" card)
-  const allSlides = [...forms, { label: 'View All', isViewAll: true }];
+  useEffect(() => {
+    const onResize = () => {
+      let nextVisible = 1;
+      if (window.innerWidth >= 1024) nextVisible = 3;
+      else if (window.innerWidth >= 768) nextVisible = 2;
+      setVisibleCards(nextVisible);
+      const maxIdx = Math.max(forms.length - nextVisible, 0);
+      setCurrentFormSlide((prev) => Math.min(prev, maxIdx));
+    };
+    onResize();
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+  const allSlides = forms;
   const totalSlides = allSlides.length;
-  const visibleCards = 3;
   const slideWidth = 100 / visibleCards;
-  // Max index so the last position shows a full row of 3 cards
   const maxSlideIndex = Math.max(totalSlides - visibleCards, 0);
 
   // Auto-advance slider (infinite loop)
@@ -152,7 +155,7 @@ export default function HomePage() {
       {/* Hero Section – Banner Image */}
       <section className="relative overflow-hidden" style={{ minHeight: '600px' }}>
         <img
-          src="/homePage/homepage_banner.jpeg"
+          src="/media/home/hero-banner.jpeg"
           alt="Rajat Products – Where Purity Meets Next Gen Silver Alloys"
           className="w-full h-full object-cover absolute inset-0"
           style={{ minHeight: '600px' }}
@@ -245,33 +248,37 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <p className="text-sm uppercase tracking-widest text-primary/60 mb-2 font-semibold">Silver & Copper Expertise</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a415a] mb-3">
-              A Glimpse At Our Silver And Copper Expertise
+            <p className="text-sm uppercase tracking-widest text-primary/60 mb-2 font-semibold">Silver &amp; copper expertise</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 tracking-tight">
+              A glimpse at our silver and copper expertise
             </h2>
-            <p className="text-gray-500 text-base font-medium">Built to perform. Designed to last.</p>
+            <p className="text-gray-600 text-sm md:text-base font-semibold uppercase tracking-wide">Different available forms</p>
           </motion.div>
 
           {/* Slider Container */}
           <div className="relative">
             {/* Left Arrow */}
             <button
+              type="button"
               onClick={() => setCurrentFormSlide(prev => prev <= 0 ? maxSlideIndex : prev - 1)}
-              className="absolute -left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 lg:w-12 lg:h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[#1a415a] hover:bg-[#1a415a] hover:text-white transition-all duration-300 border border-gray-200"
+              className="absolute left-0 sm:-left-3 lg:-left-6 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white text-[#1a415a] shadow-lg transition-all duration-300 hover:bg-[#1a415a] hover:text-white sm:h-10 sm:w-10 lg:h-12 lg:w-12"
+              aria-label="Previous slide"
             >
               <FaChevronLeft className="text-sm" />
             </button>
 
             {/* Right Arrow */}
             <button
+              type="button"
               onClick={() => setCurrentFormSlide(prev => prev >= maxSlideIndex ? 0 : prev + 1)}
-              className="absolute -right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 lg:w-12 lg:h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[#1a415a] hover:bg-[#1a415a] hover:text-white transition-all duration-300 border border-gray-200"
+              className="absolute right-0 sm:-right-3 lg:-right-6 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white text-[#1a415a] shadow-lg transition-all duration-300 hover:bg-[#1a415a] hover:text-white sm:h-10 sm:w-10 lg:h-12 lg:w-12"
+              aria-label="Next slide"
             >
               <FaChevronRight className="text-sm" />
             </button>
 
-            {/* Cards Track */}
-            <div className="overflow-hidden mx-2 lg:mx-0">
+            {/* Cards Track — pl/pr leave room for arrows on mobile */}
+            <div className="overflow-hidden mx-0 px-12 sm:px-10 md:px-8 lg:mx-0 lg:px-0 py-2">
               <motion.div
                 className="flex"
                 animate={{ x: `-${currentFormSlide * slideWidth}%` }}
@@ -280,111 +287,58 @@ export default function HomePage() {
                 {allSlides.map((form) => (
                   <div
                     key={form.label}
-                    className="px-3"
+                    className="box-border px-0.5 sm:px-1 md:px-2"
                     style={{ minWidth: `${slideWidth}%`, maxWidth: `${slideWidth}%` }}
                   >
-                    {form.isViewAll ? (
-                      /* "View All Products" Special Card */
-                      <Link to="/products" className="block h-full">
-                        <div className="bg-linear-to-br from-[#f0f7ff] to-[#e8f1fc] h-full rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border-2 border-dashed border-[#1a415a]/15 hover:border-[#1a415a]/30 flex flex-col">
-                          <div className="aspect-4/3 w-full flex flex-col items-center justify-center">
-                            <div className="w-16 h-16 bg-[#1a415a] rounded-full flex items-center justify-center mb-4 shadow-lg">
-                              <FaIndustry className="text-2xl text-white" />
-                            </div>
-                            <h3 className="text-xl font-black text-[#1a415a]">View All Products</h3>
-                          </div>
-                          <div className="p-6 grow flex flex-col justify-between">
-                            <div>
-                              <p className="text-gray-500 text-sm mb-5 text-center">Discover our complete collection of premium alloy solutions.</p>
-                              <div className="space-y-2.5 mb-6">
-                                {['Complete product catalog', 'Detailed specifications', 'Custom alloy solutions'].map((bullet, i) => (
-                                  <div key={i} className="flex items-center gap-2.5">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
-                                    <span className="text-xs font-medium text-gray-600">{bullet}</span>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                            <div className="w-full py-3.5 bg-[#1a415a] rounded-xl text-white font-bold text-sm tracking-wider flex items-center justify-center gap-2 hover:bg-primary transition-all duration-300">
-                              EXPLORE ALL
-                              <FaArrowRight className="text-xs" />
-                            </div>
-                          </div>
-                        </div>
-                      </Link>
-                    ) : (
-                      /* Regular Product Card */
-                      <div className="bg-white h-full rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-primary/20 flex flex-col group">
-                        {/* Image – 4:3 aspect ratio */}
-                        <div className="aspect-4/3 w-full overflow-hidden relative">
-                          <img
-                            src={form.image}
-                            alt={form.label}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
-                          {/* Category Tag */}
-                          <span className="absolute top-3 left-3 px-2.5 py-1 bg-[#1a415a]/85 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-widest rounded-md border border-white/10">
-                            {form.category}
-                          </span>
-                        </div>
-
-                        {/* Content */}
-                        <div className="p-6 grow flex flex-col">
-                          <h3 className="text-lg font-bold text-[#1a415a] mb-2 group-hover:text-primary transition-colors duration-300">
-                            {form.label}
-                          </h3>
-                          <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-2">
-                            {form.description}
-                          </p>
-
-                          {/* Bullet Points */}
-                          <div className="space-y-2.5 mb-6">
-                            {form.bullets.map((bullet, i) => (
-                              <div key={i} className="flex items-center gap-2.5">
-                                <div className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
-                                <span className="text-xs font-medium text-gray-600">{bullet}</span>
-                              </div>
-                            ))}
-                          </div>
-
-                          {/* CTA */}
-                          <div className="mt-auto">
-                            <Link
-                              to="/products"
-                              className="w-full py-3.5 bg-[#1a415a] rounded-xl text-white font-bold text-sm tracking-wider flex items-center justify-center gap-2 transition-all duration-300 hover:bg-primary shadow-md hover:shadow-primary/25"
-                            >
-                              VIEW DETAILS
-                              <FaArrowRight className="text-xs" />
-                            </Link>
-                          </div>
-                        </div>
+                    <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-500 group hover:border-primary/20 hover:shadow-xl">
+                      <div className="relative h-56 w-full shrink-0 overflow-hidden bg-white sm:h-60 md:h-72 lg:h-80">
+                        <img
+                          src={form.image}
+                          alt={form.label}
+                          className="block h-full w-full object-cover object-center"
+                          loading="eager"
+                          decoding="async"
+                        />
                       </div>
-                    )}
+                      <div className="flex grow flex-col">
+                        <div className="flex justify-center">
+                          <div className="w-12 h-12 rounded-full bg-[#1a415a]/10 flex items-center justify-center text-[#1a415a] shrink-0">
+                            <FaShieldAlt className="text-xl" aria-hidden />
+                          </div>
+                        </div>
+                        <h3 className="text-center text-lg md:text-xl font-bold text-primary mb-3 uppercase tracking-wide group-hover:text-primary transition-colors duration-300">
+                          {form.label}
+                        </h3>
+                        <p className="text-gray-600 text-sm md:text-[15px] leading-relaxed text-center">
+                          {form.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </motion.div>
             </div>
 
-            {/* Dots + View All Button */}
-            <div className="flex flex-col items-center mt-10 gap-6">
-              <div className="flex gap-2">
+            <div className="flex flex-col items-center mt-10 gap-8">
+              <div className="flex flex-wrap justify-center gap-2">
                 {Array.from({ length: maxSlideIndex + 1 }).map((_, i) => (
                   <button
                     key={i}
+                    type="button"
                     onClick={() => setCurrentFormSlide(i)}
-                    className={`h-2.5 rounded-full transition-all duration-300 ${i === currentFormSlide ? 'w-8 bg-[#1a415a]' : 'w-2.5 bg-gray-300 hover:bg-gray-400'}`}
+                    className={`h-2.5 rounded-full transition-all duration-300 ${i === currentFormSlide ? 'w-8 bg-primary' : 'w-2.5 bg-gray-300 hover:bg-gray-400'}`}
                     aria-label={`Go to slide ${i + 1}`}
                   />
                 ))}
               </div>
-              <Link
+              <Button
                 to="/products"
-                className="px-8 py-3 bg-[#1a415a] text-white rounded-lg font-bold text-sm tracking-wider hover:bg-primary transition-all shadow-lg hover:shadow-primary/30 flex items-center gap-2"
+                variant="primary"
+                className="rounded-xl px-10 py-3.5 text-sm font-bold tracking-wider shadow-md hover:shadow-lg !inline-flex items-center gap-2"
               >
-                View All Products
-                <FaArrowRight className="text-xs" />
-              </Link>
+                View Products
+                <FaArrowRight className="text-xs" aria-hidden />
+              </Button>
             </div>
           </div>
         </div>
@@ -460,7 +414,7 @@ export default function HomePage() {
               className="relative h-96 rounded-2xl overflow-hidden shadow-xl"
             >
               <div className="w-full h-full flex items-center justify-center">
-                <img src="/homePage/home_img2.png" alt="Why Choose Rajat Products" className="w-full h-full object-cover" />
+                <img src="/media/home/why-choose.png" alt="Why Choose Rajat Products" className="w-full h-full object-cover" />
               </div>
             </motion.div>
             <motion.div

@@ -134,7 +134,7 @@ export default function InfrastructurePage() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/infra/banner.png)',
+            backgroundImage: 'url(/media/infrastructure/banner.png)',
             // filter: 'grayscale(100%)'
           }}
         />

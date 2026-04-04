@@ -55,16 +55,14 @@ export default function ProductsPage() {
 
   return (
     <div>
-      {/* Hero Section – Banner Image */}
-      <section className="relative overflow-hidden" style={{ minHeight: '400px' }}>
-        <img
-          src="/images/product_banner.png"
-          alt="Our Products"
-          className="w-full h-full object-cover absolute inset-0"
-          style={{ minHeight: '400px' }}
+      {/* Hero Section – Banner Image (same height & treatment as Certifications) */}
+      <section className="relative min-h-[600px] flex items-center justify-center text-white overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/media/banners/products-hero.jpeg)' }}
         />
         <div className="absolute inset-0 bg-black/45" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center" style={{ minHeight: '400px' }}>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 flex items-center">
           <motion.div
             className="text-center w-full py-16"
             initial={{ opacity: 0, y: 30 }}
@@ -95,7 +93,7 @@ export default function ProductsPage() {
                 <div className="relative aspect-4/5 md:aspect-3/4 overflow-hidden bg-gray-50">
                   <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent z-10 opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                   <motion.img
-                    src={`/images/${product.cardImgName || product.imgName}`}
+                    src={`/media/products/${product.cardImgName || product.imgName}`}
                     alt={product.title}
                     className="w-full h-full object-cover relative z-0 transition-transform duration-700 group-hover:scale-110"
                     onError={(e) => { e.currentTarget.style.display = 'none'; }}
