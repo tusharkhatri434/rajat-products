@@ -3105,16 +3105,18 @@
       {
         "id": "zari-wire",
         "title": "Zari Wire",
-        "imgName": "rp_phos.png",
+        "imgName": "zari_wire.png",
         "cardImgName": "zari_wire.png",
-        "short_description": "Premium quality zari wire for textile, embroidery and decorative craftsmanship.",
-        "description": "Zari Wire blends heritage craftsmanship with modern metallurgy. Produced using high-quality copper, silver, and metallic coatings, our Zari wires are ideal for intricate hand embroidery, weaving, and embellishments in ethnic and contemporary textiles.\n\nWith uniform coating for consistent luster and resistance to tarnishing, our Zari Wires are designed for both bulk production and boutique designer applications.",
+        "short_description": "Premium Quality Zari Wire Solutions for Textile, Embroidery & Decorative Craftsmanship.",
+        "description": "Zari wires\u2014blending heritage craftsmanship with modern metallurgy. Produced using high-quality copper, silver, and metallic coatings, our Zari wires are ideal for intricate hand embroidery, weaving, and embellishments in ethnic and contemporary textiles.\n\nWe combine consistent gauge control, premium coatings, and quality-assured batches so designers and manufacturers get reliable luster, safe textile integration, and flexible packaging for both bulk supply and bespoke runs.",
         "key_technical_features": [
-          "High tensile strength with excellent flexibility",
-          "Uniform coating for consistent luster",
-          "Resistance to tarnishing and corrosion",
-          "Lightweight and easy to weave or embroider",
-          "Available in multiple shades and finishes",
+          "Flexible and lightweight construction for easy weaving",
+          "Glossy, non-tarnishing surface with premium coatings",
+          "Available in multiple finishes: gold, silver, metallic, colored",
+          "Smooth and snag-free texture for embroidery compatibility",
+          "Custom spool and reel packaging options for convenience",
+          "Fine gauge range suited for detailed threadwork",
+          "Excellent luster retention over time",
           "Non-toxic, skin-friendly materials for safe textile integration"
         ],
         "cta": {
@@ -3123,119 +3125,43 @@
         },
         "sub_products": [
           {
-            "id": "zari-wire-silver-plated",
-            "name": "Silver Plated Zari Wire",
-            "short_description": "Silver-plated zari wire on copper/brass base. Excellent luster with tarnish resistance for high-end textile embroidery.",
+            "id": "zari-wire-range",
+            "name": "Zari Wire",
+            "short_description": "Premium zari wire on copper/brass base: silver-, gold-, and enamel-coated options for embroidery, weaving, and textile embellishment.",
             "technical_specifications": {
               "table_title": "Technical Specifications",
               "rows": [
                 {
                   "parameter": "Material",
-                  "value": "Copper / Brass (base metal)"
+                  "value": "Copper/Brass (base metal)"
                 },
                 {
                   "parameter": "Purity",
-                  "value": "Copper \u2265 99.90%"
-                },
-                {
-                  "parameter": "Coating",
-                  "value": "Silver-plated"
+                  "value": "Copper \u2265 99.90%, Brass alloys as per IS 319"
                 },
                 {
                   "parameter": "Wire Diameter",
                   "value": "0.2 \u2013 1.5 mm"
                 },
                 {
-                  "parameter": "Elongation",
-                  "value": "8 \u2013 12%"
-                },
-                {
-                  "parameter": "Surface Finish",
-                  "value": "Bright / Matte / Embossed"
-                },
-                {
-                  "parameter": "Packaging",
-                  "value": "Plastic bobbins, reels, cones"
-                },
-                {
-                  "parameter": "Standard Lengths",
-                  "value": "50m, 100m, 250m (custom on request)"
-                }
-              ]
-            }
-          },
-          {
-            "id": "zari-wire-gold-plated",
-            "name": "Gold Plated Zari Wire",
-            "short_description": "Gold-plated zari wire for traditional saree, lehenga, and ethnic garment embroidery. Rich luster with excellent colour retention.",
-            "technical_specifications": {
-              "table_title": "Technical Specifications",
-              "rows": [
-                {
-                  "parameter": "Material",
-                  "value": "Copper / Brass (base metal)"
-                },
-                {
-                  "parameter": "Purity",
-                  "value": "Brass alloys as per IS 319"
-                },
-                {
-                  "parameter": "Coating",
-                  "value": "Gold-plated"
-                },
-                {
-                  "parameter": "Wire Diameter",
-                  "value": "0.2 \u2013 1.5 mm"
+                  "parameter": "Coating Options",
+                  "value": "Silver-plated, Gold-plated, Color-coated Enamel (Red, Green, Blue, etc.)"
                 },
                 {
                   "parameter": "Elongation",
-                  "value": "8 \u2013 12%"
+                  "value": "8\u201312%"
+                },
+                {
+                  "parameter": "Electrical Conductivity",
+                  "value": "Low (Decorative Use)"
                 },
                 {
                   "parameter": "Surface Finish",
-                  "value": "Bright / Matte"
+                  "value": "Bright, Matte, Embossed (optional)"
                 },
                 {
                   "parameter": "Packaging",
-                  "value": "Plastic bobbins, reels, hand bundles, cones"
-                },
-                {
-                  "parameter": "Standard Lengths",
-                  "value": "50m, 100m, 250m (custom on request)"
-                }
-              ]
-            }
-          },
-          {
-            "id": "zari-wire-colour-coated",
-            "name": "Colour Coated Zari Wire",
-            "short_description": "Enamel colour-coated zari wire in Red, Green, Blue and other shades. Ideal for contemporary and fashion embroidery.",
-            "technical_specifications": {
-              "table_title": "Technical Specifications",
-              "rows": [
-                {
-                  "parameter": "Material",
-                  "value": "Copper / Brass (base metal)"
-                },
-                {
-                  "parameter": "Coating",
-                  "value": "Color-coated Enamel (Red, Green, Blue, etc.)"
-                },
-                {
-                  "parameter": "Wire Diameter",
-                  "value": "0.2 \u2013 1.5 mm"
-                },
-                {
-                  "parameter": "Elongation",
-                  "value": "8 \u2013 12%"
-                },
-                {
-                  "parameter": "Surface Finish",
-                  "value": "Bright"
-                },
-                {
-                  "parameter": "Packaging",
-                  "value": "Plastic bobbins, reels, cones"
+                  "value": "Plastic bobbins, small reels, hand bundles, or cones"
                 },
                 {
                   "parameter": "Standard Lengths",
