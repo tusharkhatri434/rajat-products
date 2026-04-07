@@ -405,7 +405,7 @@
               },
               {
                 "id": "rp-silver-30",
-                "name": "RP SILVER 30",
+                "name": "RP SILVER 30ZN",
                 "short_description": "Versatile alloy offering excellent wetting and capillary flow.\n\nSuitable for brazing copper, brass, and steel assemblies with moderate joint clearances.",
                 "technical_specifications": {
                   "table_title": "Technical Specifications",
@@ -497,7 +497,7 @@
               },
               {
                 "id": "rp-silver-38t",
-                "name": "RP SILVER 38T",
+                "name": "RP SILVER 38ZN",
                 "short_description": "Versatile silver brazing alloy with 38% silver content. Offers good flow properties and joint strength for various metals.\n\nSuitable for industrial applications requiring reliable performance in moderate temperature ranges.",
                 "technical_specifications": {
                   "table_title": "Technical Specifications",
@@ -593,7 +593,7 @@
               },
               {
                 "id": "rp-silver-40t",
-                "name": "RP SILVER 40T",
+                "name": "RP SILVER 40ZN",
                 "short_description": "Assessment of 40% silver content for general purpose brazing. Exhibits good ductility and gap-filling capabilities.\n\nWidely used in fabrication where decent mechanical properties are required.",
                 "technical_specifications": {
                   "table_title": "Technical Specifications",
@@ -735,7 +735,7 @@
               },
               {
                 "id": "rp-silver-50",
-                "name": "RP SILVER 50",
+                "name": "RP SILVER 50ZN",
                 "short_description": "High-silver (50%) alloy for superior corrosion resistance. Meets stringent industry standards for critical joints.\n\nCommonly used in marine and chemical processing environments for long-lasting durability.",
                 "technical_specifications": {
                   "table_title": "Technical Specifications",
@@ -1868,11 +1868,11 @@
       },
       {
         "id": "rp-copper",
-        "title": "RP Copper",
+        "title": "RP WELD",
         "imgName": "rp_copper.png",
         "cardImgName": "rp_copper.png",
-        "short_description": "Copper and bronze welding alloys for high-quality, corrosion-resistant joints.",
-        "description": "RP Copper welding alloys are filler metals and consumables formulated to join pure copper and copper-based alloys while managing challenges such as high thermal conductivity, oxide formation, and porosity during welding operations.\n\nBronze welding alloys, where tin, silicon, or aluminum are principal additions, are used to weld bronzes, brasses, steels for surfacing, and dissimilar joints with good corrosion resistance and aesthetic color matching.",
+        "short_description": "RP WELD copper and bronze welding alloys for high-quality, corrosion-resistant joints.",
+        "description": "RP WELD welding alloys are filler metals and consumables formulated to join pure copper and copper-based alloys while managing challenges such as high thermal conductivity, oxide formation, and porosity during welding operations.\n\nBronze welding alloys, where tin, silicon, or aluminum are principal additions, are used to weld bronzes, brasses, steels for surfacing, and dissimilar joints with good corrosion resistance and aesthetic color matching.",
         "key_technical_features": [
           "Fine Wire from 0.1 mm to 2 mm machining capacity for all the alloys listed.",
           "Excellent corrosion resistance, especially with silicon bronze alloys",
@@ -2386,7 +2386,7 @@
         "sub_products": [
           {
             "id": "rp-braze-90",
-            "name": "RP BRAZE 90",
+            "name": "RP BRAZE 90-10",
             "short_description": "High copper content brass alloy with excellent ductility.\n\nPerfect for applications requiring superior corrosion resistance and easy cold working properties.",
             "technical_specifications": {
               "table_title": "Technical Specifications",
@@ -2416,7 +2416,7 @@
           },
           {
             "id": "rp-braze-80",
-            "name": "RP BRAZE 80",
+            "name": "RP BRAZE 80-20",
             "short_description": "Red brass brazing alloy (80% Cu). Offers excellent corrosion resistance and color match for copper piping.\n\nSuitable for joining copper pipes and fittings in plumbing systems.",
             "technical_specifications": {
               "table_title": "Technical Specifications",
@@ -2446,7 +2446,7 @@
           },
           {
             "id": "rp-braze-70",
-            "name": "RP BRAZE 70",
+            "name": "RP BRAZE 70-30",
             "short_description": "Cartridge brass alloy (70% Cu). Combines high ductility with good strength for deep drawing applications.\n\nUsed for radiator cores, fasteners, and ammunition casings.",
             "technical_specifications": {
               "table_title": "Technical Specifications",
@@ -2476,7 +2476,7 @@
           },
           {
             "id": "rp-braze-65",
-            "name": "RP BRAZE 65",
+            "name": "RP BRAZE 65-35",
             "short_description": "Standard yellow brass (65% Cu). Provides a good balance of strength and ductility for general fabrication.\n\nCommonly used for lamp fixtures, hinges, and decorative metalwork.",
             "technical_specifications": {
               "table_title": "Technical Specifications",
@@ -2506,7 +2506,7 @@
           },
           {
             "id": "rp-braze-63",
-            "name": "RP BRAZE 63",
+            "name": "RP BRAZE 63-37",
             "short_description": "Common brass alloy (63% Cu). versatile filler for brazing steels, malleable iron, and copper alloys.\n\nEffective for general repair work and maintenance brazing.",
             "technical_specifications": {
               "table_title": "Technical Specifications",
@@ -2536,7 +2536,7 @@
           },
           {
             "id": "rp-braze-60",
-            "name": "RP BRAZE 60",
+            "name": "RP BRAZE 60-40",
             "short_description": "Muntz metal (60% Cu). High strength brass for structural brazing and architectural applications.\n\nProvides good corrosion resistance and optimal color matching for architectural bronze.",
             "technical_specifications": {
               "table_title": "Technical Specifications",

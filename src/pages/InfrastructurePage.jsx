@@ -1,7 +1,25 @@
 import { motion } from 'framer-motion';
-import Button from '../components/Button';
 import AnimatedCard from '../components/AnimatedCard';
-import { FaShieldAlt, FaMicroscope, FaFileAlt, FaCheckCircle } from 'react-icons/fa';
+import { FaShieldAlt, FaMicroscope } from 'react-icons/fa';
+
+function CapabilityCard({ title, children }) {
+  return (
+    <div className="flex h-full flex-col rounded-lg border border-gray-300 bg-white p-5 shadow-sm md:p-6">
+      <h3 className="mb-4 text-base font-bold uppercase tracking-wide text-primary md:text-lg">
+        {title}
+      </h3>
+      <div className="grow space-y-3 text-sm leading-relaxed text-gray-700 md:text-[15px]">{children}</div>
+    </div>
+  );
+}
+
+function BoldLead({ label, children }) {
+  return (
+    <p>
+      <span className="font-bold text-gray-900">{label}</span> {children}
+    </p>
+  );
+}
 
 export default function InfrastructurePage() {
   const stats = [
@@ -80,52 +98,6 @@ export default function InfrastructurePage() {
     }
   ];
 
-  const technologies = [
-    {
-      icon: FaFileAlt,
-      title: 'Induction Melting Technology',
-      description: 'Advanced electromagnetic induction systems for precise temperature control & efficient melting of alloys.'
-    },
-    {
-      icon: FaFileAlt,
-      title: 'CNC Wire Drawing',
-      description: 'Computer-controlled wire drawing systems ensuring consistent diameter & surface quality across production runs.'
-    },
-    {
-      icon: FaCheckCircle,
-      title: 'Automated Quality Control',
-      description: 'Real-time monitoring systems with automated inspection for dimensional accuracy & surface defects.'
-    },
-    {
-      icon: FaCheckCircle,
-      title: 'Advanced Spectroscopy',
-      description: 'State-of-the-art spectrometers for rapid & accurate chemical composition analysis of all products.'
-    }
-  ];
-
-  const innovation = [
-    {
-      title: 'Dedicated R&D Team',
-      description: 'Our experienced R&D team focuses on continuous innovation including new alloy formulations, customized solutions, and process optimization',
-      points: [
-        'Custom alloy development',
-        'Process improvement',
-        'Application research',
-        'Quality enhancement'
-      ]
-    },
-    {
-      title: 'Continuous Improvement',
-      description: 'We invest in cutting-edge infrastructure and constantly upgrade our facilities to maintain technological leadership',
-      points: [
-        'Equipment modernization',
-        'Capacity expansion',
-        'Technology integration',
-        'Sustainability initiatives'
-      ]
-    }
-  ];
-
   return (
     <div>
       {/* Hero Section */}
@@ -180,6 +152,118 @@ export default function InfrastructurePage() {
               ))}
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Our capabilities — layout from design (not a flat image) */}
+      <section className="border-t border-gray-200 bg-gray-50 py-12 md:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-10 text-center"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Our Capabilities</h2>
+          </motion.div>
+
+          <div className="flex flex-col gap-6 md:gap-8">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45 }}
+              >
+                <CapabilityCard title="Fine Wires and Rods">
+      <p>
+        To meet your precise requirements, diameters ranging from <span className="font-medium text-gray-900">0.08 to 180 mm</span> are available.
+        For precise size and quality finishing, these are drawn from Carbide, Compax, and Diamond dies of the best quality.
+      </p>
+      <BoldLead label="Coils:">
+        Can be supplied in any quantity, as desired by the consumer.
+      </BoldLead>
+      <BoldLead label="Cut Lengths:">
+        Regularly cut from 100–1000 mm; other cut lengths available on request.
+      </BoldLead>
+      <BoldLead label="Coils:">
+        Coils can be provided in any weight desired.
+      </BoldLead>
+                </CapabilityCard>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: 0.05 }}
+              >
+                <CapabilityCard title="Strips">
+      <BoldLead label="SILVER:">
+        Strips are available with thickness from 0.1 to 100 mm and width from 2 mm to 100 mm.
+      </BoldLead>
+      <BoldLead label="COPPER:">
+        Strips are available with thickness from 0.1 to 50 mm and width from 25 mm to 180 mm.
+      </BoldLead>
+      <BoldLead label="Coils:">
+        Can be supplied in any quantity, as desired by the consumer.
+      </BoldLead>
+      <BoldLead label="Cut Lengths:">
+        Regularly cut from 100–1000 mm; other cut lengths available on request.
+      </BoldLead>
+      <BoldLead label="Spools:">
+        Strips are wound on spools layer over layer. Spools are typically used in automated brazing equipment for simple dispensing.
+      </BoldLead>
+                </CapabilityCard>
+              </motion.div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45 }}
+              >
+                <CapabilityCard title="Wire Flattening">
+      <p>
+        These are wires with square or half-round edges that have been flattened in a mill. Available in thickness down to{' '}
+        <span className="font-medium text-gray-900">0.1 mm</span> and width down to{' '}
+        <span className="font-medium text-gray-900">0.8 mm</span>.
+      </p>
+      <BoldLead label="Spools:">
+        Available in pancake reels with layer-wound strips for precise and simple dispensing.
+      </BoldLead>
+                </CapabilityCard>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: 0.05 }}
+              >
+                <CapabilityCard title="Wire Preform">
+      <p>
+        These, like rings or any other shapes, are specially made in accordance with customer specifications. The interior diameter
+        of these rings ranges from <span className="font-medium text-gray-900">320 mm to 2 mm</span>, and they can have open or
+        closed ends, one turn, two turns, or numerous turns.
+      </p>
+                </CapabilityCard>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: 0.1 }}
+              >
+                <CapabilityCard title="Customer Specifications">
+      <p>
+        Forms and size not mentioned or specified above may be available as per customer specification on request.
+      </p>
+                </CapabilityCard>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -280,130 +364,6 @@ export default function InfrastructurePage() {
               </AnimatedCard>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Advanced Technologies */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Advanced Technologies
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Leveraging cutting-edge technology to deliver superior brazing solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
-            {technologies.map((tech, index) => {
-              const IconComponent = tech.icon;
-              return (
-                <AnimatedCard
-                  key={tech.title}
-                  index={index}
-                  reveal={index % 2 === 0 ? 'fade-right' : 'fade-left'}
-                  className="flex items-start gap-6"
-                  disableHover={true}
-                  disableTap={true}
-                >
-                  {/* Icon Box */}
-                  <div className="flex-shrink-0">
-                    <div className="w-24 h-24 bg-secondary rounded-2xl flex items-center justify-center">
-                      <IconComponent className="text-4xl text-white" />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{tech.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{tech.description}</p>
-                  </div>
-                </AnimatedCard>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Innovation at Our Core */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Innovation at Our Core
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {innovation.map((item, index) => (
-              <AnimatedCard
-                key={item.title}
-                index={index}
-                reveal={index === 0 ? 'fade-right' : 'fade-left'}
-                className="bg-white p-8 rounded-lg border-2 border-gray-200 shadow-md"
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                <p className="text-gray-600 mb-6">{item.description}</p>
-                <ul className="grid grid-cols-2 gap-3">
-                  {item.points.map((point, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-700">
-                      <svg className="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </AnimatedCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-primary text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-100 mb-8"
-          >
-            Visit our facilities or schedule a virtual tour to see our world-class infrastructure in action
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap gap-4 justify-center"
-          >
-            <Button to="/products" variant="outline">
-              Contact Us
-            </Button>
-            <Button to="/certifications" variant="outline">
-              View Our Certifications
-            </Button>
-          </motion.div>
         </div>
       </section>
     </div>

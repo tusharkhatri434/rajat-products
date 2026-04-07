@@ -1,20 +1,33 @@
 import { useState } from 'react';
 import ScrollReveal from '../components/ScrollReveal';
 
+const PRODUCT_INTEREST_OPTIONS = [
+  'SILVER BRAZING ALLOYS',
+  'COPPER PHOSPHORUS ALLOYS',
+  'BRASS BRAZING ALLOYS',
+  'WELDING ALLOYS',
+  'FLUXES AND OTHER CONSUMABLES',
+  'CUSTOM ALLOY DEVELOPMENT',
+];
+
+const emptyForm = () => ({
+  fullName: '',
+  email: '',
+  phone: '',
+  company: '',
+  inquiryType: '',
+  monthlyConsumption: '',
+  productInterest: [],
+  productInterestOther: '',
+  message: '',
+});
+
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    company: '',
-    inquiryType: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState(emptyForm);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Format the message for WhatsApp
     let message = `*New Contact Form Inquiry*\n\n`;
     message += `*Name:* ${formData.fullName}\n`;
     message += `*Email:* ${formData.email}\n`;
@@ -27,42 +40,64 @@ export default function ContactPage() {
       message += `*Company:* ${formData.company}\n`;
     }
 
-    message += `*Inquiry Type:* ${formData.inquiryType}\n\n`;
-    message += `*Message:*\n${formData.message}`;
+    message += `*Inquiry Type:* ${formData.inquiryType}\n`;
 
-    // Encode the message for WhatsApp URL
+    if (formData.monthlyConsumption) {
+      message += `*Monthly Consumption:* ${formData.monthlyConsumption}\n`;
+    }
+
+    if (formData.productInterest.length > 0 || formData.productInterestOther.trim()) {
+      message += `*Product Interest:*\n`;
+      formData.productInterest.forEach((item) => {
+        message += `• ${item}\n`;
+      });
+      if (formData.productInterestOther.trim()) {
+        message += `• Other: ${formData.productInterestOther.trim()}\n`;
+      }
+    }
+
+    message += `\n*Message:*\n${formData.message}`;
+
     const encodedMessage = encodeURIComponent(message);
 
-    // Redirect to WhatsApp
     window.open(`https://wa.me/919837065599?text=${encodedMessage}`, '_blank');
 
-    // Optional: Reset form after submission
-    setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      company: '',
-      inquiryType: '',
-      message: ''
-    });
+    setFormData(emptyForm());
   };
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const toggleProductInterest = (label) => {
+    setFormData((prev) => {
+      const set = new Set(prev.productInterest);
+      if (set.has(label)) {
+        set.delete(label);
+      } else {
+        set.add(label);
+      }
+      return { ...prev, productInterest: [...set] };
     });
   };
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative bg-[#1f5c7a] text-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal animation="fade-up" className="text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Contact Us</h1>
-            <p className="text-base md:text-xl text-gray-100 max-w-5xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
-              Whether you need technical specifications, custom solutions, or partnership opportunities, we're here to help.
+      {/* Hero — banner from updatedImagesChanges (served via public/media) */}
+      <section className="relative min-h-[480px] md:min-h-[600px] flex items-center justify-center overflow-hidden bg-gray-900">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/media/banners/contact-hero.png)' }}
+        />
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
+          <ScrollReveal animation="fade-up" className="text-center text-white">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 drop-shadow-md">Contact Us</h1>
+            <p className="text-base md:text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed drop-shadow">
+              Whether you need technical specifications, custom solutions, or partnership opportunities, we&apos;re here to help.
             </p>
           </ScrollReveal>
         </div>
@@ -163,6 +198,48 @@ export default function ContactPage() {
                   </select>
                 </div>
 
+                <div>
+                  <label className="block text-sm font-medium text-gray-900 mb-2">
+                    Monthly Consumption
+                  </label>
+                  <input
+                    type="text"
+                    name="monthlyConsumption"
+                    value={formData.monthlyConsumption}
+                    onChange={handleChange}
+                    placeholder="e.g. 500 kg/month, project-based…"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  />
+                </div>
+
+                <fieldset className="space-y-3 rounded-lg border border-gray-200 bg-gray-50/50 p-4">
+                  <legend className="text-sm font-medium text-gray-900 px-1">Product Interest</legend>
+                  <div className="grid gap-2.5 sm:grid-cols-2">
+                    {PRODUCT_INTEREST_OPTIONS.map((label) => (
+                      <label key={label} className="flex cursor-pointer items-start gap-2 text-sm text-gray-800">
+                        <input
+                          type="checkbox"
+                          checked={formData.productInterest.includes(label)}
+                          onChange={() => toggleProductInterest(label)}
+                          className="mt-1 h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                        />
+                        <span>{label}</span>
+                      </label>
+                    ))}
+                  </div>
+                  <div className="pt-2">
+                    <label className="mb-1 block text-xs font-medium uppercase tracking-wide text-gray-600">Other</label>
+                    <input
+                      type="text"
+                      name="productInterestOther"
+                      value={formData.productInterestOther}
+                      onChange={handleChange}
+                      placeholder="Specify other interest"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                    />
+                  </div>
+                </fieldset>
+
                 {/* Message */}
                 <div>
                   <label className="block text-sm font-medium text-gray-900 mb-2">
@@ -252,7 +329,7 @@ export default function ContactPage() {
                       <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
                       <p className="text-gray-600 text-sm">
                         1, Mohkampur Industrial Complex<br />
-                        Phase - II, Rithani, Meerut, U.P, 250103
+                        Phase - II, Rithani, Meerut, U.P, 250103, India
                       </p>
                     </div>
                   </div>

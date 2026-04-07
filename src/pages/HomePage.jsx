@@ -5,22 +5,23 @@ import Button from '../components/Button';
 import AnimatedCard from '../components/AnimatedCard';
 import ScrollReveal from '../components/ScrollReveal';
 import { FaCog, FaTrophy, FaCheckCircle, FaMicroscope, FaGlobe, FaShieldAlt, FaChevronLeft, FaChevronRight, FaArrowRight } from 'react-icons/fa';
-import glimpsRod from '../assets/glimps/rods.png';
-import glimpsRings from '../assets/glimps/rings.png';
+import slideRod from '../assets/updatedImagesChanges/rp_phos & rods.png';
+import slideRings from '../assets/updatedImagesChanges/rp_silver & rings.png';
 import glimpsStrips from '../assets/glimps/strips.png';
 import glimpsFoils from '../assets/glimps/foils.png';
 import glimpsWire from '../assets/glimps/wire.png';
 
+/** Order: Fine Wire → Rings → Strips → Foils → Rod (per product team) */
 const forms = [
   {
-    label: 'Rod',
-    description: 'Precision-cut rods for torch and furnace brazing.',
-    image: glimpsRod,
+    label: 'Fine Wire',
+    description: '0.1mm – 2mm fine wires for the most demanding applications.',
+    image: glimpsWire,
   },
   {
     label: 'Rings',
     description: 'Pre-formed rings for consistent joint repeatability.',
-    image: glimpsRings,
+    image: slideRings,
   },
   {
     label: 'Strips',
@@ -33,9 +34,9 @@ const forms = [
     image: glimpsFoils,
   },
   {
-    label: 'Fine wires',
-    description: '0.1mm – 2mm fine wires for the most demanding applications.',
-    image: glimpsWire,
+    label: 'Rod',
+    description: 'Precision-cut rods for torch and furnace brazing.',
+    image: slideRod,
   },
 ];
 

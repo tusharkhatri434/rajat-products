@@ -21,7 +21,7 @@ export default function Footer() {
         { name: 'Cadmium Bearing Alloy', path: '/products/rp-silver#cadmium-bearing' }
       ]
     },
-    { name: 'RP Copper', path: '/products/rp-copper' },
+    { name: 'RP WELD', path: '/products/rp-copper' },
     { name: 'RP Braze', path: '/products/rp-braze' },
     { name: 'RP Aluminium', path: '/products/rp-aluminium' },
     { name: 'Brazing Fluxes', path: '/products/brazing-fluxes' },
@@ -166,7 +166,7 @@ export default function Footer() {
                       className="hover:text-primary transition-colors"
                     >
                       1, Mohkampur Industrial Complex<br />
-                      Phase - II, Rithani, Meerut, U.P, 250103
+                      Phase - II, Rithani, Meerut, U.P, 250103, India
                     </a>
                   </p>
                 </div>
