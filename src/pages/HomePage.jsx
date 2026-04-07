@@ -5,8 +5,8 @@ import Button from '../components/Button';
 import AnimatedCard from '../components/AnimatedCard';
 import ScrollReveal from '../components/ScrollReveal';
 import { FaCog, FaTrophy, FaCheckCircle, FaMicroscope, FaGlobe, FaShieldAlt, FaChevronLeft, FaChevronRight, FaArrowRight } from 'react-icons/fa';
-import slideRod from '../assets/updatedImagesChanges/rp_phos & rods.png';
-import slideRings from '../assets/updatedImagesChanges/rp_silver & rings.png';
+import slideRod from '../assets/glimps/rods.png';
+import slideRings from '../assets/glimps/rings.png';
 import glimpsStrips from '../assets/glimps/strips.png';
 import glimpsFoils from '../assets/glimps/foils.png';
 import glimpsWire from '../assets/glimps/wire.png';
@@ -292,7 +292,7 @@ export default function HomePage() {
                     style={{ minWidth: `${slideWidth}%`, maxWidth: `${slideWidth}%` }}
                   >
                     <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-500 group hover:border-primary/20 hover:shadow-xl">
-                      <div className="relative h-56 w-full shrink-0 overflow-hidden bg-white sm:h-60 md:h-72 lg:h-80">
+                      <div className="relative h-56 w-full shrink-0 overflow-hidden bg-white sm:h-60 md:h-72 lg:h-72">
                         <img
                           src={form.image}
                           alt={form.label}
