@@ -245,11 +245,28 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-200">
+      <div className="border-t border-primary bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="text-center text-sm text-gray-600">
-            © 2026 Rajat Products Pvt. Ltd. All rights reserved.
-          </div>
+          <p className="text-center text-xs sm:text-sm text-gray-200 leading-relaxed">
+            Copyright © 2026 Jayco Electricals. All rights reserved. Website Developed by :{' '}
+            <a
+              href="https://pixelinfiniteai.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-100 underline decoration-gray-400 underline-offset-2 hover:text-white hover:decoration-white transition-colors"
+            >
+              Team Pixel8ai
+            </a>
+            {' '}&amp; Promoted by :{' '}
+            <a
+              href="https://www.sharadupadhyay.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-100 underline decoration-gray-400 underline-offset-2 hover:text-white hover:decoration-white transition-colors"
+            >
+              Team Exabyte
+            </a>
+          </p>
         </div>
       </div>
     </footer>
