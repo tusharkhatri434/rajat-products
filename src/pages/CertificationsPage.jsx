@@ -93,19 +93,24 @@ export default function CertificationsPage() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative bg-[#1f5c7a] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section – Banner Image */}
+      <section className="relative min-h-[600px] flex items-center justify-center text-white overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/media/banners/certifications-hero.png)' }}
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
               Certifications & Quality Assurance
             </h1>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto drop-shadow">
               Committed to international standards and meticulous quality control at every step
             </p>
           </motion.div>
@@ -135,6 +140,7 @@ export default function CertificationsPage() {
               <AnimatedCard
                 key={cert.title}
                 index={index}
+                reveal={index === 0 ? 'fade-right' : 'fade-left'}
                 className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex flex-col items-center text-center">
@@ -176,6 +182,7 @@ export default function CertificationsPage() {
               <AnimatedCard
                 key={standard.code}
                 index={index}
+                reveal="zoom-in"
                 className="group bg-white rounded-xl p-6 text-center border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
@@ -212,6 +219,7 @@ export default function CertificationsPage() {
               <AnimatedCard
                 key={process.step}
                 index={index}
+                reveal={index % 2 === 0 ? 'fade-right' : 'fade-left'}
                 className="relative"
                 disableHover={true}
                 disableTap={true}
@@ -261,6 +269,7 @@ export default function CertificationsPage() {
               <AnimatedCard
                 key={commitment.title}
                 index={index}
+                reveal="fade-up"
                 className="group bg-primary p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="flex justify-center mb-4">

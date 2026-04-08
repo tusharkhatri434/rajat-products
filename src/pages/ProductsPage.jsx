@@ -55,129 +55,97 @@ export default function ProductsPage() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative bg-[#1f5c7a] text-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section – Banner Image (same height & treatment as Certifications) */}
+      <section className="relative min-h-[600px] flex items-center justify-center text-white overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/media/banners/products-hero.jpeg)' }}
+        />
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 flex items-center">
           <motion.div
-            className="text-center"
+            className="text-center w-full py-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Our Product Range</h1>
-            <p className="text-base md:text-xl text-gray-100 max-w-5xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white drop-shadow-lg">Our Product Range</h1>
+            <p className="text-base md:text-xl text-gray-100 max-w-5xl mx-auto px-4 drop-shadow">
               Comprehensive range of brazing alloys delivering exceptional performance for demanding industrial applications
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Major Products - Layout matching design */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      {/* Major Products — compact card grid */}
+      <section className="py-8 md:py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8 md:space-y-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 pb-10">
             {majorProducts.map((product, index) => (
               <AnimatedCard
                 key={product.id}
                 index={index}
-                delay={index * 0.15}
-                className="group bg-white rounded-3xl border-2 border-gray-200 p-6 md:p-8 lg:p-10 hover:border-gray-300 transition-all duration-300"
+                delay={index * 0.06}
+                reveal={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+                className="group bg-white rounded-xl border border-gray-200/80 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
               >
-                {/* Top Section: Image, Title, Description */}
-                <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 xl:gap-12 mb-6 lg:mb-8">
-                  {/* Image - Compact on Left */}
-                  <div className="shrink-0">
-                    <div className="relative w-full lg:w-[280px] xl:w-[340px] h-64 lg:h-[340px] bg-linear-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center overflow-hidden group">
-                      <img
-                        src={`/images/${product.imgName}`}
-                        alt={product.title}
-                        className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                        }}
-                      />
-                    </div>
-                  </div>
+                {/* Product image — tall portrait ratio (no max-height clamp) */}
+                <div className="relative aspect-4/5 md:aspect-3/4 overflow-hidden bg-gray-50">
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent z-10 opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                  <motion.img
+                    src={`/media/products/${product.cardImgName || product.imgName}`}
+                    alt={product.title}
+                    className="w-full h-full object-cover relative z-0 transition-transform duration-700 group-hover:scale-110"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
 
-                  {/* Title & Description on Right */}
-                  <div className="flex-1 flex flex-col">
-                    {/* Title */}
-                    <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-[#1f5c7a] mb-4 lg:mb-6 leading-tight">
-                      {product.title}
-                    </h2>
-
-                    {/* Description Paragraphs */}
-                    <div className="space-y-4 text-gray-700 leading-relaxed text-[15px] md:text-base text-justify mb-6">
-                      {product.description.split('\n\n').map((paragraph, idx) => (
-                        <p key={idx}>{paragraph}</p>
-                      ))}
-                    </div>
-
-                    {/* RP Silver Buttons */}
-                    {product.id === 'rp-silver' && (
-                      <div className="flex flex-wrap gap-3 mt-6">
-                        <Link
-                          to="/products/rp-silver#cadmium-free"
-                          className="inline-flex items-center px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-[#1f5c7a] transition-all duration-300 font-medium shadow-md hover:shadow-lg text-sm"
-                        >
-                          Cadmium Free Alloy
-                          <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </Link>
-                        <Link
-                          to="/products/rp-silver#cadmium-bearing"
-                          className="inline-flex items-center px-6 py-2.5 bg-white text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg text-sm"
-                        >
-                          Cadmium Bearing Alloy
-                          <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </Link>
-                      </div>
-                    )}
+                  <div className="absolute top-3 left-3 z-20 md:top-4 md:left-4">
+                    <span className="px-2.5 py-1 bg-white/90 backdrop-blur-sm text-[#1a415a] text-[10px] font-bold uppercase tracking-widest rounded shadow-sm">
+                      {product.id === 'rp-silver' ? 'Silver Alloy' : 'Premium Alloy'}
+                    </span>
                   </div>
                 </div>
 
-                {/* Bottom Section: Features & CTA */}
-                {product.key_technical_features && (
-                  <div className="border-t-2 border-gray-200 pt-6 lg:pt-8">
-                    <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
-                      {/* Features - Takes More Space */}
-                      <div className="flex-1">
-                        <h3 className="text-xl md:text-2xl font-bold text-[#1f5c7a] mb-4 flex items-center">
-                          <svg className="w-6 h-6 mr-2 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                          </svg>
-                          Features:
-                        </h3>
-                        <ul className="grid md:grid-cols-2 gap-3">
-                          {product.key_technical_features.map((feature, idx) => (
-                            <li key={idx} className="flex items-start text-gray-700 text-[15px] md:text-base">
-                              <svg className="w-5 h-5 text-primary mr-2 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                              </svg>
-                              <span>{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                <div className="p-4 flex flex-col grow bg-white">
+                  <h2 className="text-base font-bold text-gray-900 line-clamp-2 leading-snug mb-2">
+                    {product.title}
+                  </h2>
 
-                      {/* CTA Button - Right Side */}
-                      <div className="shrink-0 lg:self-end">
-                        <Link
-                          to={product.cta.route}
-                          className="inline-flex items-center px-8 py-3 bg-[#1f5c7a] text-white rounded-lg hover:bg-[#1a4f65] transition-all duration-300 font-medium shadow-md hover:shadow-lg text-base whitespace-nowrap hover:scale-105 active:scale-95"
-                        >
-                          {product.cta.label}
-                          <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </Link>
-                      </div>
-                    </div>
+                  <p className="text-gray-600 text-xs leading-relaxed line-clamp-2 mb-3">
+                    {product.short_description}
+                  </p>
+
+                  {product.key_technical_features && (
+                    <ul className="space-y-1.5 mb-4 grow">
+                      {product.key_technical_features.slice(0, 2).map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <span className="mt-1.5 shrink-0 w-1 h-1 rounded-full bg-primary" />
+                          <span className="text-[11px] text-gray-700 leading-snug line-clamp-2">
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <div className="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <span className="text-[9px] font-bold text-gray-400 uppercase tracking-wide px-1.5 py-0.5 bg-gray-50 rounded shrink-0">
+                      Premium
+                    </span>
+                    <Link
+                      to={product.cta.route}
+                      className="inline-flex items-center text-primary font-bold text-xs group/link shrink-0"
+                    >
+                      <span className="relative">
+                        {product.cta.label}
+                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover/link:w-full" />
+                      </span>
+                      <svg className="w-4 h-4 ml-1 transform group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5-5 5M6 7l5 5-5 5" />
+                      </svg>
+                    </Link>
                   </div>
-                )}
+                </div>
               </AnimatedCard>
             ))}
           </div>
@@ -207,6 +175,7 @@ export default function ProductsPage() {
               <AnimatedCard
                 key={solution.title}
                 index={index}
+                reveal={index % 3 === 1 ? 'fade-up' : index % 3 === 0 ? 'fade-right' : 'fade-left'}
                 className="group bg-white p-6 md:p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="flex justify-center mb-4">
@@ -329,6 +298,6 @@ export default function ProductsPage() {
           </motion.div>
         </div>
       </section>
-    </div >
+    </div>
   );
 }

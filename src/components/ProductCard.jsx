@@ -11,7 +11,7 @@ export default function ProductCard({ product, index = 0 }) {
       <div className="relative h-48 sm:h-56 md:h-64 bg-linear-to-br from-gray-800 to-gray-900 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={`/images/${product.imgName}`}
+            src={`/media/products/${product.imgName}`}
             alt={product.title}
             className="w-full h-full object-contain p-4 transition-transform duration-300 group-hover:scale-105"
             onError={(e) => {
