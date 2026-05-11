@@ -345,6 +345,34 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Manufacturing Partner Section */}
+      <section className="py-16 bg-primary text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col items-center"
+          >
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+              Visit Our Manufacturing Partner
+            </h3>
+            <h2 className="text-3xl sm:text-5xl md:text-5xl font-black text-white mb-8">
+              Maheshwari Wires Pvt.Ltd.
+            </h2>
+            <a
+              href="https://maheshwariwires.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-black px-10 py-4 rounded-xl font-bold hover:bg-gray-900 transition-colors duration-300 text-lg shadow-lg"
+            >
+              Visit Website
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Industries We Serve */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
