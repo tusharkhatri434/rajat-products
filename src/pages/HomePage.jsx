@@ -355,17 +355,17 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="flex flex-col items-center"
           >
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+            <h3 className="text-lg md:text-xl font-bold text-white mb-2">
               Visit Our Manufacturing Partner
             </h3>
-            <h2 className="text-3xl sm:text-5xl md:text-5xl font-black text-white mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-8">
               Maheshwari Wires Pvt.Ltd.
             </h2>
             <a
               href="https://maheshwariwires.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-white text-black px-10 py-4 rounded-xl font-bold hover:bg-gray-900 transition-colors duration-300 text-lg shadow-lg"
+              className="inline-block bg-white text-primary px-7 py-2 rounded-xl font-bold transform transition-all duration-300 ease-in-out hover:scale-105 text-lg shadow-lg"
             >
               Visit Website
             </a>
