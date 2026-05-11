@@ -95,6 +95,23 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
+
+            {/* Manufacturing Partner Tab */}
+            <div className="mt-8">
+              <a
+                href="https://maheshwariwires.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center justify-center text-center border border-gray-300 bg-primary hover:bg-primary-dark rounded-xl px-4 py-3 transition-all duration-300 shadow-sm w-full"
+              >
+                <span className="text-xs font-bold text-white/90 mb-1">
+                  Visit Our Manufacturing Partner
+                </span>
+                <span className="text-base font-black text-white tracking-tight leading-tight">
+                  Maheshwari Wires Pvt.Ltd.
+                </span>
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -255,7 +272,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-gray-100 underline decoration-gray-400 underline-offset-2 hover:text-white hover:decoration-white transition-colors"
             >
-              Team Pixel8ai
+              Team Pixel Infinite Ai
             </a>
             {' '}&amp; Promoted by :{' '}
             <a
